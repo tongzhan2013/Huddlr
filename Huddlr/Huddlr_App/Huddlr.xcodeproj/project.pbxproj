@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3617810774004E5FF9 /* UIKit.framework */; };
+		DE0DBD3917810774004E5FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3817810774004E5FF9 /* Foundation.framework */; };
+		DE0DBD3B17810774004E5FF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3A17810774004E5FF9 /* CoreGraphics.framework */; };
+		DE0DBD4117810774004E5FF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD3F17810774004E5FF9 /* InfoPlist.strings */; };
+		DE0DBD4317810774004E5FF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0DBD4217810774004E5FF9 /* main.m */; };
+		DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0DBD4617810774004E5FF9 /* AppDelegate.m */; };
+		DE0DBD4917810774004E5FF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4817810774004E5FF9 /* Default.png */; };
+		DE0DBD4B17810774004E5FF9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4A17810774004E5FF9 /* Default@2x.png */; };
+		DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */; };
+		DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */; };
+		DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */; };
+		DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0DBD5517810775004E5FF9 /* MapViewController.m */; };
+		DE0DBD5D178107FA004E5FF9 /* morsemapicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */; };
+		DE0DBD5F178107FF004E5FF9 /* morsemapicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */; };
+		DE0DBD6117810C94004E5FF9 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */; };
+		DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */; };
+		DE0DBD6517810EB7004E5FF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6417810EB7004E5FF9 /* AVFoundation.framework */; };
+		DE0DBD6717810EBD004E5FF9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6617810EBD004E5FF9 /* CoreData.framework */; };
+		DE0DBD6917810ECA004E5FF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6817810ECA004E5FF9 /* CoreLocation.framework */; };
+		DE0DBD6B17810ED2004E5FF9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6A17810ED2004E5FF9 /* CoreText.framework */; };
+		DE0DBD6D17810EDD004E5FF9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6C17810EDD004E5FF9 /* GLKit.framework */; };
+		DE0DBD6F17810EE5004E5FF9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6E17810EE5004E5FF9 /* ImageIO.framework */; };
+		DE0DBD7117810EF4004E5FF9 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7017810EF4004E5FF9 /* libc++.dylib */; };
+		DE0DBD7317810F13004E5FF9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7217810F13004E5FF9 /* libicucore.dylib */; };
+		DE0DBD7517810F23004E5FF9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7417810F23004E5FF9 /* libz.dylib */; };
+		DE0DBD7717810F30004E5FF9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */; };
+		DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */; };
+		DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91BD3417EE1E0600E2170A /* HuddlrClient.m */; };
+		DEE147F017964A6E009043B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE147EF17964A6E009043B8 /* User.m */; };
+		DEE1489017C82066009043B8 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */; };
+		DEE1489117C82066009043B8 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */; };
+		DEE1489217C82066009043B8 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */; };
+		DEE1489317C82066009043B8 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488E17C82066009043B8 /* AWSRuntime.framework */; };
+		DEE1489417C82066009043B8 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488F17C82066009043B8 /* AWSSQS.framework */; };
+		DEE1489617CD8699009043B8 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */; };
+		DEE1491717D29D6F009043B8 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1491517D29D6F009043B8 /* UsersViewController.m */; };
+		DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE1491617D29D6F009043B8 /* UsersViewController.xib */; };
+		DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494417D2CBC7009043B8 /* Crypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495D17D2CBC7009043B8 /* JSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495E17D2CBC7009043B8 /* RegisterDeviceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1495F17D2CBC7009043B8 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495017D2CBC7009043B8 /* Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1496017D2CBC7009043B8 /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495217D2CBC7009043B8 /* RequestDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1496117D2CBC7009043B8 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495417D2CBC7009043B8 /* Response.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495617D2CBC7009043B8 /* ResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE0DBD3317810774004E5FF9 /* Huddlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0DBD3617810774004E5FF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE0DBD3817810774004E5FF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DE0DBD3A17810774004E5FF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE0DBD3E17810774004E5FF9 /* Huddlr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Huddlr-Info.plist"; sourceTree = "<group>"; };
+		DE0DBD4017810774004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE0DBD4217810774004E5FF9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE0DBD4417810774004E5FF9 /* Huddlr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Huddlr-Prefix.pch"; sourceTree = "<group>"; };
+		DE0DBD4517810774004E5FF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE0DBD4617810774004E5FF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE0DBD4817810774004E5FF9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DE0DBD4A17810774004E5FF9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DE0DBD4F17810774004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DE0DBD5217810775004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DE0DBD5417810775004E5FF9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		DE0DBD5517810775004E5FF9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morsemapicon2.png; sourceTree = "<group>"; };
+		DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morsemapicon3.png; sourceTree = "<group>"; };
+		DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		DE0DBD6417810EB7004E5FF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DE0DBD6617810EBD004E5FF9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DE0DBD6817810ECA004E5FF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DE0DBD6A17810ED2004E5FF9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DE0DBD6C17810EDD004E5FF9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DE0DBD6E17810EE5004E5FF9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		DE0DBD7017810EF4004E5FF9 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		DE0DBD7217810F13004E5FF9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		DE0DBD7417810F23004E5FF9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE91BD3317EE1E0600E2170A /* HuddlrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddlrClient.h; sourceTree = "<group>"; };
+		DE91BD3417EE1E0600E2170A /* HuddlrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddlrClient.m; sourceTree = "<group>"; };
+		DEE147EE17964A6E009043B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DEE147EF17964A6E009043B8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAutoScaling.framework; path = "../aws-ios-sdk-1.6.1/AWSAutoScaling.framework"; sourceTree = "<group>"; };
+		DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCloudWatch.framework; path = "../aws-ios-sdk-1.6.1/AWSCloudWatch.framework"; sourceTree = "<group>"; };
+		DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "../aws-ios-sdk-1.6.1/AWSDynamoDB.framework"; sourceTree = "<group>"; };
+		DEE1488E17C82066009043B8 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../aws-ios-sdk-1.6.1/AWSRuntime.framework"; sourceTree = "<group>"; };
+		DEE1488F17C82066009043B8 /* AWSSQS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSQS.framework; path = "../aws-ios-sdk-1.6.1/AWSSQS.framework"; sourceTree = "<group>"; };
+		DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSecurityTokenService.framework; path = "../aws-ios-sdk-1.6.1/AWSSecurityTokenService.framework"; sourceTree = "<group>"; };
+		DEE1491417D29D6F009043B8 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		DEE1491517D29D6F009043B8 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
+		DEE1491617D29D6F009043B8 /* UsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		DEE1493F17D2CBC7009043B8 /* AmazonKeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonKeyChainWrapper.h; sourceTree = "<group>"; };
+		DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonKeyChainWrapper.m; sourceTree = "<group>"; };
+		DEE1494117D2CBC7009043B8 /* AmazonTVMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonTVMClient.h; sourceTree = "<group>"; };
+		DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonTVMClient.m; sourceTree = "<group>"; };
+		DEE1494317D2CBC7009043B8 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		DEE1494417D2CBC7009043B8 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		DEE1494517D2CBC7009043B8 /* GetTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenRequest.h; sourceTree = "<group>"; };
+		DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenRequest.m; sourceTree = "<group>"; };
+		DEE1494717D2CBC7009043B8 /* GetTokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponse.h; sourceTree = "<group>"; };
+		DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponse.m; sourceTree = "<group>"; };
+		DEE1494917D2CBC7009043B8 /* GetTokenResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponseHandler.h; sourceTree = "<group>"; };
+		DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponseHandler.m; sourceTree = "<group>"; };
+		DEE1494B17D2CBC7009043B8 /* JSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtilities.h; sourceTree = "<group>"; };
+		DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtilities.m; sourceTree = "<group>"; };
+		DEE1494D17D2CBC7009043B8 /* RegisterDeviceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceRequest.h; sourceTree = "<group>"; };
+		DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceRequest.m; sourceTree = "<group>"; };
+		DEE1494F17D2CBC7009043B8 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		DEE1495017D2CBC7009043B8 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		DEE1495117D2CBC7009043B8 /* RequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
+		DEE1495217D2CBC7009043B8 /* RequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDelegate.m; sourceTree = "<group>"; };
+		DEE1495317D2CBC7009043B8 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		DEE1495417D2CBC7009043B8 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		DEE1495517D2CBC7009043B8 /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = "<group>"; };
+		DEE1495617D2CBC7009043B8 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
+		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE0DBD3017810774004E5FF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */,
+				DEE1489617CD8699009043B8 /* AWSSecurityTokenService.framework in Frameworks */,
+				DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */,
+				DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */,
+				DE0DBD7717810F30004E5FF9 /* OpenGLES.framework in Frameworks */,
+				DE0DBD7517810F23004E5FF9 /* libz.dylib in Frameworks */,
+				DE0DBD7317810F13004E5FF9 /* libicucore.dylib in Frameworks */,
+				DE0DBD7117810EF4004E5FF9 /* libc++.dylib in Frameworks */,
+				DE0DBD6F17810EE5004E5FF9 /* ImageIO.framework in Frameworks */,
+				DE0DBD6D17810EDD004E5FF9 /* GLKit.framework in Frameworks */,
+				DE0DBD6B17810ED2004E5FF9 /* CoreText.framework in Frameworks */,
+				DE0DBD6917810ECA004E5FF9 /* CoreLocation.framework in Frameworks */,
+				DE0DBD6717810EBD004E5FF9 /* CoreData.framework in Frameworks */,
+				DE0DBD6517810EB7004E5FF9 /* AVFoundation.framework in Frameworks */,
+				DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */,
+				DE0DBD3917810774004E5FF9 /* Foundation.framework in Frameworks */,
+				DE0DBD3B17810774004E5FF9 /* CoreGraphics.framework in Frameworks */,
+				DE0DBD6117810C94004E5FF9 /* GoogleMaps.framework in Frameworks */,
+				DEE1489017C82066009043B8 /* AWSAutoScaling.framework in Frameworks */,
+				DEE1489117C82066009043B8 /* AWSCloudWatch.framework in Frameworks */,
+				DEE1489217C82066009043B8 /* AWSDynamoDB.framework in Frameworks */,
+				DEE1489317C82066009043B8 /* AWSRuntime.framework in Frameworks */,
+				DEE1489417C82066009043B8 /* AWSSQS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE0DBD2A17810774004E5FF9 = {
+			isa = PBXGroup;
+			children = (
+				DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */,
+				DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */,
+				DE0DBD3C17810774004E5FF9 /* Huddlr_files */,
+				DE0DBD3517810774004E5FF9 /* Frameworks */,
+				DE0DBD3417810774004E5FF9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE0DBD3417810774004E5FF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE0DBD3317810774004E5FF9 /* Huddlr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE0DBD3517810774004E5FF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */,
+				DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */,
+				DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */,
+				DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */,
+				DEE1488E17C82066009043B8 /* AWSRuntime.framework */,
+				DEE1488F17C82066009043B8 /* AWSSQS.framework */,
+				DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */,
+				DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */,
+				DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */,
+				DE0DBD7417810F23004E5FF9 /* libz.dylib */,
+				DE0DBD7217810F13004E5FF9 /* libicucore.dylib */,
+				DE0DBD7017810EF4004E5FF9 /* libc++.dylib */,
+				DEE1496317D2CDA7009043B8 /* Security.framework */,
+				DE0DBD6E17810EE5004E5FF9 /* ImageIO.framework */,
+				DE0DBD6C17810EDD004E5FF9 /* GLKit.framework */,
+				DE0DBD6A17810ED2004E5FF9 /* CoreText.framework */,
+				DE0DBD6817810ECA004E5FF9 /* CoreLocation.framework */,
+				DE0DBD6617810EBD004E5FF9 /* CoreData.framework */,
+				DE0DBD6417810EB7004E5FF9 /* AVFoundation.framework */,
+				DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */,
+				DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */,
+				DE0DBD3617810774004E5FF9 /* UIKit.framework */,
+				DE0DBD3817810774004E5FF9 /* Foundation.framework */,
+				DE0DBD3A17810774004E5FF9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE0DBD3C17810774004E5FF9 /* Huddlr_files */ = {
+			isa = PBXGroup;
+			children = (
+				DE0DBD4517810774004E5FF9 /* AppDelegate.h */,
+				DE0DBD4617810774004E5FF9 /* AppDelegate.m */,
+				DE91BD3317EE1E0600E2170A /* HuddlrClient.h */,
+				DE91BD3417EE1E0600E2170A /* HuddlrClient.m */,
+				DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */,
+				DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */,
+				DE0DBD5417810775004E5FF9 /* MapViewController.h */,
+				DE0DBD5517810775004E5FF9 /* MapViewController.m */,
+				DEE1491417D29D6F009043B8 /* UsersViewController.h */,
+				DEE1491517D29D6F009043B8 /* UsersViewController.m */,
+				DEE1491617D29D6F009043B8 /* UsersViewController.xib */,
+				DEE147EE17964A6E009043B8 /* User.h */,
+				DEE147EF17964A6E009043B8 /* User.m */,
+				DEE1493E17D2CBC7009043B8 /* TVMClient */,
+				DE0DBD3D17810774004E5FF9 /* Supporting Files */,
+			);
+			path = Huddlr_files;
+			sourceTree = "<group>";
+		};
+		DE0DBD3D17810774004E5FF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE0DBD3E17810774004E5FF9 /* Huddlr-Info.plist */,
+				DE0DBD3F17810774004E5FF9 /* InfoPlist.strings */,
+				DE0DBD4217810774004E5FF9 /* main.m */,
+				DE0DBD4417810774004E5FF9 /* Huddlr-Prefix.pch */,
+				DE0DBD4817810774004E5FF9 /* Default.png */,
+				DE0DBD4A17810774004E5FF9 /* Default@2x.png */,
+				DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEE1493E17D2CBC7009043B8 /* TVMClient */ = {
+			isa = PBXGroup;
+			children = (
+				DEE1493F17D2CBC7009043B8 /* AmazonKeyChainWrapper.h */,
+				DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */,
+				DEE1494117D2CBC7009043B8 /* AmazonTVMClient.h */,
+				DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */,
+				DEE1494317D2CBC7009043B8 /* Crypto.h */,
+				DEE1494417D2CBC7009043B8 /* Crypto.m */,
+				DEE1494517D2CBC7009043B8 /* GetTokenRequest.h */,
+				DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */,
+				DEE1494717D2CBC7009043B8 /* GetTokenResponse.h */,
+				DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */,
+				DEE1494917D2CBC7009043B8 /* GetTokenResponseHandler.h */,
+				DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */,
+				DEE1494B17D2CBC7009043B8 /* JSONUtilities.h */,
+				DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */,
+				DEE1494D17D2CBC7009043B8 /* RegisterDeviceRequest.h */,
+				DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */,
+				DEE1494F17D2CBC7009043B8 /* Request.h */,
+				DEE1495017D2CBC7009043B8 /* Request.m */,
+				DEE1495117D2CBC7009043B8 /* RequestDelegate.h */,
+				DEE1495217D2CBC7009043B8 /* RequestDelegate.m */,
+				DEE1495317D2CBC7009043B8 /* Response.h */,
+				DEE1495417D2CBC7009043B8 /* Response.m */,
+				DEE1495517D2CBC7009043B8 /* ResponseHandler.h */,
+				DEE1495617D2CBC7009043B8 /* ResponseHandler.m */,
+			);
+			path = TVMClient;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE0DBD3217810774004E5FF9 /* Huddlr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE0DBD5917810775004E5FF9 /* Build configuration list for PBXNativeTarget "Huddlr" */;
+			buildPhases = (
+				DE0DBD2F17810774004E5FF9 /* Sources */,
+				DE0DBD3017810774004E5FF9 /* Frameworks */,
+				DE0DBD3117810774004E5FF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Huddlr;
+			productName = MorseMap;
+			productReference = DE0DBD3317810774004E5FF9 /* Huddlr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE0DBD2B17810774004E5FF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "William Zhao";
+			};
+			buildConfigurationList = DE0DBD2E17810774004E5FF9 /* Build configuration list for PBXProject "Huddlr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE0DBD2A17810774004E5FF9;
+			productRefGroup = DE0DBD3417810774004E5FF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE0DBD3217810774004E5FF9 /* Huddlr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE0DBD3117810774004E5FF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0DBD4117810774004E5FF9 /* InfoPlist.strings in Resources */,
+				DE0DBD4917810774004E5FF9 /* Default.png in Resources */,
+				DE0DBD4B17810774004E5FF9 /* Default@2x.png in Resources */,
+				DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */,
+				DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
+				DE0DBD5D178107FA004E5FF9 /* morsemapicon2.png in Resources */,
+				DE0DBD5F178107FF004E5FF9 /* morsemapicon3.png in Resources */,
+				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
+				DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE0DBD2F17810774004E5FF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0DBD4317810774004E5FF9 /* main.m in Sources */,
+				DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */,
+				DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */,
+				DEE147F017964A6E009043B8 /* User.m in Sources */,
+				DEE1491717D29D6F009043B8 /* UsersViewController.m in Sources */,
+				DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */,
+				DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */,
+				DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */,
+				DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */,
+				DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */,
+				DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */,
+				DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */,
+				DEE1495D17D2CBC7009043B8 /* JSONUtilities.m in Sources */,
+				DEE1495E17D2CBC7009043B8 /* RegisterDeviceRequest.m in Sources */,
+				DEE1495F17D2CBC7009043B8 /* Request.m in Sources */,
+				DEE1496017D2CBC7009043B8 /* RequestDelegate.m in Sources */,
+				DEE1496117D2CBC7009043B8 /* Response.m in Sources */,
+				DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE0DBD3F17810774004E5FF9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0DBD4017810774004E5FF9 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = /Users/discipulus/Documents/BrotherzLLC/Huddlr/Huddlr_App/Huddlr_files;
+			sourceTree = "<absolute>";
+		};
+		DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0DBD4F17810774004E5FF9 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0DBD5217810775004E5FF9 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE0DBD5717810775004E5FF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE0DBD5817810775004E5FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE0DBD5A17810775004E5FF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../aws-ios-sdk-1.6.1\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseMap/Huddlr-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle/Info.plist";
+				PRODUCT_NAME = Huddlr;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE0DBD5B17810775004E5FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../aws-ios-sdk-1.6.1\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseMap/Huddlr-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle/Info.plist";
+				PRODUCT_NAME = Huddlr;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE0DBD2E17810774004E5FF9 /* Build configuration list for PBXProject "Huddlr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE0DBD5717810775004E5FF9 /* Debug */,
+				DE0DBD5817810775004E5FF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE0DBD5917810775004E5FF9 /* Build configuration list for PBXNativeTarget "Huddlr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE0DBD5A17810775004E5FF9 /* Debug */,
+				DE0DBD5B17810775004E5FF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE0DBD2B17810774004E5FF9 /* Project object */;
+}
