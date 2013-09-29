@@ -15,7 +15,7 @@
 #import "AmazonKeyChainWrapper.h"
 #import "AmazonTVMClient.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property(nonatomic,retain) CLLocationManager *locationManager;
 
