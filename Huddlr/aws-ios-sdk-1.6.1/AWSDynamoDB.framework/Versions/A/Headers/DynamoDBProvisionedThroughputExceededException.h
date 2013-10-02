@@ -17,8 +17,6 @@
 
 
 
-
-
 /**
  * <p>
  * Your request rate is too high, or the request is too large. The AWS

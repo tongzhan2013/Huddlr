@@ -23,8 +23,7 @@ GMSMapView *mapView_;
 
 // You don't need to modify the default initWithNibName:bundle: method.
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)loadView {
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
@@ -40,7 +39,6 @@ GMSMapView *mapView_;
     
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
-    
     self.view = mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
@@ -52,10 +50,6 @@ GMSMapView *mapView_;
     marker.title = @"William Zhao";
     marker.snippet = @"Swag";
     marker.map = mapView_;
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
 }
  
 

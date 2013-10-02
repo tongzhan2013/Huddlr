@@ -18,9 +18,6 @@
 		DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */; };
 		DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */; };
 		DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0DBD5517810775004E5FF9 /* MapViewController.m */; };
-		DE0DBD5D178107FA004E5FF9 /* morsemapicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */; };
-		DE0DBD5F178107FF004E5FF9 /* morsemapicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */; };
-		DE0DBD6117810C94004E5FF9 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */; };
 		DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */; };
 		DE0DBD6517810EB7004E5FF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6417810EB7004E5FF9 /* AVFoundation.framework */; };
 		DE0DBD6717810EBD004E5FF9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6617810EBD004E5FF9 /* CoreData.framework */; };
@@ -34,14 +31,22 @@
 		DE0DBD7717810F30004E5FF9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */; };
 		DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */; };
+		DE25BE3B17F8C7E800719560 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */; };
+		DE5758AD17F906D8007A7777 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */; };
+		DE5758AE17F9071C007A7777 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488E17C82066009043B8 /* AWSRuntime.framework */; };
+		DE5758AF17F90764007A7777 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */; };
+		DE5758B017F9078E007A7777 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */; };
+		DE5758B117F907B3007A7777 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */; };
+		DE5758B217F907DD007A7777 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488F17C82066009043B8 /* AWSSQS.framework */; };
+		DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */; };
+		DE5758BD17FA97D8007A7777 /* Huddlr_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */; };
+		DE5758BF17FA9805007A7777 /* Huddlr_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */; };
+		DE5758C117FA9840007A7777 /* Huddlr_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C017FA9840007A7777 /* Huddlr_icon4.png */; };
+		DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C217FA9880007A7777 /* Huddlr_icon5.png */; };
+		DE5758C517FA98B5007A7777 /* Huddlr_icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */; };
+		DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */; };
 		DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91BD3417EE1E0600E2170A /* HuddlrClient.m */; };
 		DEE147F017964A6E009043B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE147EF17964A6E009043B8 /* User.m */; };
-		DEE1489017C82066009043B8 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */; };
-		DEE1489117C82066009043B8 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */; };
-		DEE1489217C82066009043B8 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */; };
-		DEE1489317C82066009043B8 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488E17C82066009043B8 /* AWSRuntime.framework */; };
-		DEE1489417C82066009043B8 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488F17C82066009043B8 /* AWSSQS.framework */; };
-		DEE1489617CD8699009043B8 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */; };
 		DEE1491717D29D6F009043B8 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1491517D29D6F009043B8 /* UsersViewController.m */; };
 		DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE1491617D29D6F009043B8 /* UsersViewController.xib */; };
 		DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -76,8 +81,6 @@
 		DE0DBD5217810775004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DE0DBD5417810775004E5FF9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		DE0DBD5517810775004E5FF9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morsemapicon2.png; sourceTree = "<group>"; };
-		DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morsemapicon3.png; sourceTree = "<group>"; };
 		DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		DE0DBD6417810EB7004E5FF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,13 @@
 		DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon1.png; sourceTree = "<group>"; };
+		DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon2.png; sourceTree = "<group>"; };
+		DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon3.png; sourceTree = SOURCE_ROOT; };
+		DE5758C017FA9840007A7777 /* Huddlr_icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon4.png; sourceTree = "<group>"; };
+		DE5758C217FA9880007A7777 /* Huddlr_icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon5.png; sourceTree = "<group>"; };
+		DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon6.png; sourceTree = "<group>"; };
+		DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon7.png; sourceTree = "<group>"; };
 		DE91BD3317EE1E0600E2170A /* HuddlrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddlrClient.h; sourceTree = "<group>"; };
 		DE91BD3417EE1E0600E2170A /* HuddlrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddlrClient.m; sourceTree = "<group>"; };
 		DEE147EE17964A6E009043B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -137,8 +147,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5758B217F907DD007A7777 /* AWSSQS.framework in Frameworks */,
+				DE5758B117F907B3007A7777 /* AWSCloudWatch.framework in Frameworks */,
+				DE5758B017F9078E007A7777 /* AWSAutoScaling.framework in Frameworks */,
+				DE5758AF17F90764007A7777 /* AWSSecurityTokenService.framework in Frameworks */,
+				DE5758AE17F9071C007A7777 /* AWSRuntime.framework in Frameworks */,
+				DE5758AD17F906D8007A7777 /* AWSDynamoDB.framework in Frameworks */,
+				DE25BE3B17F8C7E800719560 /* GoogleMaps.framework in Frameworks */,
 				DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */,
-				DEE1489617CD8699009043B8 /* AWSSecurityTokenService.framework in Frameworks */,
 				DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */,
 				DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */,
 				DE0DBD7717810F30004E5FF9 /* OpenGLES.framework in Frameworks */,
@@ -154,12 +170,6 @@
 				DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */,
 				DE0DBD3917810774004E5FF9 /* Foundation.framework in Frameworks */,
 				DE0DBD3B17810774004E5FF9 /* CoreGraphics.framework in Frameworks */,
-				DE0DBD6117810C94004E5FF9 /* GoogleMaps.framework in Frameworks */,
-				DEE1489017C82066009043B8 /* AWSAutoScaling.framework in Frameworks */,
-				DEE1489117C82066009043B8 /* AWSCloudWatch.framework in Frameworks */,
-				DEE1489217C82066009043B8 /* AWSDynamoDB.framework in Frameworks */,
-				DEE1489317C82066009043B8 /* AWSRuntime.framework in Frameworks */,
-				DEE1489417C82066009043B8 /* AWSSQS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +179,7 @@
 		DE0DBD2A17810774004E5FF9 = {
 			isa = PBXGroup;
 			children = (
-				DE0DBD5E178107FF004E5FF9 /* morsemapicon3.png */,
-				DE0DBD5C178107FA004E5FF9 /* morsemapicon2.png */,
+				DE5758B917FA96ED007A7777 /* Images */,
 				DE0DBD3C17810774004E5FF9 /* Huddlr_files */,
 				DE0DBD3517810774004E5FF9 /* Frameworks */,
 				DE0DBD3417810774004E5FF9 /* Products */,
@@ -249,6 +258,20 @@
 				DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE5758B917FA96ED007A7777 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */,
+				DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */,
+				DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */,
+				DE5758C017FA9840007A7777 /* Huddlr_icon4.png */,
+				DE5758C217FA9880007A7777 /* Huddlr_icon5.png */,
+				DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */,
+				DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DEE1493E17D2CBC7009043B8 /* TVMClient */ = {
@@ -334,14 +357,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0DBD4917810774004E5FF9 /* Default.png in Resources */,
+				DE5758BD17FA97D8007A7777 /* Huddlr_icon2.png in Resources */,
+				DE5758C517FA98B5007A7777 /* Huddlr_icon6.png in Resources */,
 				DE0DBD4B17810774004E5FF9 /* Default@2x.png in Resources */,
+				DE5758BF17FA9805007A7777 /* Huddlr_icon3.png in Resources */,
 				DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */,
 				DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */,
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
-				DE0DBD5D178107FA004E5FF9 /* morsemapicon2.png in Resources */,
-				DE0DBD5F178107FF004E5FF9 /* morsemapicon3.png in Resources */,
+				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
+				DE5758C117FA9840007A7777 /* Huddlr_icon4.png in Resources */,
 				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
 				DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */,
+				DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,10 +489,13 @@
 		DE0DBD5A17810775004E5FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../aws-ios-sdk-1.6.1\"",
+					"$(SRCROOT)",
+					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
@@ -472,6 +503,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -480,10 +512,13 @@
 		DE0DBD5B17810775004E5FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../aws-ios-sdk-1.6.1\"",
+					"$(SRCROOT)",
+					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
@@ -491,6 +526,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};

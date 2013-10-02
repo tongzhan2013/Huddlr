@@ -16,7 +16,6 @@
 #import "DynamoDBAttributeValue.h"
 #import "DynamoDBAttributeValueUpdate.h"
 #import "DynamoDBExpectedAttributeValue.h"
-
 #import <AWSRuntime/AmazonServiceRequestConfig.h>
 
 

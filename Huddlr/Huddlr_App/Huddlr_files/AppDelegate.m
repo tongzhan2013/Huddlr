@@ -18,7 +18,7 @@
     [GMSServices provideAPIKey:@"AIzaSyDBrAgarDG3pFtg92dmxrrXkBDjmdMnNEI"];
     // Override point for customization after application launch.
     
-    HuddlrClient *huddlr = [[HuddlrClient alloc] initWithEndpoint:@"http://default-environment-ti2kr6z2qm.elasticbeanstalk.com/" useSSL:USE_SSL];
+    // HuddlrClient *huddlr = [[HuddlrClient alloc] initWithEndpoint:@"http://default-environment-ti2kr6z2qm.elasticbeanstalk.com/" useSSL:USE_SSL];
     
     return YES;
 }
