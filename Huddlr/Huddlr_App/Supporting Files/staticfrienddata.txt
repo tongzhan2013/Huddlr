@@ -1,0 +1,22 @@
+Xiao Wu,TD College,Xiao.png,NO
+Ivan Fan,Morse College,Ivan.png,NO
+Tong Zhan,Morse College,Tong.png,NO
+Will Zhao,Morse College,Will.png,NO
+Jie Min,Yale Law School,Jie.png,NO 
+Diana Saverin,484 College Street,Diana.png,NO
+Henry Gottfried,484 College Street,Henry.png,NO
+Jessica Oddie,Yale Music School,Jessica.png,NO
+Sinye Tang,New York,Sinye.png,NO
+Nicholas Medina Mora,New York,Nicolas.JPG,NO
+Willa Fitzgerald,New York,Willa.png,NO
+Orlando Hernandez,New York,Orlando.png,NO
+Cassius Clay,New York,Cassius.png,NO
+Natalia Emanuel,NBER,Natalia.JPG,NO
+Aaron,Boston,Aaron.png,NO
+Ben Elder,Philadelphia,Ben.png,NO
+Josh Penny,Atlanta,Josh.png,NO
+Christy Nelson,Stanford University,Christy.png,NO
+Danqing Liu,San Francisco,Danqing.png,NO
+David Carel,England,David.png,NO
+Adele Jackson Gibson,Japan,Adele.png,NO
+Wen Hu,China,Wen.png,NO 

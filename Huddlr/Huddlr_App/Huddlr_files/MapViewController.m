@@ -23,7 +23,9 @@ GMSMapView *mapView_;
 
 // You don't need to modify the default initWithNibName:bundle: method.
 
-- (void)loadView {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m

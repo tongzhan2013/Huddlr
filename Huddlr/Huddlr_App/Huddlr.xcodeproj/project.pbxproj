@@ -15,7 +15,6 @@
 		DE0DBD4917810774004E5FF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4817810774004E5FF9 /* Default.png */; };
 		DE0DBD4B17810774004E5FF9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4A17810774004E5FF9 /* Default@2x.png */; };
 		DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */; };
-		DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */; };
 		DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */; };
 		DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0DBD5517810775004E5FF9 /* MapViewController.m */; };
 		DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE0DBD6217810DEE004E5FF9 /* GoogleMaps.bundle */; };
@@ -45,10 +44,13 @@
 		DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C217FA9880007A7777 /* Huddlr_icon5.png */; };
 		DE5758C517FA98B5007A7777 /* Huddlr_icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */; };
 		DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */; };
+		DE5758D017FBBC75007A7777 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758C917FBBC75007A7777 /* DetailViewController.m */; };
+		DE5758D117FBBC75007A7777 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CB17FBBC75007A7777 /* Friend.m */; };
+		DE5758D217FBBC75007A7777 /* FriendsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CD17FBBC75007A7777 /* FriendsDataController.m */; };
+		DE5758D317FBBC75007A7777 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CF17FBBC75007A7777 /* MasterViewController.m */; };
+		DE5758D91800AB80007A7777 /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5758D71800AB80007A7777 /* Table.storyboard */; };
 		DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91BD3417EE1E0600E2170A /* HuddlrClient.m */; };
 		DEE147F017964A6E009043B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE147EF17964A6E009043B8 /* User.m */; };
-		DEE1491717D29D6F009043B8 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1491517D29D6F009043B8 /* UsersViewController.m */; };
-		DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE1491617D29D6F009043B8 /* UsersViewController.xib */; };
 		DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494417D2CBC7009043B8 /* Crypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -77,7 +79,6 @@
 		DE0DBD4817810774004E5FF9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE0DBD4A17810774004E5FF9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DE0DBD4C17810774004E5FF9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DE0DBD4F17810774004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		DE0DBD5217810775004E5FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DE0DBD5417810775004E5FF9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		DE0DBD5517810775004E5FF9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -95,13 +96,22 @@
 		DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon1.png; sourceTree = "<group>"; };
-		DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon2.png; sourceTree = "<group>"; };
-		DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon3.png; sourceTree = SOURCE_ROOT; };
-		DE5758C017FA9840007A7777 /* Huddlr_icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon4.png; sourceTree = "<group>"; };
-		DE5758C217FA9880007A7777 /* Huddlr_icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon5.png; sourceTree = "<group>"; };
-		DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon6.png; sourceTree = "<group>"; };
-		DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon7.png; sourceTree = "<group>"; };
+		DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon1.png; path = Images/Huddlr_icon1.png; sourceTree = "<group>"; };
+		DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon2.png; path = Images/Huddlr_icon2.png; sourceTree = "<group>"; };
+		DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon3.png; path = Images/Huddlr_icon3.png; sourceTree = SOURCE_ROOT; };
+		DE5758C017FA9840007A7777 /* Huddlr_icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon4.png; path = Images/Huddlr_icon4.png; sourceTree = "<group>"; };
+		DE5758C217FA9880007A7777 /* Huddlr_icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon5.png; path = Images/Huddlr_icon5.png; sourceTree = "<group>"; };
+		DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon6.png; path = Images/Huddlr_icon6.png; sourceTree = "<group>"; };
+		DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon7.png; path = Images/Huddlr_icon7.png; sourceTree = "<group>"; };
+		DE5758C817FBBC75007A7777 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DE5758C917FBBC75007A7777 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DE5758CA17FBBC75007A7777 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		DE5758CB17FBBC75007A7777 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		DE5758CC17FBBC75007A7777 /* FriendsDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDataController.h; sourceTree = "<group>"; };
+		DE5758CD17FBBC75007A7777 /* FriendsDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsDataController.m; sourceTree = "<group>"; };
+		DE5758CE17FBBC75007A7777 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		DE5758CF17FBBC75007A7777 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		DE5758D81800AB80007A7777 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Table.storyboard; sourceTree = "<group>"; };
 		DE91BD3317EE1E0600E2170A /* HuddlrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddlrClient.h; sourceTree = "<group>"; };
 		DE91BD3417EE1E0600E2170A /* HuddlrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddlrClient.m; sourceTree = "<group>"; };
 		DEE147EE17964A6E009043B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -112,9 +122,6 @@
 		DEE1488E17C82066009043B8 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../aws-ios-sdk-1.6.1/AWSRuntime.framework"; sourceTree = "<group>"; };
 		DEE1488F17C82066009043B8 /* AWSSQS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSQS.framework; path = "../aws-ios-sdk-1.6.1/AWSSQS.framework"; sourceTree = "<group>"; };
 		DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSecurityTokenService.framework; path = "../aws-ios-sdk-1.6.1/AWSSecurityTokenService.framework"; sourceTree = "<group>"; };
-		DEE1491417D29D6F009043B8 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
-		DEE1491517D29D6F009043B8 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
-		DEE1491617D29D6F009043B8 /* UsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		DEE1493F17D2CBC7009043B8 /* AmazonKeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonKeyChainWrapper.h; sourceTree = "<group>"; };
 		DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonKeyChainWrapper.m; sourceTree = "<group>"; };
 		DEE1494117D2CBC7009043B8 /* AmazonTVMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonTVMClient.h; sourceTree = "<group>"; };
@@ -232,13 +239,18 @@
 				DE0DBD4617810774004E5FF9 /* AppDelegate.m */,
 				DE91BD3317EE1E0600E2170A /* HuddlrClient.h */,
 				DE91BD3417EE1E0600E2170A /* HuddlrClient.m */,
-				DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */,
 				DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */,
+				DE5758D71800AB80007A7777 /* Table.storyboard */,
+				DE5758C817FBBC75007A7777 /* DetailViewController.h */,
+				DE5758C917FBBC75007A7777 /* DetailViewController.m */,
+				DE5758CA17FBBC75007A7777 /* Friend.h */,
+				DE5758CB17FBBC75007A7777 /* Friend.m */,
+				DE5758CC17FBBC75007A7777 /* FriendsDataController.h */,
+				DE5758CD17FBBC75007A7777 /* FriendsDataController.m */,
+				DE5758CE17FBBC75007A7777 /* MasterViewController.h */,
+				DE5758CF17FBBC75007A7777 /* MasterViewController.m */,
 				DE0DBD5417810775004E5FF9 /* MapViewController.h */,
 				DE0DBD5517810775004E5FF9 /* MapViewController.m */,
-				DEE1491417D29D6F009043B8 /* UsersViewController.h */,
-				DEE1491517D29D6F009043B8 /* UsersViewController.m */,
-				DEE1491617D29D6F009043B8 /* UsersViewController.xib */,
 				DEE147EE17964A6E009043B8 /* User.h */,
 				DEE147EF17964A6E009043B8 /* User.m */,
 				DEE1493E17D2CBC7009043B8 /* TVMClient */,
@@ -362,13 +374,12 @@
 				DE0DBD4B17810774004E5FF9 /* Default@2x.png in Resources */,
 				DE5758BF17FA9805007A7777 /* Huddlr_icon3.png in Resources */,
 				DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */,
-				DE0DBD5017810774004E5FF9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DE5758D91800AB80007A7777 /* Table.storyboard in Resources */,
 				DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */,
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
 				DE5758C117FA9840007A7777 /* Huddlr_icon4.png in Resources */,
 				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
-				DEE1491817D29D6F009043B8 /* UsersViewController.xib in Resources */,
 				DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,13 +394,16 @@
 				DE0DBD4317810774004E5FF9 /* main.m in Sources */,
 				DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */,
 				DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */,
+				DE5758D217FBBC75007A7777 /* FriendsDataController.m in Sources */,
 				DEE147F017964A6E009043B8 /* User.m in Sources */,
-				DEE1491717D29D6F009043B8 /* UsersViewController.m in Sources */,
+				DE5758D317FBBC75007A7777 /* MasterViewController.m in Sources */,
 				DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */,
 				DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */,
 				DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */,
 				DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */,
+				DE5758D017FBBC75007A7777 /* DetailViewController.m in Sources */,
 				DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */,
+				DE5758D117FBBC75007A7777 /* Friend.m in Sources */,
 				DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */,
 				DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */,
 				DEE1495D17D2CBC7009043B8 /* JSONUtilities.m in Sources */,
@@ -404,20 +418,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DE0DBD4E17810774004E5FF9 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE0DBD4F17810774004E5FF9 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
 		DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DE0DBD5217810775004E5FF9 /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DE5758D71800AB80007A7777 /* Table.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE5758D81800AB80007A7777 /* en */,
+			);
+			name = Table.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
