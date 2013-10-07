@@ -25,13 +25,6 @@ GMSMapView *mapView_;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    locationManager.delegate = self;
-    [locationManager startUpdatingLocation];
-    
     double latitude=locationManager.location.coordinate.latitude;
     double longitude=locationManager.location.coordinate.longitude;
     NSLog(@"%f, %f", latitude,longitude);

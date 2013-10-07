@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 /**
  * This is the the DNS domain name of the endpoint your Token Vending
@@ -22,7 +23,10 @@
 #define USE_SSL                      NO
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    CLLocationManager *locationManager;
+}
 @property (strong, nonatomic) UIWindow *window;
+@property(nonatomic,retain) CLLocationManager *locationManager;
 
 @end
