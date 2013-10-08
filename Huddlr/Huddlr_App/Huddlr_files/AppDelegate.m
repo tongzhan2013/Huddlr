@@ -20,12 +20,24 @@
     
     // HuddlrClient *huddlr = [[HuddlrClient alloc] initWithEndpoint:@"http://default-environment-ti2kr6z2qm.elasticbeanstalk.com/" useSSL:USE_SSL];
     
+    // Create location manager object
     locationManager = [[CLLocationManager alloc] init];
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    locationManager.delegate = self;
+    
+    // There will be a warning from this line of code; ignore it for now
+    [locationManager setDelegate:self];
+    
+    // We want all results from the location manager
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    
+    // And we want it to be as accurate as possible
+    // regardless of how much time/power it takes
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    // Tell our manager to start looking for its location immediately
     [locationManager startUpdatingLocation];
     
+    // This line may say self.window, don't worry about that
+    [[self window] makeKeyAndVisible];
     return YES;
 }
 							
@@ -56,5 +68,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)newLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
+}
 
 @end

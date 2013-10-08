@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bKK-np-Skf">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
@@ -26,7 +26,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="SVd-ah-VEg">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="iYU-Uw-9Ig"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="iYU-Uw-9Ig">
+                            <connections>
+                                <action selector="refresh:" destination="9W5-Oi-ATd" id="TEX-sB-L8E"/>
+                            </connections>
+                        </barButtonItem>
                         <switch key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="U1h-lB-3Xc">
                             <rect key="frame" x="135" y="7" width="51" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,16 +43,19 @@
                                 <state key="normal" backgroundImage="Huddlr_icon1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="huddle:" destination="9W5-Oi-ATd" eventType="touchDown" id="dh1-V8-4zZ"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="NUN-fh-vdH" kind="modal" id="1cC-Nr-RRR"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="serviceSwitch" destination="U1h-lB-3Xc" id="uX0-B0-jfh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUW-L1-qei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="74"/>
+            <point key="canvasLocation" x="715" y="64"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="QZD-tQ-FHk">

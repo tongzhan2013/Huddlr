@@ -17,7 +17,7 @@
         _name = name;
         _location = location;
         _picture = picture;
-        _selected=selected;
+        _selected = selected;
         return self;
     }
     else return nil;

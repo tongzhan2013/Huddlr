@@ -7,13 +7,9 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
-
 #import "FriendsDataController.h"
-
 #import "Friend.h"
-
 #import <QuartzCore/QuartzCore.h>
 
 @interface MasterViewController ()
@@ -27,7 +23,7 @@
     [super awakeFromNib];
     _dataController=[[FriendsDataController alloc]init];
     [self.serviceSwitch addTarget:self action:@selector(switchOff:) forControlEvents:UIControlEventValueChanged];
-    //[self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
+    [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
 
 }
 
@@ -72,6 +68,10 @@
     if (section==1) {row=row+8;}
     else if (section==2) {row=row+15;}
     Friend *friend=[self.dataController friendAtIndex: row];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] init]; // or your custom initialization
+    }
     
     
     // This step means that when you are reusing the cell, you update the checkmark situation according to this new friend that you're looking at.
