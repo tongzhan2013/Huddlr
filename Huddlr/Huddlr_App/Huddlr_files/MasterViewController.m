@@ -12,6 +12,8 @@
 #import "Friend.h"
 #import <QuartzCore/QuartzCore.h>
 
+@class MapViewController;
+
 @interface MasterViewController ()
 
 @end
@@ -105,6 +107,12 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // This sets the height of each cell in the table
+    return 60;
+}
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
@@ -138,6 +146,8 @@
         NSString *alertString=[NSString stringWithFormat:@"Your location service is switched off: Turn it on to enable real-time location monitoring"];
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message: alertString
                                                     delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        
+        //////////// We need to actually turn the location on and off with this button
         [alert show];
     }
 }
@@ -166,12 +176,12 @@
 
 }
 
-
+// This is the action from the huddle button
 - (IBAction)huddle:(id)sender {
     NSMutableString *names=[[NSMutableString alloc]init];
     [names appendString:@"Would you like to huddle with \n"];
-    int count=0;
-    for (int i=0; i<22;i++){
+    int count = 0;
+    for (int i = 0; i < 22; i++){
         Friend *friend=[self.dataController friendAtIndex:i];
         if (friend.selected==YES){
             if (count>0){
@@ -193,6 +203,14 @@
       UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Tip" message: @"Before tapping this button to initiate a huddle, please first select at least one friend"
                                                     delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
       [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != [alertView cancelButtonIndex]) {
+        NSLog(@"Launching the mapView");
+        //replace appname with any specific name you want
+        [self performSegueWithIdentifier:@"segue.modal.alert" sender:self];
     }
 }
 

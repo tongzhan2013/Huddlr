@@ -36,6 +36,10 @@
     // Tell our manager to start looking for its location immediately
     [locationManager startUpdatingLocation];
     
+    //double latitude=locationManager.location.coordinate.latitude;
+    //double longitude=locationManager.location.coordinate.longitude;
+    //NSLog(@"%f, %f", latitude,longitude);
+    
     // This line may say self.window, don't worry about that
     [[self window] makeKeyAndVisible];
     return YES;

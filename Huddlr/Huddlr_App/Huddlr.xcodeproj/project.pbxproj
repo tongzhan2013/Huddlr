@@ -87,6 +87,7 @@
 		DEE1496117D2CBC7009043B8 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495417D2CBC7009043B8 /* Response.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495617D2CBC7009043B8 /* ResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
+		DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE462761804BDD6005C8618 /* Huddlr_icon8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +194,7 @@
 		DEE1495517D2CBC7009043B8 /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = "<group>"; };
 		DEE1495617D2CBC7009043B8 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
 		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DEE462761804BDD6005C8618 /* Huddlr_icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon8.png; path = Images/Huddlr_icon8.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				DE5758C217FA9880007A7777 /* Huddlr_icon5.png */,
 				DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */,
 				DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */,
+				DEE462761804BDD6005C8618 /* Huddlr_icon8.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
 				DE5759041800DC83007A7777 /* Tong.png in Resources */,
+				DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */,
 				DE5758FF1800DC83007A7777 /* Natalia.JPG in Resources */,
 				DE5758C117FA9840007A7777 /* Huddlr_icon4.png in Resources */,
 				DE5758DC1800DC67007A7777 /* Aaron.png in Resources */,

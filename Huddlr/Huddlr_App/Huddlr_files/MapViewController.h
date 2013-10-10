@@ -16,6 +16,9 @@
 #import "AmazonTVMClient.h"
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 
 @property(nonatomic,retain) CLLocationManager *locationManager;
 

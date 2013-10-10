@@ -25,9 +25,27 @@ GMSMapView *mapView_;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Create location manager object
+    locationManager = [[CLLocationManager alloc] init];
+    
+    // There will be a warning from this line of code; ignore it for now
+    [locationManager setDelegate:self];
+    
+    // We want all results from the location manager
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    
+    // And we want it to be as accurate as possible
+    // regardless of how much time/power it takes
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    // Tell our manager to start looking for its location immediately
+    [locationManager startUpdatingLocation];
+    
     double latitude=locationManager.location.coordinate.latitude;
     double longitude=locationManager.location.coordinate.longitude;
-    NSLog(@"%f, %f", latitude,longitude);
+    
+    
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude                                                            longitude: longitude zoom:10];
@@ -38,6 +56,7 @@ GMSMapView *mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
     
+    NSLog(@"%f, %f", latitude,longitude);
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];

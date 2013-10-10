@@ -22,7 +22,7 @@
  */
 #define USE_SSL                      NO
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
 }
