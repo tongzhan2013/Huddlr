@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Master View Controller - Item-->
+        <!--Master View Controller-->
         <scene sceneID="qCt-Fe-1Xc">
             <objects>
                 <tableViewController id="9W5-Oi-ATd" customClass="MasterViewController" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="wGE-gF-QPP"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="wGE-gF-QPP"/>
                     <navigationItem key="navigationItem" id="SVd-ah-VEg">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="iYU-Uw-9Ig">
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="1211" y="74"/>
         </scene>
-        <!--Map View Controller - Item-->
+        <!--Map View Controller-->
         <scene sceneID="QZD-tQ-FHk">
             <objects>
                 <viewController id="NUN-fh-vdH" customClass="MapViewController" sceneMemberID="viewController">
@@ -71,29 +71,20 @@
                     <view key="view" contentMode="scaleToFill" id="vVo-gU-jKg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-eg-RkY">
-                                <rect key="frame" x="20" y="20" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PWI-L8-igV"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="bookmarks" id="PWI-L8-igV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjz-ms-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="1250"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Zc3-pm-08c">
             <objects>
                 <navigationController definesPresentationContext="YES" id="bKK-np-Skf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3Vh-ky-6Zu"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="3Vh-ky-6Zu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TG6-JO-Gxs">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -134,6 +125,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zz9-zs-AIh"/>
+        <segue reference="5dN-Wg-74k"/>
     </inferredMetricsTieBreakers>
 </document>
