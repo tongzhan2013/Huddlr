@@ -10,8 +10,10 @@
 @class FriendsDataController;
 
 @interface MasterViewController : UITableViewController <UITableViewDelegate>
+
 @property (strong, nonatomic) FriendsDataController *dataController;
 @property (weak, nonatomic) IBOutlet UISwitch *serviceSwitch;
+@property (nonatomic, retain) NSMutableArray *huddleList;
 - (IBAction)huddle:(id)sender;
 - (IBAction)refresh:(id)sender;
 

@@ -9,17 +9,12 @@
 #import "MapViewController.h"
 
 
-@interface MapViewController (){
-}
-
-@end
-
-
 @implementation MapViewController {
 GMSMapView *mapView_;
 }
 
     @synthesize locationManager;
+    @synthesize huddleList;
 
 // You don't need to modify the default initWithNibName:bundle: method.
 
@@ -59,11 +54,16 @@ GMSMapView *mapView_;
     NSLog(@"%f, %f", latitude,longitude);
     
     // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = mapView_.myLocation.coordinate;
-    marker.title = @"William Zhao";
-    marker.snippet = @"Swag";
-    marker.map = mapView_;
+    for(id friend in huddleList)
+    {
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = mapView_.myLocation.coordinate;
+        marker.title = @"William Zhao";
+        marker.snippet = @"Swag";
+        marker.map = mapView_;
+        NSLog(@"Found a friend: %@",friend);
+    }
+    
 }
  
 

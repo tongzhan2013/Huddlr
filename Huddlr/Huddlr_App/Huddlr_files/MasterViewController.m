@@ -179,6 +179,7 @@
 // This is the action from the huddle button
 - (IBAction)huddle:(id)sender {
     NSMutableString *names=[[NSMutableString alloc]init];
+    NSMutableArray *huddleList=[[NSMutableArray alloc]init];
     [names appendString:@"Would you like to huddle with \n"];
     int count = 0;
     for (int i = 0; i < 22; i++){
@@ -189,7 +190,7 @@
             }
             count=count+1;
             [names appendString:friend.name];
-        
+            [huddleList addObject:friend];
         }
     }
     [names appendString:@"? "];
@@ -210,7 +211,8 @@
     if (buttonIndex != [alertView cancelButtonIndex]) {
         NSLog(@"Launching the mapView");
         //replace appname with any specific name you want
-        [self performSegueWithIdentifier:@"segue.modal.alert" sender:self];
+        [self.tabBarController setSelectedIndex:1];
+        //[self performSegueWithIdentifier:@"segue.modal.alert" sender:self];
     }
 }
 

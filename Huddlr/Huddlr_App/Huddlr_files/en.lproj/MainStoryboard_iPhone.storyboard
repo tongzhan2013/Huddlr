@@ -24,7 +24,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="wGE-gF-QPP"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="wGE-gF-QPP"/>
                     <navigationItem key="navigationItem" id="SVd-ah-VEg">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="iYU-Uw-9Ig">
@@ -46,7 +46,6 @@
                                 </state>
                                 <connections>
                                     <action selector="huddle:" destination="9W5-Oi-ATd" eventType="touchDown" id="dh1-V8-4zZ"/>
-                                    <segue destination="NUN-fh-vdH" kind="modal" identifier="segue.modal.alert" id="5dN-Wg-74k"/>
                                 </connections>
                             </button>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -73,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="bookmarks" id="PWI-L8-igV"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="PWI-L8-igV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjz-ms-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,7 +83,7 @@
         <scene sceneID="Zc3-pm-08c">
             <objects>
                 <navigationController definesPresentationContext="YES" id="bKK-np-Skf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="3Vh-ky-6Zu"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="3Vh-ky-6Zu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TG6-JO-Gxs">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -124,7 +123,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="5dN-Wg-74k"/>
-    </inferredMetricsTieBreakers>
 </document>

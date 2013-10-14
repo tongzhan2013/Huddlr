@@ -14,12 +14,15 @@
 #import "User.h"
 #import "AmazonKeyChainWrapper.h"
 #import "AmazonTVMClient.h"
+#import "MasterViewController.h"
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
+    NSMutableArray *huddleList;
 }
 
 @property(nonatomic,retain) CLLocationManager *locationManager;
+@property(nonatomic,copy) NSMutableArray *huddleList;
 
 @end
