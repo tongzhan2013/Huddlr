@@ -60,7 +60,7 @@ GMSMapView *mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = mapView_.myLocation.coordinate;
+    marker.position=CLLocationCoordinate2DMake(latitude,longitude);
     marker.title = @"William Zhao";
     marker.snippet = @"Swag";
     marker.map = mapView_;
