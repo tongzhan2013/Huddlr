@@ -53,11 +53,17 @@ GMSMapView *mapView_;
     
     NSLog(@"%f, %f", latitude,longitude);
     
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position=CLLocationCoordinate2DMake(latitude,longitude);
+    marker.title = @"William Zhao";
+    marker.snippet = @"Swag";
+    marker.map = mapView_;
+    
     // Creates a marker in the center of the map.
     for(id friend in huddleList)
     {
         GMSMarker *marker = [[GMSMarker alloc] init];
-        marker.position = mapView_.myLocation.coordinate;
+        marker.position=CLLocationCoordinate2DMake(latitude,longitude);
         marker.title = @"William Zhao";
         marker.snippet = @"Swag";
         marker.map = mapView_;
