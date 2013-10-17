@@ -21,6 +21,7 @@
 //here is a static initialization of the FriendsDataController
 -(void) initializeDefaultList {
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
+    _friendNames = [[NSMutableArray alloc] init];
     self.friendList=newArray;
  
     NSString *fileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"staticfrienddata" ofType: @"txt"] encoding:NSUTF8StringEncoding error:NULL];
@@ -31,7 +32,7 @@
         NSArray *values = [[NSArray alloc] init];
         values = [line componentsSeparatedByString:@","];
         if ([values count]>1){
-            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0 location: [values objectAtIndex:1] picture: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
+            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0] location: [values objectAtIndex:1] picture: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
             [self addFriend:myFriend];
         
             //the zeroth component in each line of the file is the name

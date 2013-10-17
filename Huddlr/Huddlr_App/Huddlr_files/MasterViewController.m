@@ -39,6 +39,9 @@
     // Additional setup
     
     _friendNames=_dataController.friendNames;
+    
+    NSLog(@"%@", _friendNames);
+    
     _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
     _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
     _friendsFarAway=[[NSMutableArray alloc]init];
@@ -316,7 +319,6 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    _dataController=[[FriendsDataController alloc]init];
     
     for (int i=0; i<[_dataController countOfFriends]; i++){
         Friend *friend=[_dataController friendAtIndex:i];

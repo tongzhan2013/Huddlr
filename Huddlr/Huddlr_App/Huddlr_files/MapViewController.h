@@ -14,7 +14,7 @@
 #import "User.h"
 #import "AmazonKeyChainWrapper.h"
 #import "AmazonTVMClient.h"
-#import "MasterViewController.h"
+//#import "MasterViewController.h"
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>
 {
