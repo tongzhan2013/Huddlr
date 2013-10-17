@@ -17,6 +17,8 @@
         _name = name;
         _location = location;
         _picture = picture;
+        _latitude= latitude;
+        _longitude= longitude;
         _selected = selected;
         return self;
     }

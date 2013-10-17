@@ -1,22 +1,22 @@
-Xiao Wu,TD College,Xiao.png,NO
-Ivan Fan,Morse College,Ivan.png,NO
-Tong Zhan,Morse College,Tong.png,NO
-Will Zhao,Morse College,Will.png,NO
-Jie Min,Yale Law School,Jie.png,NO 
-Diana Saverin,484 College Street,Diana.png,NO
-Henry Gottfried,484 College Street,Henry.png,NO
-Jessica Oddie,Yale Music School,Jessica.png,NO
-Sinye Tang,New York,Sinye.png,NO
-Nicholas Medina Mora,New York,Nicolas.JPG,NO
-Willa Fitzgerald,New York,Willa.png,NO
-Orlando Hernandez,New York,Orlando.png,NO
-Cassius Clay,New York,Cassius.png,NO
-Natalia Emanuel,NBER,Natalia.JPG,NO
-Aaron,Boston,Aaron.png,NO
-Ben Elder,Philadelphia,Ben.png,NO
-Josh Penny,Atlanta,Josh.png,NO
-Christy Nelson,Stanford University,Christy.png,NO
-Danqing Liu,San Francisco,Danqing.png,NO
-David Carel,England,David.png,NO
-Adele Jackson Gibson,Japan,Adele.png,NO
-Wen Hu,China,Wen.png,NO 
+Aaron Feuer,Boston,Aaron.png,42.367169,-71.06163
+Adele Jackson Gibson,Japan,Adele.png,35.701359,139.691849
+Ben Elder,Philadelphia,Ben.png,39.976068,-75.164337
+Cassius Clay,New York,Cassius.png,40.739974,-74.012146
+Christy Nelson,Stanford University,Christy.png,37.429001,-122.1696
+Danqing Liu,San Francisco,Danqing.png,37.780755,-122.418594
+David Carel,England,David.png,51.756153,-1.257248
+Diana Saverin,484 College Street,Diana.png,41.311694,-72.925336
+Henry Gottfried,484 College Street,Henry.png,41.311694,-72.925336
+Ivan Fan,Morse College,Ivan.png,41.313096,-72.930057
+Jessica Oddie,Yale Music School,Jessica.png,41.308632,-72.928963
+Jie Min,Yale Law School,Jie.png,41.313209,-72.92819
+Josh Penny,Atlanta,Josh.png,33.762024,-84.385986
+Natalia Emanuel,NBER,Natalia.JPG,42.370435,-71.112657
+Nicolas Medina Mora,New York,Nicolas.JPG,40.739974,-74.012146
+Orlando Hernandez,New York,Orlando.png,40.739974,-74.012146
+Sinye Tang,New York,Sinye.png,40.739974,-74.012146
+Tong Zhan,Morse College,Tong.png,41.313096,-72.930057
+Wen Hu,China,Wen.png,31.294981,121.473083
+Will Zhao,Morse College,Will.png,41.313096,-72.930057
+Willa Fitzgerald,New York,Willa.png,40.739974,-74.012146
+Xiao Wu,TD College,Xiao.png,41.310727,-72.923877

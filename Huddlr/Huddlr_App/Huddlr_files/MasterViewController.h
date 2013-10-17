@@ -9,9 +9,23 @@
 #import <UIKit/UIKit.h>
 @class FriendsDataController;
 
-@interface MasterViewController : UITableViewController <UITableViewDelegate>
+// The following declarations are used for calculating static distance as well as for reverse geocoding
+const double myLatitude=41.310727;
+const double myLongitude=-72.923877;
+const double RADIANS=0.0174532925;
+
+@interface MasterViewController : UITableViewController <UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) FriendsDataController *dataController;
+
+/* These arrays manage data for the different sections, which are sorted by distance. There should also be an array for offline friends */
+@property (nonatomic, copy) NSMutableArray *friendsWithinFiveHundredFeet;
+@property (nonatomic, copy) NSMutableArray *friendsWithinHalfAMile;
+@property (nonatomic, copy) NSMutableArray *friendsFarAway;
+
+// This array contains friend names from which to search
+@property (nonatomic, copy) NSArray *friendNames;
+
 @property (weak, nonatomic) IBOutlet UISwitch *serviceSwitch;
 @property (nonatomic, retain) NSMutableArray *huddleList;
 - (IBAction)huddle:(id)sender;
