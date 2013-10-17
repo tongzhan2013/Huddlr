@@ -30,12 +30,13 @@
     for(NSString *line in lines){
         NSArray *values = [[NSArray alloc] init];
         values = [line componentsSeparatedByString:@","];
-            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0] location: [values objectAtIndex:1] picture: [values objectAtIndex:2] selected: NO];
+        if ([values count]>1){
+            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0 location: [values objectAtIndex:1] picture: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
             [self addFriend:myFriend];
         
-        //the zeroth component in each line of the file is the name
-        [_friendNames addObject:[[properties objectAtIndex:0] mutableCopy]];
-        
+            //the zeroth component in each line of the file is the name
+            [_friendNames addObject:[[values objectAtIndex:0] mutableCopy]];
+        }
     }
 }
 
