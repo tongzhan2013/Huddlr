@@ -39,9 +39,6 @@
     // Additional setup
     
     _friendNames=_dataController.friendNames;
-    
-    NSLog(@"%@", _friendNames);
-    
     _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
     _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
     _friendsFarAway=[[NSMutableArray alloc]init];
