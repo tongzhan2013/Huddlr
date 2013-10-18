@@ -23,6 +23,7 @@
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
     _friendNames = [[NSMutableArray alloc] init];
     self.friendList=newArray;
+    _friendNames=[[NSMutableArray alloc] init];
  
     NSString *fileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"staticfrienddata" ofType: @"txt"] encoding:NSUTF8StringEncoding error:NULL];
    

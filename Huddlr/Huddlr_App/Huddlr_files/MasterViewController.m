@@ -348,7 +348,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
 {
     [self filterContentForSearchText:searchString
                                scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                               objectAtIndex:[self.searchDisplayController.searchBar
+                                    objectAtIndex:[self.searchDisplayController.searchBar
                                                      selectedScopeButtonIndex]]];
     
     /* Immediately after this method returns YES, cellForRowAtIndexPath is called to display the filtered search results every time the user inputs */
