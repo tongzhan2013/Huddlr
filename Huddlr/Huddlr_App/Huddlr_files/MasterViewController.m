@@ -311,6 +311,7 @@
         NSLog(@"Launching the mapView");
         //replace appname with any specific name you want
         [self.tabBarController setSelectedIndex:1];
+        [self.tabBarController viewControllers];
         //[self performSegueWithIdentifier:@"segue.modal.alert" sender:self];
     }
 }

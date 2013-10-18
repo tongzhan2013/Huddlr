@@ -14,7 +14,7 @@ GMSMapView *mapView_;
 }
 
     @synthesize locationManager;
-    @synthesize huddleList;
+    // @synthesize huddleList;
 
 // You don't need to modify the default initWithNibName:bundle: method.
 
