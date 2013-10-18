@@ -88,6 +88,7 @@
 		DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495617D2CBC7009043B8 /* ResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
 		DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE462761804BDD6005C8618 /* Huddlr_icon8.png */; };
+		DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE462CA180F93EF005C8618 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +196,7 @@
 		DEE1495617D2CBC7009043B8 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
 		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DEE462761804BDD6005C8618 /* Huddlr_icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon8.png; path = Images/Huddlr_icon8.png; sourceTree = "<group>"; };
+		DEE462CA180F93EF005C8618 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */,
 				DE5758B217F907DD007A7777 /* AWSSQS.framework in Frameworks */,
 				DE5758B117F907B3007A7777 /* AWSCloudWatch.framework in Frameworks */,
 				DE5758B017F9078E007A7777 /* AWSAutoScaling.framework in Frameworks */,
@@ -252,6 +255,7 @@
 		DE0DBD3517810774004E5FF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEE462CA180F93EF005C8618 /* MapKit.framework */,
 				DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */,
 				DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */,
 				DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */,

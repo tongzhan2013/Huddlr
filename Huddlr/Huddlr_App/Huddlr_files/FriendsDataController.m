@@ -21,6 +21,7 @@
 //here is a static initialization of the FriendsDataController
 -(void) initializeDefaultList {
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
+    _friendNames = [[NSMutableArray alloc] init];
     self.friendList=newArray;
     _friendNames=[[NSMutableArray alloc] init];
  
