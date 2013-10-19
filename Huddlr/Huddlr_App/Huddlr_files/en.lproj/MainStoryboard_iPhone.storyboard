@@ -127,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map-pin.png" id="PWI-L8-igV"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map.png" id="PWI-L8-igV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjz-ms-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,9 +175,9 @@
     <resources>
         <image name="Huddles.png" width="20" height="18"/>
         <image name="Huddlr_icon8.png" width="114" height="114"/>
+        <image name="Map.png" width="30" height="30"/>
         <image name="Profile.png" width="30" height="30"/>
         <image name="home.png" width="30" height="30"/>
-        <image name="map-pin.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
