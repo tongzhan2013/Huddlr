@@ -7,14 +7,15 @@
 //
 
 #import "MapViewController.h"
-
+#import "Friend.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation MapViewController {
 GMSMapView *mapView_;
 }
 
     @synthesize locationManager;
-    // @synthesize huddleList;
+    @synthesize huddleList;
 
 // You don't need to modify the default initWithNibName:bundle: method.
 
@@ -44,14 +45,13 @@ GMSMapView *mapView_;
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude                                                            longitude: longitude zoom:10];
-    
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    CGFloat height=[[UIScreen mainScreen] applicationFrame].size.height;
+    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0,60,320,height-89) camera:camera];
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
     
-    NSLog(@"%f, %f", latitude,longitude);
     
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position=CLLocationCoordinate2DMake(latitude,longitude);
@@ -60,14 +60,13 @@ GMSMapView *mapView_;
     marker.map = mapView_;
     
     // Creates a marker in the center of the map.
-    for(id friend in huddleList)
-    {
+    for (int i=0; i<[huddleList count]; i++){
+        Friend *friend=[huddleList objectAtIndex:i];
         GMSMarker *marker = [[GMSMarker alloc] init];
-        marker.position=CLLocationCoordinate2DMake(latitude,longitude);
-        marker.title = @"William Zhao";
-        marker.snippet = @"Swag";
-        marker.map = mapView_;
-        NSLog(@"Found a friend: %@",friend);
+        marker.position=CLLocationCoordinate2DMake(friend.latitude, friend.longitude);
+        marker.title=friend.name;
+        marker.snippet =@"Great!";
+        marker.map=mapView_;
     }
     
 }

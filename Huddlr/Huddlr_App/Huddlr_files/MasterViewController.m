@@ -7,7 +7,6 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
 #import "FriendsDataController.h"
 #import "Friend.h"
 #import <QuartzCore/QuartzCore.h>
@@ -15,6 +14,10 @@
 //Make sure you have these frameworks linked
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+
+#import "MapViewController.h"
+
+
 
 @class MapViewController;
 
@@ -308,11 +311,17 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != [alertView cancelButtonIndex]) {
-        NSLog(@"Launching the mapView");
-        //replace appname with any specific name you want
+        //lead the user to the map tab
+        MapViewController *mapController=[self.tabBarController.viewControllers objectAtIndex:1];
+        mapController.huddleList=[[NSMutableArray alloc]init];
+        
+        for (int i=0; i<[_dataController countOfFriends]; i++){
+            Friend *friend=[_dataController friendAtIndex:i];
+            if (friend.selected==YES){
+                [mapController.huddleList addObject:friend];
+            }
+        }
         [self.tabBarController setSelectedIndex:1];
-        [self.tabBarController viewControllers];
-        //[self performSegueWithIdentifier:@"segue.modal.alert" sender:self];
     }
 }
 

@@ -23,6 +23,6 @@
 }
 
 @property(nonatomic,retain) CLLocationManager *locationManager;
-@property(nonatomic,copy) NSMutableArray *huddleList;
+@property(nonatomic,retain) NSMutableArray *huddleList;
 
 @end

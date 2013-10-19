@@ -44,7 +44,6 @@
 		DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C217FA9880007A7777 /* Huddlr_icon5.png */; };
 		DE5758C517FA98B5007A7777 /* Huddlr_icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */; };
 		DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */; };
-		DE5758D017FBBC75007A7777 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758C917FBBC75007A7777 /* DetailViewController.m */; };
 		DE5758D117FBBC75007A7777 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CB17FBBC75007A7777 /* Friend.m */; };
 		DE5758D217FBBC75007A7777 /* FriendsDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CD17FBBC75007A7777 /* FriendsDataController.m */; };
 		DE5758D317FBBC75007A7777 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5758CF17FBBC75007A7777 /* MasterViewController.m */; };
@@ -132,8 +131,6 @@
 		DE5758C217FA9880007A7777 /* Huddlr_icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon5.png; path = Images/Huddlr_icon5.png; sourceTree = "<group>"; };
 		DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon6.png; path = Images/Huddlr_icon6.png; sourceTree = "<group>"; };
 		DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon7.png; path = Images/Huddlr_icon7.png; sourceTree = "<group>"; };
-		DE5758C817FBBC75007A7777 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		DE5758C917FBBC75007A7777 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		DE5758CA17FBBC75007A7777 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
 		DE5758CB17FBBC75007A7777 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		DE5758CC17FBBC75007A7777 /* FriendsDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDataController.h; sourceTree = "<group>"; };
@@ -301,8 +298,6 @@
 				DE91BD3417EE1E0600E2170A /* HuddlrClient.m */,
 				DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */,
 				DE5758D71800AB80007A7777 /* MainStoryboard_iPhone.storyboard */,
-				DE5758C817FBBC75007A7777 /* DetailViewController.h */,
-				DE5758C917FBBC75007A7777 /* DetailViewController.m */,
 				DE5758CA17FBBC75007A7777 /* Friend.h */,
 				DE5758CB17FBBC75007A7777 /* Friend.m */,
 				DE5758CC17FBBC75007A7777 /* FriendsDataController.h */,
@@ -525,7 +520,6 @@
 				DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */,
 				DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */,
 				DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */,
-				DE5758D017FBBC75007A7777 /* DetailViewController.m in Sources */,
 				DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */,
 				DE5758D117FBBC75007A7777 /* Friend.m in Sources */,
 				DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */,
@@ -633,12 +627,12 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/xiaosheng/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
@@ -657,12 +651,12 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/xiaosheng/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;

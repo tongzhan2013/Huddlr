@@ -27,7 +27,7 @@ const double RADIANS=0.0174532925;
 @property (nonatomic, copy) NSArray *friendNames;
 
 @property (weak, nonatomic) IBOutlet UISwitch *serviceSwitch;
-@property (nonatomic, copy) NSMutableArray *huddleList;
+
 - (IBAction)huddle:(id)sender;
 - (IBAction)refresh:(id)sender;
 
