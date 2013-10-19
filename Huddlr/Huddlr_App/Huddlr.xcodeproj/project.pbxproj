@@ -627,12 +627,12 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/xiaosheng/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
@@ -651,12 +651,12 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/xiaosheng/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
