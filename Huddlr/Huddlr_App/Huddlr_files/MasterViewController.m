@@ -276,7 +276,7 @@
 
 
 // This is the action from the huddle button
-- (IBAction)huddle:(id)sender {
+- (IBAction)huddle:(id)sener {
     NSMutableString *names=[[NSMutableString alloc]init];
     NSMutableArray *huddleList=[[NSMutableArray alloc]init];
     [names appendString:@"Would you like to huddle with \n"];
