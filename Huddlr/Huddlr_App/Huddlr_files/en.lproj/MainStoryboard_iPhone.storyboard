@@ -32,7 +32,6 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="wGE-gF-QPP"/>
                     <navigationItem key="navigationItem" id="SVd-ah-VEg">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="iYU-Uw-9Ig">
@@ -77,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="1211" y="74"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Profile-->
         <scene sceneID="MTx-49-SZR">
             <objects>
                 <viewController id="zwn-lf-ULl" sceneMemberID="viewController">
@@ -90,13 +89,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Laf-Wy-Hf9"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile.png" id="Laf-Wy-Hf9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gs-Jn-43g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="837"/>
+            <point key="canvasLocation" x="1659" y="830"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Huddles-->
         <scene sceneID="Z5e-Mk-ZOT">
             <objects>
                 <viewController id="QK0-C0-fQ0" sceneMemberID="viewController">
@@ -109,13 +108,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="wMO-hW-9xO"/>
+                    <tabBarItem key="tabBarItem" title="Huddles" image="Huddles.png" id="wMO-hW-9xO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdX-hY-Fkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671" y="841"/>
+            <point key="canvasLocation" x="1211" y="830"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View Controller - Map-->
         <scene sceneID="QZD-tQ-FHk">
             <objects>
                 <viewController id="NUN-fh-vdH" customClass="MapViewController" sceneMemberID="viewController">
@@ -128,18 +127,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="PWI-L8-igV"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map-pin.png" id="PWI-L8-igV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjz-ms-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="732" y="830"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Home-->
         <scene sceneID="Zc3-pm-08c">
             <objects>
                 <navigationController definesPresentationContext="YES" id="bKK-np-Skf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="3Vh-ky-6Zu"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="3Vh-ky-6Zu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TG6-JO-Gxs">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -174,7 +173,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Huddles.png" width="20" height="18"/>
         <image name="Huddlr_icon8.png" width="114" height="114"/>
+        <image name="Profile.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="map-pin.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -72,6 +72,10 @@
 		DE5759061800DC83007A7777 /* Will.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758F01800DC83007A7777 /* Will.png */; };
 		DE5759071800DC83007A7777 /* Willa.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758F11800DC83007A7777 /* Willa.png */; };
 		DE5759081800DC83007A7777 /* Xiao.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758F21800DC83007A7777 /* Xiao.png */; };
+		DE721F7F1812085D00ECC698 /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F7E1812085D00ECC698 /* map-pin.png */; };
+		DE721F81181209A500ECC698 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F80181209A500ECC698 /* home.png */; };
+		DE721F8418120C2D00ECC698 /* Huddles.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F8218120C2D00ECC698 /* Huddles.png */; };
+		DE721F8518120C2D00ECC698 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F8318120C2D00ECC698 /* Profile.png */; };
 		DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91BD3417EE1E0600E2170A /* HuddlrClient.m */; };
 		DEE147F017964A6E009043B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE147EF17964A6E009043B8 /* User.m */; };
 		DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -160,6 +164,10 @@
 		DE5758F01800DC83007A7777 /* Will.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Will.png; path = "User Data/Will.png"; sourceTree = SOURCE_ROOT; };
 		DE5758F11800DC83007A7777 /* Willa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Willa.png; path = "User Data/Willa.png"; sourceTree = SOURCE_ROOT; };
 		DE5758F21800DC83007A7777 /* Xiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Xiao.png; path = "User Data/Xiao.png"; sourceTree = SOURCE_ROOT; };
+		DE721F7E1812085D00ECC698 /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-pin.png"; path = "Images/map-pin.png"; sourceTree = "<group>"; };
+		DE721F80181209A500ECC698 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Images/home.png; sourceTree = "<group>"; };
+		DE721F8218120C2D00ECC698 /* Huddles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddles.png; path = Images/Huddles.png; sourceTree = "<group>"; };
+		DE721F8318120C2D00ECC698 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile.png; path = Images/Profile.png; sourceTree = "<group>"; };
 		DE91BD3317EE1E0600E2170A /* HuddlrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddlrClient.h; sourceTree = "<group>"; };
 		DE91BD3417EE1E0600E2170A /* HuddlrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddlrClient.m; sourceTree = "<group>"; };
 		DEE147EE17964A6E009043B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -336,6 +344,10 @@
 				DE5758C417FA98B5007A7777 /* Huddlr_icon6.png */,
 				DE5758C617FA98F5007A7777 /* Huddlr_icon7.png */,
 				DEE462761804BDD6005C8618 /* Huddlr_icon8.png */,
+				DE721F7E1812085D00ECC698 /* map-pin.png */,
+				DE721F80181209A500ECC698 /* home.png */,
+				DE721F8218120C2D00ECC698 /* Huddles.png */,
+				DE721F8318120C2D00ECC698 /* Profile.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -475,6 +487,8 @@
 				DE5758FA1800DC83007A7777 /* Henry.png in Resources */,
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
+				DE721F8418120C2D00ECC698 /* Huddles.png in Resources */,
+				DE721F81181209A500ECC698 /* home.png in Resources */,
 				DE5759041800DC83007A7777 /* Tong.png in Resources */,
 				DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */,
 				DE5758FF1800DC83007A7777 /* Natalia.JPG in Resources */,
@@ -485,7 +499,9 @@
 				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
 				DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */,
 				DE5758F71800DC83007A7777 /* Danqing.png in Resources */,
+				DE721F8518120C2D00ECC698 /* Profile.png in Resources */,
 				DE5758F41800DC83007A7777 /* Ben.png in Resources */,
+				DE721F7F1812085D00ECC698 /* map-pin.png in Resources */,
 				DE5758FE1800DC83007A7777 /* Josh.png in Resources */,
 				DE5758F91800DC83007A7777 /* Diana.png in Resources */,
 				DE5758FD1800DC83007A7777 /* Jie.png in Resources */,
