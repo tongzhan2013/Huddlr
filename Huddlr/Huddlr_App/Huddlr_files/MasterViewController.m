@@ -36,7 +36,6 @@
 {
     [super awakeFromNib];
     _dataController=[[FriendsDataController alloc]init];
-    [self.serviceSwitch addTarget:self action:@selector(switchOff:) forControlEvents:UIControlEventValueChanged];
     [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
     
     // Additional setup
@@ -206,9 +205,9 @@
         else if (section==1) {string=@"Within 1/2 Mile";}
         else if (section==2) {string=@"Far Away";}
         [label setText:string];
-        [label setTextColor:[UIColor grayColor]];
+        [label setTextColor:[UIColor whiteColor]];
         [view addSubview:label];
-        [view setBackgroundColor:[UIColor lightGrayColor]];
+        [view setBackgroundColor:[UIColor colorWithRed:60.0/255.0 green:179.0/255.0 blue:113.0/255.0 alpha:0.7]];
         return view;
     }
     else return nil;
@@ -227,17 +226,6 @@
 
 
 #pragma mark-configure actions
-
--(void)switchOff:(id)sender{
-    if (![sender isOn]){
-        NSString *alertString=[NSString stringWithFormat:@"Your location service is switched off: Turn it on to enable real-time location monitoring"];
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message: alertString
-                                                    delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        
-        //////////// We need to actually turn the location on and off with this button
-        [alert show];
-    }
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];

@@ -14,7 +14,6 @@
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
-    NSMutableArray *huddleList;
 }
 
 @property(nonatomic,retain) CLLocationManager *locationManager;

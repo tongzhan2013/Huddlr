@@ -1,18 +1,18 @@
 //
-//  EmailViewController.m
+//  MobileViewController.m
 //  Huddlr
 //
 //  Created by Xiaosheng Mu on 10/19/13.
 //  Copyright (c) 2013 William Zhao. All rights reserved.
 //
 
-#import "EmailViewController.h"
+#import "MobileViewController.h"
 
-@interface EmailViewController ()
+@interface MobileViewController ()
 
 @end
 
-@implementation EmailViewController
+@implementation MobileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,12 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.emailInput.delegate=self;
+    self.mobileInput.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{

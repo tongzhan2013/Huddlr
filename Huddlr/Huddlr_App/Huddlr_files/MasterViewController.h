@@ -26,8 +26,6 @@ const double RADIANS=0.0174532925;
 // This array contains friend names from which to search
 @property (nonatomic, copy) NSArray *friendNames;
 
-@property (weak, nonatomic) IBOutlet UISwitch *serviceSwitch;
-
 - (IBAction)huddle:(id)sender;
 - (IBAction)refresh:(id)sender;
 
