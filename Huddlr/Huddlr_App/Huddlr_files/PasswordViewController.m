@@ -16,28 +16,17 @@
 
 @implementation PasswordViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.oldPasswordInput.delegate=self;
     self.passwordInput.delegate=self;
     self.confirmPasswordInput.delegate=self;
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -45,8 +34,13 @@
     return YES;
 }
 
+/////////Use KeyChainItem to increase security 
+
 - (IBAction)done:(id)sender {
-    if (![_oldPasswordInput.text isEqualToString:_passwordCheck]){
+    NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
+    NSString *passwordCheck=[prefs objectForKey:@"password"];
+    
+    if (![_oldPasswordInput.text isEqualToString:passwordCheck]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Invalid old password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
@@ -55,8 +49,7 @@
         [alert show];
     }
     else {
-        SettingsViewController *controller=(SettingsViewController *)[[self.navigationController viewControllers] objectAtIndex:0];
-        controller.dataController.password=self.passwordInput.text;
+        [prefs setObject:_passwordInput.text forKey:@"password"];
         [self.navigationController popViewControllerAnimated:YES];
     }
     

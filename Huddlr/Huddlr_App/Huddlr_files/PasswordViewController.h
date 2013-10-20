@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PasswordViewController : UIViewController <UITextFieldDelegate>
+@interface PasswordViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *oldPasswordInput;
 @property (weak, nonatomic) IBOutlet UITextField *passwordInput;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordInput;
-@property (nonatomic, copy) NSString *passwordCheck;
 
 @end

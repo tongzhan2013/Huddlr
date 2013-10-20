@@ -17,11 +17,7 @@ GMSMapView *mapView_;
     @synthesize locationManager;
     @synthesize huddleList;
 
-// You don't need to modify the default initWithNibName:bundle: method.
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)viewWillAppear:(BOOL)animated{
     // Create location manager object
     locationManager = [[CLLocationManager alloc] init];
     
@@ -42,13 +38,12 @@ GMSMapView *mapView_;
     double longitude=locationManager.location.coordinate.longitude;
     
     
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude                                                            longitude: longitude zoom:10];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude longitude: longitude zoom:10];
     CGFloat height=[[UIScreen mainScreen] applicationFrame].size.height;
-    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0,60,320,height-89) camera:camera];
+    CGFloat width=[[UIScreen mainScreen] applicationFrame].size.width;
+    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0,20,width,height-50) camera:camera];
     mapView_.myLocationEnabled = YES;
-    self.view = mapView_;
+    self.view=mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
     
@@ -68,6 +63,10 @@ GMSMapView *mapView_;
         marker.snippet =@"Great!";
         marker.map=mapView_;
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
 }
  

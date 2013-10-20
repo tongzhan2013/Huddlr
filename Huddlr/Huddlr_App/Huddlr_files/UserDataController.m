@@ -12,10 +12,11 @@
 
 -(id) init{
     if (self=[super init]){
-        _username=@"Tong Zhan";
-        _password=@"12345678";
-        _email=@"tong.zhan@aya.yale.edu";
-        _mobile=@"513-260-4054";
+        NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
+        _username = [prefs stringForKey:@"username"];
+        _email = [prefs stringForKey:@"email"];
+        _mobile = [prefs stringForKey:@"mobile"];
+        _locationService= [prefs stringForKey:@"locationService"];
         return self;
     }
     return nil;

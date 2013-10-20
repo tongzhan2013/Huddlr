@@ -35,11 +35,19 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    _dataController=[[FriendsDataController alloc]init];
-    [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
+    
+    //setting UserDefault for first-time users
+    NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
+    if ([prefs stringForKey:@"username"]==nil) {[prefs setObject:@"Xiaosheng Mu" forKey:@"username"];}
+    if ([prefs stringForKey:@"password"]==nil) {[prefs setObject:@"yatou1729" forKey:@"password"];}
+    if ([prefs stringForKey:@"email"]==nil) {[prefs setObject:@"indefatigablexs@gmail.com" forKey:@"email"];}
+    if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
+    if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
+    
     
     // Additional setup
-    
+    [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
+    _dataController=[[FriendsDataController alloc]init];
     _friendNames=_dataController.friendNames;
     _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
     _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
@@ -297,19 +305,45 @@
     }
 }
 
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != [alertView cancelButtonIndex]) {
         //lead the user to the map tab
         MapViewController *mapController=[self.tabBarController.viewControllers objectAtIndex:1];
         mapController.huddleList=[[NSMutableArray alloc]init];
         
+        NSMutableString *huddle=[[NSMutableString alloc]init];
         for (int i=0; i<[_dataController countOfFriends]; i++){
             Friend *friend=[_dataController friendAtIndex:i];
             if (friend.selected==YES){
                 [mapController.huddleList addObject:friend];
+                [huddle appendString:[friend.name copy]];
+                [huddle appendString:@","];
             }
         }
+        //removing the last ","
+        huddle = [[huddle substringToIndex:[huddle length]-1]mutableCopy];
+        [huddle appendString:@";"];
+        
+        //append date and time
+        NSDate *now = [NSDate date];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"MM-dd 'at' HH:mm";
+        [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+        NSMutableString *dateTime=[[dateFormatter stringFromDate:now] mutableCopy];
+        [huddle appendString:dateTime];
+        
+        ////adding a new huddle to local storage
+        NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
+        NSMutableArray *huddleHistory=[[prefs arrayForKey:@"huddleHistory"] mutableCopy];
+        if (huddleHistory==nil) {huddleHistory=[[NSMutableArray alloc]init];}
+        [huddleHistory insertObject:huddle atIndex:0];
+
+        [prefs setObject:huddleHistory forKey:@"huddleHistory"];
+        
+        ///////lead the user to the map
         [self.tabBarController setSelectedIndex:1];
+        
     }
 }
 
@@ -353,16 +387,5 @@ shouldReloadTableForSearchString:(NSString *)searchString
 }
 
 
-/*
- 
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- if ([[segue identifier] isEqualToString:@"showDetail"]) {
- NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
- NSDate *object = _objects[indexPath.row];
- [[segue destinationViewController] setDetailItem:object];
- }
- }
- 
- */
+
 @end
