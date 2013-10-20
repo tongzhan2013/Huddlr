@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
-#import <AWSRuntime/AWSRuntime.h>
-#import <AWSDynamoDB/AWSDynamoDB.h>
-#import "User.h"
-#import "AmazonKeyChainWrapper.h"
-#import "AmazonTVMClient.h"
 //#import "MasterViewController.h"
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>

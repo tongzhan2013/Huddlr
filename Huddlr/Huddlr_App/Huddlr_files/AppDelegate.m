@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
-#import "HuddlrClient.h"
-#import "AmazonKeyChainWrapper.h"
 
 @implementation AppDelegate
 
@@ -19,6 +17,14 @@
     // Override point for customization after application launch.
     
     // HuddlrClient *huddlr = [[HuddlrClient alloc] initWithEndpoint:@"http://default-environment-ti2kr6z2qm.elasticbeanstalk.com/" useSSL:USE_SSL];
+    
+    [Parse setApplicationId:@"FtiKmIeaXfFzK4RkxaHhtISbjh5jCmxYu8zYJdLO"
+                  clientKey:@"fiBcY95k8UHVV2eMnp05g63C4iV3pdXBCH0l2NO2"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
     
     // Create location manager object
     locationManager = [[CLLocationManager alloc] init];

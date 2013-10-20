@@ -31,12 +31,6 @@
 		DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */; };
 		DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */; };
 		DE25BE3B17F8C7E800719560 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD6017810C94004E5FF9 /* GoogleMaps.framework */; };
-		DE5758AD17F906D8007A7777 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */; };
-		DE5758AE17F9071C007A7777 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488E17C82066009043B8 /* AWSRuntime.framework */; };
-		DE5758AF17F90764007A7777 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */; };
-		DE5758B017F9078E007A7777 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */; };
-		DE5758B117F907B3007A7777 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */; };
-		DE5758B217F907DD007A7777 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1488F17C82066009043B8 /* AWSSQS.framework */; };
 		DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */; };
 		DE5758BD17FA97D8007A7777 /* Huddlr_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */; };
 		DE5758BF17FA9805007A7777 /* Huddlr_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */; };
@@ -75,20 +69,13 @@
 		DE721F8418120C2D00ECC698 /* Huddles.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F8218120C2D00ECC698 /* Huddles.png */; };
 		DE721F8518120C2D00ECC698 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F8318120C2D00ECC698 /* Profile.png */; };
 		DE721F8718120D9B00ECC698 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = DE721F8618120D9B00ECC698 /* Map.png */; };
-		DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91BD3417EE1E0600E2170A /* HuddlrClient.m */; };
-		DEE147F017964A6E009043B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE147EF17964A6E009043B8 /* User.m */; };
-		DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494417D2CBC7009043B8 /* Crypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495D17D2CBC7009043B8 /* JSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495E17D2CBC7009043B8 /* RegisterDeviceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1495F17D2CBC7009043B8 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495017D2CBC7009043B8 /* Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1496017D2CBC7009043B8 /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495217D2CBC7009043B8 /* RequestDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1496117D2CBC7009043B8 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495417D2CBC7009043B8 /* Response.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE1495617D2CBC7009043B8 /* ResponseHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE721F891813533500ECC698 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F881813533500ECC698 /* Parse.framework */; };
+		DE721F8B181353B200ECC698 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F8A181353B200ECC698 /* AudioToolbox.framework */; };
+		DE721F8D181353BE00ECC698 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F8C181353BE00ECC698 /* CFNetwork.framework */; };
+		DE721F8F181353E800ECC698 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F8E181353E700ECC698 /* libz.1.1.3.dylib */; };
+		DE721F91181353FB00ECC698 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F90181353FB00ECC698 /* MobileCoreServices.framework */; };
+		DE721F931813541500ECC698 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F921813541500ECC698 /* StoreKit.framework */; };
+		DE721F9B18135B8700ECC698 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F9A18135B8700ECC698 /* FacebookSDK.framework */; };
 		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
 		DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE462761804BDD6005C8618 /* Huddlr_icon8.png */; };
 		DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE462CA180F93EF005C8618 /* MapKit.framework */; };
@@ -165,40 +152,13 @@
 		DE721F8218120C2D00ECC698 /* Huddles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddles.png; path = Images/Huddles.png; sourceTree = "<group>"; };
 		DE721F8318120C2D00ECC698 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile.png; path = Images/Profile.png; sourceTree = "<group>"; };
 		DE721F8618120D9B00ECC698 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Map.png; path = Images/Map.png; sourceTree = "<group>"; };
-		DE91BD3317EE1E0600E2170A /* HuddlrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddlrClient.h; sourceTree = "<group>"; };
-		DE91BD3417EE1E0600E2170A /* HuddlrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddlrClient.m; sourceTree = "<group>"; };
-		DEE147EE17964A6E009043B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		DEE147EF17964A6E009043B8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAutoScaling.framework; path = "../aws-ios-sdk-1.6.1/AWSAutoScaling.framework"; sourceTree = "<group>"; };
-		DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCloudWatch.framework; path = "../aws-ios-sdk-1.6.1/AWSCloudWatch.framework"; sourceTree = "<group>"; };
-		DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "../aws-ios-sdk-1.6.1/AWSDynamoDB.framework"; sourceTree = "<group>"; };
-		DEE1488E17C82066009043B8 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../aws-ios-sdk-1.6.1/AWSRuntime.framework"; sourceTree = "<group>"; };
-		DEE1488F17C82066009043B8 /* AWSSQS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSQS.framework; path = "../aws-ios-sdk-1.6.1/AWSSQS.framework"; sourceTree = "<group>"; };
-		DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSecurityTokenService.framework; path = "../aws-ios-sdk-1.6.1/AWSSecurityTokenService.framework"; sourceTree = "<group>"; };
-		DEE1493F17D2CBC7009043B8 /* AmazonKeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonKeyChainWrapper.h; sourceTree = "<group>"; };
-		DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonKeyChainWrapper.m; sourceTree = "<group>"; };
-		DEE1494117D2CBC7009043B8 /* AmazonTVMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonTVMClient.h; sourceTree = "<group>"; };
-		DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonTVMClient.m; sourceTree = "<group>"; };
-		DEE1494317D2CBC7009043B8 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
-		DEE1494417D2CBC7009043B8 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
-		DEE1494517D2CBC7009043B8 /* GetTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenRequest.h; sourceTree = "<group>"; };
-		DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenRequest.m; sourceTree = "<group>"; };
-		DEE1494717D2CBC7009043B8 /* GetTokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponse.h; sourceTree = "<group>"; };
-		DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponse.m; sourceTree = "<group>"; };
-		DEE1494917D2CBC7009043B8 /* GetTokenResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponseHandler.h; sourceTree = "<group>"; };
-		DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponseHandler.m; sourceTree = "<group>"; };
-		DEE1494B17D2CBC7009043B8 /* JSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtilities.h; sourceTree = "<group>"; };
-		DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtilities.m; sourceTree = "<group>"; };
-		DEE1494D17D2CBC7009043B8 /* RegisterDeviceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceRequest.h; sourceTree = "<group>"; };
-		DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceRequest.m; sourceTree = "<group>"; };
-		DEE1494F17D2CBC7009043B8 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
-		DEE1495017D2CBC7009043B8 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		DEE1495117D2CBC7009043B8 /* RequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
-		DEE1495217D2CBC7009043B8 /* RequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDelegate.m; sourceTree = "<group>"; };
-		DEE1495317D2CBC7009043B8 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
-		DEE1495417D2CBC7009043B8 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
-		DEE1495517D2CBC7009043B8 /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = "<group>"; };
-		DEE1495617D2CBC7009043B8 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
+		DE721F881813533500ECC698 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DE721F8A181353B200ECC698 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DE721F8C181353BE00ECC698 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DE721F8E181353E700ECC698 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		DE721F90181353FB00ECC698 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DE721F921813541500ECC698 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DE721F9A18135B8700ECC698 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DEE462761804BDD6005C8618 /* Huddlr_icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon8.png; path = Images/Huddlr_icon8.png; sourceTree = "<group>"; };
 		DEE462CA180F93EF005C8618 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -209,18 +169,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE721F9B18135B8700ECC698 /* FacebookSDK.framework in Frameworks */,
+				DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */,
+				DE721F931813541500ECC698 /* StoreKit.framework in Frameworks */,
+				DE721F91181353FB00ECC698 /* MobileCoreServices.framework in Frameworks */,
+				DE721F8D181353BE00ECC698 /* CFNetwork.framework in Frameworks */,
+				DE721F8B181353B200ECC698 /* AudioToolbox.framework in Frameworks */,
 				DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */,
-				DE5758B217F907DD007A7777 /* AWSSQS.framework in Frameworks */,
-				DE5758B117F907B3007A7777 /* AWSCloudWatch.framework in Frameworks */,
-				DE5758B017F9078E007A7777 /* AWSAutoScaling.framework in Frameworks */,
-				DE5758AF17F90764007A7777 /* AWSSecurityTokenService.framework in Frameworks */,
-				DE5758AE17F9071C007A7777 /* AWSRuntime.framework in Frameworks */,
-				DE5758AD17F906D8007A7777 /* AWSDynamoDB.framework in Frameworks */,
 				DE25BE3B17F8C7E800719560 /* GoogleMaps.framework in Frameworks */,
 				DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */,
-				DE0DBD7B17810F46004E5FF9 /* SystemConfiguration.framework in Frameworks */,
 				DE0DBD7917810F3F004E5FF9 /* QuartzCore.framework in Frameworks */,
 				DE0DBD7717810F30004E5FF9 /* OpenGLES.framework in Frameworks */,
+				DE721F8F181353E800ECC698 /* libz.1.1.3.dylib in Frameworks */,
 				DE0DBD7517810F23004E5FF9 /* libz.dylib in Frameworks */,
 				DE0DBD7317810F13004E5FF9 /* libicucore.dylib in Frameworks */,
 				DE0DBD7117810EF4004E5FF9 /* libc++.dylib in Frameworks */,
@@ -228,6 +188,7 @@
 				DE0DBD6D17810EDD004E5FF9 /* GLKit.framework in Frameworks */,
 				DE0DBD6B17810ED2004E5FF9 /* CoreText.framework in Frameworks */,
 				DE0DBD6917810ECA004E5FF9 /* CoreLocation.framework in Frameworks */,
+				DE721F891813533500ECC698 /* Parse.framework in Frameworks */,
 				DE0DBD6717810EBD004E5FF9 /* CoreData.framework in Frameworks */,
 				DE0DBD6517810EB7004E5FF9 /* AVFoundation.framework in Frameworks */,
 				DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */,
@@ -260,13 +221,14 @@
 		DE0DBD3517810774004E5FF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE721F9A18135B8700ECC698 /* FacebookSDK.framework */,
+				DE721F921813541500ECC698 /* StoreKit.framework */,
+				DE721F90181353FB00ECC698 /* MobileCoreServices.framework */,
+				DE721F8E181353E700ECC698 /* libz.1.1.3.dylib */,
+				DE721F8C181353BE00ECC698 /* CFNetwork.framework */,
+				DE721F8A181353B200ECC698 /* AudioToolbox.framework */,
+				DE721F881813533500ECC698 /* Parse.framework */,
 				DEE462CA180F93EF005C8618 /* MapKit.framework */,
-				DEE1489517CD8699009043B8 /* AWSSecurityTokenService.framework */,
-				DEE1488B17C82066009043B8 /* AWSAutoScaling.framework */,
-				DEE1488C17C82066009043B8 /* AWSCloudWatch.framework */,
-				DEE1488D17C82066009043B8 /* AWSDynamoDB.framework */,
-				DEE1488E17C82066009043B8 /* AWSRuntime.framework */,
-				DEE1488F17C82066009043B8 /* AWSSQS.framework */,
 				DE0DBD7A17810F46004E5FF9 /* SystemConfiguration.framework */,
 				DE0DBD7817810F3F004E5FF9 /* QuartzCore.framework */,
 				DE0DBD7617810F30004E5FF9 /* OpenGLES.framework */,
@@ -294,8 +256,6 @@
 			children = (
 				DE0DBD4517810774004E5FF9 /* AppDelegate.h */,
 				DE0DBD4617810774004E5FF9 /* AppDelegate.m */,
-				DE91BD3317EE1E0600E2170A /* HuddlrClient.h */,
-				DE91BD3417EE1E0600E2170A /* HuddlrClient.m */,
 				DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */,
 				DE5758D71800AB80007A7777 /* MainStoryboard_iPhone.storyboard */,
 				DE5758CA17FBBC75007A7777 /* Friend.h */,
@@ -306,10 +266,7 @@
 				DE5758CF17FBBC75007A7777 /* MasterViewController.m */,
 				DE0DBD5417810775004E5FF9 /* MapViewController.h */,
 				DE0DBD5517810775004E5FF9 /* MapViewController.m */,
-				DEE147EE17964A6E009043B8 /* User.h */,
-				DEE147EF17964A6E009043B8 /* User.m */,
 				DE5758DA1800DC28007A7777 /* User Data */,
-				DEE1493E17D2CBC7009043B8 /* TVMClient */,
 				DE0DBD3D17810774004E5FF9 /* Supporting Files */,
 			);
 			path = Huddlr_files;
@@ -375,37 +332,6 @@
 				DE5758DB1800DC67007A7777 /* Aaron.png */,
 			);
 			name = "User Data";
-			sourceTree = "<group>";
-		};
-		DEE1493E17D2CBC7009043B8 /* TVMClient */ = {
-			isa = PBXGroup;
-			children = (
-				DEE1493F17D2CBC7009043B8 /* AmazonKeyChainWrapper.h */,
-				DEE1494017D2CBC7009043B8 /* AmazonKeyChainWrapper.m */,
-				DEE1494117D2CBC7009043B8 /* AmazonTVMClient.h */,
-				DEE1494217D2CBC7009043B8 /* AmazonTVMClient.m */,
-				DEE1494317D2CBC7009043B8 /* Crypto.h */,
-				DEE1494417D2CBC7009043B8 /* Crypto.m */,
-				DEE1494517D2CBC7009043B8 /* GetTokenRequest.h */,
-				DEE1494617D2CBC7009043B8 /* GetTokenRequest.m */,
-				DEE1494717D2CBC7009043B8 /* GetTokenResponse.h */,
-				DEE1494817D2CBC7009043B8 /* GetTokenResponse.m */,
-				DEE1494917D2CBC7009043B8 /* GetTokenResponseHandler.h */,
-				DEE1494A17D2CBC7009043B8 /* GetTokenResponseHandler.m */,
-				DEE1494B17D2CBC7009043B8 /* JSONUtilities.h */,
-				DEE1494C17D2CBC7009043B8 /* JSONUtilities.m */,
-				DEE1494D17D2CBC7009043B8 /* RegisterDeviceRequest.h */,
-				DEE1494E17D2CBC7009043B8 /* RegisterDeviceRequest.m */,
-				DEE1494F17D2CBC7009043B8 /* Request.h */,
-				DEE1495017D2CBC7009043B8 /* Request.m */,
-				DEE1495117D2CBC7009043B8 /* RequestDelegate.h */,
-				DEE1495217D2CBC7009043B8 /* RequestDelegate.m */,
-				DEE1495317D2CBC7009043B8 /* Response.h */,
-				DEE1495417D2CBC7009043B8 /* Response.m */,
-				DEE1495517D2CBC7009043B8 /* ResponseHandler.h */,
-				DEE1495617D2CBC7009043B8 /* ResponseHandler.m */,
-			);
-			path = TVMClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,22 +440,8 @@
 				DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */,
 				DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */,
 				DE5758D217FBBC75007A7777 /* FriendsDataController.m in Sources */,
-				DEE147F017964A6E009043B8 /* User.m in Sources */,
 				DE5758D317FBBC75007A7777 /* MasterViewController.m in Sources */,
-				DEE1495717D2CBC7009043B8 /* AmazonKeyChainWrapper.m in Sources */,
-				DEE1495817D2CBC7009043B8 /* AmazonTVMClient.m in Sources */,
-				DEE1495917D2CBC7009043B8 /* Crypto.m in Sources */,
-				DEE1495A17D2CBC7009043B8 /* GetTokenRequest.m in Sources */,
-				DEE1495B17D2CBC7009043B8 /* GetTokenResponse.m in Sources */,
 				DE5758D117FBBC75007A7777 /* Friend.m in Sources */,
-				DEE1495C17D2CBC7009043B8 /* GetTokenResponseHandler.m in Sources */,
-				DE91BD3517EE1E0600E2170A /* HuddlrClient.m in Sources */,
-				DEE1495D17D2CBC7009043B8 /* JSONUtilities.m in Sources */,
-				DEE1495E17D2CBC7009043B8 /* RegisterDeviceRequest.m in Sources */,
-				DEE1495F17D2CBC7009043B8 /* Request.m in Sources */,
-				DEE1496017D2CBC7009043B8 /* RequestDelegate.m in Sources */,
-				DEE1496117D2CBC7009043B8 /* Response.m in Sources */,
-				DEE1496217D2CBC7009043B8 /* ResponseHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,13 +534,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
 					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
@@ -646,13 +558,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					"\\\\\\\"$(SRCROOT)/../aws-ios-sdk-1.6.1\\\\\\\"",
 					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					"/Users/discipulus/Desktop/Huddlr/Huddlr/aws-ios-sdk-1.6.1",
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
