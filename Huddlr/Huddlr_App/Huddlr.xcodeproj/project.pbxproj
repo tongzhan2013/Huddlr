@@ -13,6 +13,8 @@
 		511B213518137A4400447996 /* MobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213418137A4400447996 /* MobileViewController.m */; };
 		511B213818137A7400447996 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213718137A7400447996 /* PasswordViewController.m */; };
 		51EEF23318144B2C003F3B07 /* HuddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23218144B2C003F3B07 /* HuddleViewController.m */; };
+		51EEF23B1814B4BA003F3B07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF2381814B4BA003F3B07 /* LoginViewController.m */; };
+		51EEF23C1814B4BA003F3B07 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */; };
 		DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3617810774004E5FF9 /* UIKit.framework */; };
 		DE0DBD3917810774004E5FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3817810774004E5FF9 /* Foundation.framework */; };
 		DE0DBD3B17810774004E5FF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3A17810774004E5FF9 /* CoreGraphics.framework */; };
@@ -100,6 +102,10 @@
 		511B213718137A7400447996 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
 		51EEF23118144B2C003F3B07 /* HuddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddleViewController.h; sourceTree = "<group>"; };
 		51EEF23218144B2C003F3B07 /* HuddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddleViewController.m; sourceTree = "<group>"; };
+		51EEF2371814B4BA003F3B07 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		51EEF2381814B4BA003F3B07 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		51EEF2391814B4BA003F3B07 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
+		51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
 		DE0DBD3317810774004E5FF9 /* Huddlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0DBD3617810774004E5FF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE0DBD3817810774004E5FF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -276,6 +282,10 @@
 				DE0DBD4617810774004E5FF9 /* AppDelegate.m */,
 				DE0DBD5117810775004E5FF9 /* MainStoryboard_iPad.storyboard */,
 				DE5758D71800AB80007A7777 /* MainStoryboard_iPhone.storyboard */,
+				51EEF2371814B4BA003F3B07 /* LoginViewController.h */,
+				51EEF2381814B4BA003F3B07 /* LoginViewController.m */,
+				51EEF2391814B4BA003F3B07 /* UserDetailsViewController.h */,
+				51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */,
 				DE5758CA17FBBC75007A7777 /* Friend.h */,
 				DE5758CB17FBBC75007A7777 /* Friend.m */,
 				DE5758CC17FBBC75007A7777 /* FriendsDataController.h */,
@@ -466,8 +476,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EEF23C1814B4BA003F3B07 /* UserDetailsViewController.m in Sources */,
 				51EEF23318144B2C003F3B07 /* HuddleViewController.m in Sources */,
 				511B213518137A4400447996 /* MobileViewController.m in Sources */,
+				51EEF23B1814B4BA003F3B07 /* LoginViewController.m in Sources */,
 				511B213818137A7400447996 /* PasswordViewController.m in Sources */,
 				DE0DBD4317810774004E5FF9 /* main.m in Sources */,
 				DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */,
