@@ -10,8 +10,8 @@
 @class FriendsDataController;
 
 // The following declarations are used for calculating static distance as well as for reverse geocoding
-const double myLatitude=41.310727;
-const double myLongitude=-72.923877;
+const double myLatitude=42.37922525;
+const double myLongitude=-71.11674352;
 const double RADIANS=0.0174532925;
 
 @interface MasterViewController : UITableViewController <UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>

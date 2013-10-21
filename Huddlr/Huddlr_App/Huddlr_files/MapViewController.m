@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation MapViewController {
-GMSMapView *mapView_;
+    GMSMapView *mapView_;
 }
 
     @synthesize locationManager;
@@ -37,8 +37,34 @@ GMSMapView *mapView_;
     double latitude=locationManager.location.coordinate.latitude;
     double longitude=locationManager.location.coordinate.longitude;
     
+    double radius;
+    if (huddleList==nil) {radius=0.6;}
+    else {radius=0;
+          for (int i=0; i<[huddleList count]; i++){
+              Friend *friend=[huddleList objectAtIndex:i];
+              if (radius<friend.distance){
+                 radius=friend.distance;
+              }
+          }
+    }
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude longitude: longitude zoom:10];
+    NSUInteger zoomLevel;
+    if (radius<0.25){zoomLevel=16;}
+    else if (radius<0.5){zoomLevel=15;}
+    else if (radius<1){zoomLevel=14;}
+    else if (radius<2){zoomLevel=13;}
+    else if (radius<3){zoomLevel=12;}
+    else if (radius<5){zoomLevel=11;}
+    else if (radius<7){zoomLevel=10;}
+    else if (radius<15){zoomLevel=9;}
+    else if (radius<30){zoomLevel=8;}
+    else if (radius<60){zoomLevel=7;}
+    else if (radius<120){zoomLevel=6;}
+    else if (radius<240){zoomLevel=5;}
+    else if (radius<480){zoomLevel=4;}
+    else {zoomLevel=1;}
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude longitude: longitude zoom:zoomLevel];
     CGFloat height=[[UIScreen mainScreen] applicationFrame].size.height;
     CGFloat width=[[UIScreen mainScreen] applicationFrame].size.width;
     mapView_ = [GMSMapView mapWithFrame:CGRectMake(0,20,width,height-50) camera:camera];
@@ -46,15 +72,9 @@ GMSMapView *mapView_;
     self.view=mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
+
     
-    
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position=CLLocationCoordinate2DMake(latitude,longitude);
-    marker.title = @"William Zhao";
-    marker.snippet = @"Swag";
-    marker.map = mapView_;
-    
-    // Creates a marker in the center of the map.
+    // Creates a marker for each friend in the huddleList
     for (int i=0; i<[huddleList count]; i++){
         Friend *friend=[huddleList objectAtIndex:i];
         GMSMarker *marker = [[GMSMarker alloc] init];

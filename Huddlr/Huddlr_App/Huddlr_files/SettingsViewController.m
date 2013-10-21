@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    self.tableView.delegate=self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -53,17 +54,17 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 48;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    return 30;
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0,0,tableView.frame.size.width,40)];
-    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(10, 4, tableView.frame.size.width,32)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0,0,tableView.frame.size.width,30)];
+    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(10, 2, tableView.frame.size.width,26)];
     [label setFont:[UIFont boldSystemFontOfSize:14]];
     NSString *string;
     if (section==0) {string=@"My Account";}
@@ -72,7 +73,7 @@
     [label setText:string];
     [label setTextColor:[UIColor whiteColor]];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor lightGrayColor]];
+    [view setBackgroundColor:[UIColor colorWithRed:159.0/255.0 green:127.0/255.0 blue:223.0/255.0 alpha:1]];
     return view;
 }
 
@@ -114,4 +115,12 @@
         
          //need to actually turn the location on and off with this button
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+}
+
+
 @end

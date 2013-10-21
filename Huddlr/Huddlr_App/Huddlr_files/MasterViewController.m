@@ -18,7 +18,6 @@
 #import "MapViewController.h"
 
 
-
 @class MapViewController;
 
 @interface MasterViewController ()
@@ -56,7 +55,7 @@
     // Calculate distance using longitude and latitude info and sort friends into sections
     
     for (Friend *friend in _dataController.friendList){
-        double distance=acos(cos(RADIANS*(90-myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(myLongitude-friend.longitude))) *4300;
+        double distance=acos(cos(RADIANS*(90-myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(myLongitude-friend.longitude))) *4500;
         
         friend.distance=distance;
         if (distance < 0.1){[_friendsWithinFiveHundredFeet addObject:friend];}
@@ -133,7 +132,6 @@
         }
     }
     
-    
     NSInteger row=indexPath.row;
     NSInteger section=indexPath.section;
     
@@ -161,7 +159,7 @@
     else {cell.accessoryType=UITableViewCellAccessoryNone;}
     
     
-    UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(16, 8, 44, 44)];
+    UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(16, 11, 44, 44)];
     imgView.backgroundColor=[UIColor clearColor];
     [imgView setImage:[UIImage imageNamed: friend.picture]];
     
@@ -172,11 +170,11 @@
     [cell.contentView addSubview:imgView];
     
 
-    UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,10,180,20)];
+    UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,14,180,20)];
     nameLabel.text=friend.name;
     [cell.contentView addSubview:nameLabel];
     
-    UILabel *locationLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,30,180,20)];
+    UILabel *locationLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,36,180,20)];
     locationLabel.text=friend.location;
     locationLabel.textColor=[UIColor lightGrayColor];
     locationLabel.font=[UIFont fontWithName:nil size:12];
@@ -190,7 +188,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // This sets the height of each cell in the table
-    return 60;
+    return 66;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -206,8 +204,8 @@
     if (tableView==self.tableView){
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 20)];
         // Create custom view in section header
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, tableView.frame.size.width, 20)];
-        [label setFont:[UIFont boldSystemFontOfSize:10]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 2, tableView.frame.size.width, 26)];
+        [label setFont:[UIFont boldSystemFontOfSize:14]];
         NSString *string;
         if (section==0) {string=@"Within 500 Feet";}
         else if (section==1) {string=@"Within 1/2 Mile";}
@@ -225,7 +223,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (tableView==self.tableView){
-        return 22;
+        return 30;
     }
     
     // Without this method the searchDisplayTableView would have a blank header
@@ -239,7 +237,7 @@
     UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
     NSInteger section=indexPath.section;
     NSInteger row=indexPath.row;
-    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     // Again we need to first find the "right" friend that the user selects
     
     Friend *friend;
@@ -270,7 +268,7 @@
     if (tableView!=self.tableView){
         [self.tableView reloadData];
     }
-
+    [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
 }
 
 

@@ -15,6 +15,8 @@
 		51EEF23318144B2C003F3B07 /* HuddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23218144B2C003F3B07 /* HuddleViewController.m */; };
 		51EEF23B1814B4BA003F3B07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF2381814B4BA003F3B07 /* LoginViewController.m */; };
 		51EEF23C1814B4BA003F3B07 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */; };
+		51EEF23E1814C8F6003F3B07 /* Huddlr_icon9.png in Resources */ = {isa = PBXBuildFile; fileRef = 51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */; };
+		51EEF2401814CA43003F3B07 /* Huddlr_icon9-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */; };
 		DE0DBD3717810774004E5FF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3617810774004E5FF9 /* UIKit.framework */; };
 		DE0DBD3917810774004E5FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3817810774004E5FF9 /* Foundation.framework */; };
 		DE0DBD3B17810774004E5FF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0DBD3A17810774004E5FF9 /* CoreGraphics.framework */; };
@@ -106,6 +108,8 @@
 		51EEF2381814B4BA003F3B07 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		51EEF2391814B4BA003F3B07 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
+		51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon9.png; sourceTree = "<group>"; };
+		51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Huddlr_icon9-1.png"; sourceTree = "<group>"; };
 		DE0DBD3317810774004E5FF9 /* Huddlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0DBD3617810774004E5FF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE0DBD3817810774004E5FF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -328,6 +332,8 @@
 		DE5758B917FA96ED007A7777 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */,
+				51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */,
 				DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */,
 				DE5758BC17FA97D8007A7777 /* Huddlr_icon2.png */,
 				DE5758BE17FA9805007A7777 /* Huddlr_icon3.png */,
@@ -449,6 +455,7 @@
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
 				DE721F8418120C2D00ECC698 /* Huddles.png in Resources */,
+				51EEF2401814CA43003F3B07 /* Huddlr_icon9-1.png in Resources */,
 				DE721F81181209A500ECC698 /* home.png in Resources */,
 				DE5759041800DC83007A7777 /* Tong.png in Resources */,
 				DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */,
@@ -462,6 +469,7 @@
 				DE5758F71800DC83007A7777 /* Danqing.png in Resources */,
 				DE721F8518120C2D00ECC698 /* Profile.png in Resources */,
 				DE5758F41800DC83007A7777 /* Ben.png in Resources */,
+				51EEF23E1814C8F6003F3B07 /* Huddlr_icon9.png in Resources */,
 				DE5758FE1800DC83007A7777 /* Josh.png in Resources */,
 				DE5758F91800DC83007A7777 /* Diana.png in Resources */,
 				DE5758FD1800DC83007A7777 /* Jie.png in Resources */,
