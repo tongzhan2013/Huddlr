@@ -318,11 +318,11 @@
             if (friend.selected==YES){
                 [mapController.huddleList addObject:friend];
                 [huddle appendString:[friend.name copy]];
-                [huddle appendString:@","];
+                [huddle appendString:@", "];
             }
         }
         //removing the last ","
-        huddle = [[huddle substringToIndex:[huddle length]-1]mutableCopy];
+        huddle = [[huddle substringToIndex:[huddle length]-2]mutableCopy];
         [huddle appendString:@";"];
         
         //append date and time
