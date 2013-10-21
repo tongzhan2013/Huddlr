@@ -12,6 +12,14 @@
 		511B2132181379E800447996 /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B2131181379E800447996 /* EmailViewController.m */; };
 		511B213518137A4400447996 /* MobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213418137A4400447996 /* MobileViewController.m */; };
 		511B213818137A7400447996 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213718137A7400447996 /* PasswordViewController.m */; };
+		512599F91815A4D300771A2A /* Refresh_icon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599F81815A4D300771A2A /* Refresh_icon-1.png */; };
+		512599FB1815A7AC00771A2A /* Huddlr_icon10.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599FA1815A7AC00771A2A /* Huddlr_icon10.png */; };
+		512599FD1815A84C00771A2A /* Huddlr_icon11.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599FC1815A84C00771A2A /* Huddlr_icon11.png */; };
+		512599FF1815AAD400771A2A /* Huddlr_icon12.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599FE1815AAD400771A2A /* Huddlr_icon12.png */; };
+		51259A011815AC1400771A2A /* Huddlr_icon13.png in Resources */ = {isa = PBXBuildFile; fileRef = 51259A001815AC1400771A2A /* Huddlr_icon13.png */; };
+		51259A031815ACC800771A2A /* Huddlr_icon14.png in Resources */ = {isa = PBXBuildFile; fileRef = 51259A021815ACC800771A2A /* Huddlr_icon14.png */; };
+		51259A051815AD7400771A2A /* Huddlr_icon15.png in Resources */ = {isa = PBXBuildFile; fileRef = 51259A041815AD7400771A2A /* Huddlr_icon15.png */; };
+		51259A071815AFA200771A2A /* Launch_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 51259A061815AFA200771A2A /* Launch_image.png */; };
 		51EEF23318144B2C003F3B07 /* HuddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23218144B2C003F3B07 /* HuddleViewController.m */; };
 		51EEF23B1814B4BA003F3B07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF2381814B4BA003F3B07 /* LoginViewController.m */; };
 		51EEF23C1814B4BA003F3B07 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */; };
@@ -102,6 +110,14 @@
 		511B213418137A4400447996 /* MobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileViewController.m; sourceTree = "<group>"; };
 		511B213618137A7400447996 /* PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordViewController.h; sourceTree = "<group>"; };
 		511B213718137A7400447996 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
+		512599F81815A4D300771A2A /* Refresh_icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh_icon-1.png"; sourceTree = "<group>"; };
+		512599FA1815A7AC00771A2A /* Huddlr_icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon10.png; sourceTree = "<group>"; };
+		512599FC1815A84C00771A2A /* Huddlr_icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon11.png; sourceTree = "<group>"; };
+		512599FE1815AAD400771A2A /* Huddlr_icon12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon12.png; sourceTree = "<group>"; };
+		51259A001815AC1400771A2A /* Huddlr_icon13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon13.png; sourceTree = "<group>"; };
+		51259A021815ACC800771A2A /* Huddlr_icon14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon14.png; sourceTree = "<group>"; };
+		51259A041815AD7400771A2A /* Huddlr_icon15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon15.png; sourceTree = "<group>"; };
+		51259A061815AFA200771A2A /* Launch_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch_image.png; sourceTree = "<group>"; };
 		51EEF23118144B2C003F3B07 /* HuddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddleViewController.h; sourceTree = "<group>"; };
 		51EEF23218144B2C003F3B07 /* HuddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddleViewController.m; sourceTree = "<group>"; };
 		51EEF2371814B4BA003F3B07 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -332,6 +348,14 @@
 		DE5758B917FA96ED007A7777 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				51259A061815AFA200771A2A /* Launch_image.png */,
+				51259A041815AD7400771A2A /* Huddlr_icon15.png */,
+				51259A021815ACC800771A2A /* Huddlr_icon14.png */,
+				51259A001815AC1400771A2A /* Huddlr_icon13.png */,
+				512599FE1815AAD400771A2A /* Huddlr_icon12.png */,
+				512599FC1815A84C00771A2A /* Huddlr_icon11.png */,
+				512599FA1815A7AC00771A2A /* Huddlr_icon10.png */,
+				512599F81815A4D300771A2A /* Refresh_icon-1.png */,
 				51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */,
 				51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */,
 				DE5758BA17FA9797007A7777 /* Huddlr_icon1.png */,
@@ -445,12 +469,15 @@
 				DE5759071800DC83007A7777 /* Willa.png in Resources */,
 				DE0DBD4D17810774004E5FF9 /* Default-568h@2x.png in Resources */,
 				DE5759011800DC83007A7777 /* Orlando.png in Resources */,
+				512599FF1815AAD400771A2A /* Huddlr_icon12.png in Resources */,
 				DE5758D91800AB80007A7777 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DE5758C717FA98F5007A7777 /* Huddlr_icon7.png in Resources */,
 				DE5759001800DC83007A7777 /* Nicolas.JPG in Resources */,
+				512599FB1815A7AC00771A2A /* Huddlr_icon10.png in Resources */,
 				DE5759061800DC83007A7777 /* Will.png in Resources */,
 				DE5758F61800DC83007A7777 /* Christy.png in Resources */,
 				DE5759021800DC83007A7777 /* Sinye.png in Resources */,
+				51259A071815AFA200771A2A /* Launch_image.png in Resources */,
 				DE5758FA1800DC83007A7777 /* Henry.png in Resources */,
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
@@ -463,15 +490,20 @@
 				DE5758C117FA9840007A7777 /* Huddlr_icon4.png in Resources */,
 				DE5758DC1800DC67007A7777 /* Aaron.png in Resources */,
 				DE5758F51800DC83007A7777 /* Cassius.png in Resources */,
+				512599FD1815A84C00771A2A /* Huddlr_icon11.png in Resources */,
+				51259A011815AC1400771A2A /* Huddlr_icon13.png in Resources */,
 				DE5758F31800DC83007A7777 /* Adele.png in Resources */,
 				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
+				512599F91815A4D300771A2A /* Refresh_icon-1.png in Resources */,
 				DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */,
 				DE5758F71800DC83007A7777 /* Danqing.png in Resources */,
 				DE721F8518120C2D00ECC698 /* Profile.png in Resources */,
+				51259A031815ACC800771A2A /* Huddlr_icon14.png in Resources */,
 				DE5758F41800DC83007A7777 /* Ben.png in Resources */,
 				51EEF23E1814C8F6003F3B07 /* Huddlr_icon9.png in Resources */,
 				DE5758FE1800DC83007A7777 /* Josh.png in Resources */,
 				DE5758F91800DC83007A7777 /* Diana.png in Resources */,
+				51259A051815AD7400771A2A /* Huddlr_icon15.png in Resources */,
 				DE5758FD1800DC83007A7777 /* Jie.png in Resources */,
 				DE721F8718120D9B00ECC698 /* Map.png in Resources */,
 			);

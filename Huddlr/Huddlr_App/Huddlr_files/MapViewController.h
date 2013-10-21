@@ -16,7 +16,6 @@
     CLLocationManager *locationManager;
 }
 
-@property(nonatomic,retain) CLLocationManager *locationManager;
 @property(nonatomic,retain) NSMutableArray *huddleList;
 
 @end

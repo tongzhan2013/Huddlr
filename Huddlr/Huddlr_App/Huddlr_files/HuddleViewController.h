@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HuddleViewController : UITableViewController
+@interface HuddleViewController : UITableViewController <UITableViewDelegate>
 
 @end

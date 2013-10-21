@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
 
 /**
@@ -23,10 +22,7 @@
  */
 #define USE_SSL                      NO
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
-{
-    CLLocationManager *locationManager;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

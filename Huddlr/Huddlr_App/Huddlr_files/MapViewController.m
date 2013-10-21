@@ -14,8 +14,28 @@
     GMSMapView *mapView_;
 }
 
-    @synthesize locationManager;
-    @synthesize huddleList;
+@synthesize huddleList;
+
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    CGRect frame = CGRectMake(0, 0, 320, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:24.0];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.text = @"Map";
+    self.navigationItem.titleView = label;
+}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     // Create location manager object
@@ -48,21 +68,11 @@
           }
     }
     
+    
+    // Set zoom level based on radius/maximum distance to any friend in the huddleList
     NSUInteger zoomLevel;
-    if (radius<0.25){zoomLevel=16;}
-    else if (radius<0.5){zoomLevel=15;}
-    else if (radius<1){zoomLevel=14;}
-    else if (radius<2){zoomLevel=13;}
-    else if (radius<3){zoomLevel=12;}
-    else if (radius<5){zoomLevel=11;}
-    else if (radius<7){zoomLevel=10;}
-    else if (radius<15){zoomLevel=9;}
-    else if (radius<30){zoomLevel=8;}
-    else if (radius<60){zoomLevel=7;}
-    else if (radius<120){zoomLevel=6;}
-    else if (radius<240){zoomLevel=5;}
-    else if (radius<480){zoomLevel=4;}
-    else {zoomLevel=1;}
+    if (radius<0.25){zoomLevel=16;}else if (radius<0.5){zoomLevel=15;}else if (radius<1){zoomLevel=14;}else if (radius<2){zoomLevel=13;}else if (radius<3){zoomLevel=12;}else if (radius<5){zoomLevel=11;}else if (radius<7){zoomLevel=10;}
+    else if (radius<15){zoomLevel=9;}else if (radius<30){zoomLevel=8;}else if (radius<60){zoomLevel=7;}else if (radius<120){zoomLevel=6;}else if (radius<240){zoomLevel=5;}else if (radius<480){zoomLevel=4;}else {zoomLevel=1;}
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: latitude longitude: longitude zoom:zoomLevel];
     CGFloat height=[[UIScreen mainScreen] applicationFrame].size.height;
@@ -85,10 +95,6 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
  
 
 @end

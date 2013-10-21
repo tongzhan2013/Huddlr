@@ -22,6 +22,21 @@
 }
 
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tableView.delegate=self;
+    CGRect frame = CGRectMake(0, 0, 320, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:24.0];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.text = @"Huddles";
+    self.navigationItem.titleView = label;
+}
+
+
 - (void)viewWillAppear:(BOOL)animated{
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     huddleHistory=[[prefs arrayForKey:@"huddleHistory"] mutableCopy];
@@ -29,16 +44,13 @@
 }
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -76,5 +88,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
 }
+
+/*
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+}
+*/
+
 
 @end

@@ -24,13 +24,28 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     self.tableView.delegate=self;
+    CGRect frame = CGRectMake(0, 0, 320, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:24.0];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.text = @"Profile";
+    self.navigationItem.titleView = label;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     _dataController=[[UserDataController alloc]init];
     [_usernameLabel setText:_dataController.username];
     [_emailLabel setText:_dataController.email];
+    [_emailLabel setFont:[UIFont systemFontOfSize:14]];
     [_mobileLabel setText:_dataController.mobile];
     if ([_dataController.locationService isEqualToString: @"On"]){
         _serviceSwitch.on=YES;
@@ -38,17 +53,14 @@
     else {_serviceSwitch.on=NO;}
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -116,11 +128,13 @@
          //need to actually turn the location on and off with this button
 }
 
+/*
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
 }
+ */
 
 
 @end

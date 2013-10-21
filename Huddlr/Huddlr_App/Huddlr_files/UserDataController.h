@@ -13,5 +13,5 @@
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *mobile;
 @property (nonatomic, copy) NSString *locationService;
-////need to add block list
+////need to add block list etc.
 @end

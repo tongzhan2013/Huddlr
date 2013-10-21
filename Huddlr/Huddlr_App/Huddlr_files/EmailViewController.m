@@ -14,10 +14,22 @@
 
 @implementation EmailViewController
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.emailInput.delegate=self;
+    CGRect frame = CGRectMake(0, 0, 320, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.text = @"Email";
+    self.navigationItem.titleView = label;
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,11 +10,8 @@
 #import "FriendsDataController.h"
 #import "Friend.h"
 #import <QuartzCore/QuartzCore.h>
-
-//Make sure you have these frameworks linked
-#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-
+#import <Parse/Parse.h>
 #import "MapViewController.h"
 
 
@@ -25,15 +22,31 @@
 @end
 
 @implementation MasterViewController{
-    
     /* This instance variable keeps track of the indexes of search results in _dataController.friendList */
-    
     NSIndexSet *searchResultIndexes;
+    double myLatitude;
+    double myLongitude;
 }
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    CGRect frame = CGRectMake(0, 0, 320, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:24.0];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.text = @"Huddlr";
+    self.navigationItem.titleView = label;
+    [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
     
     //setting UserDefault for first-time users
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
@@ -43,9 +56,27 @@
     if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
     if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
     
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    myLatitude=locationManager.location.coordinate.latitude;
+    myLongitude=locationManager.location.coordinate.longitude;
+    
+    // Update Parse Cloud of the user's latitude and longitude information
+    PFQuery *query=[PFUser query];
+    PFUser *user=(PFUser *)[query getObjectWithId:@"Hqj8R8KENL"];
+    user[@"latitude"]=@(myLatitude);
+    user[@"longitude"]=@(myLongitude);
+    [user saveInBackground];
     
     // Additional setup
-    [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
+    
     _dataController=[[FriendsDataController alloc]init];
     _friendNames=_dataController.friendNames;
     _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
@@ -62,19 +93,11 @@
         else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
         else {[_friendsFarAway addObject:friend];}
     }
-
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    /* This part on reverse geocoding is optional. But if it's run correctly, you should be able to see the address of TD College in the output box in Xcode */
+    
+    /////// Reverse geocoding example
     
     CLGeocoder *geocoder=[[CLGeocoder alloc]init];
     CLLocation *location=[[CLLocation alloc]initWithLatitude:myLatitude  longitude:myLongitude];
-    
-    // This block code is borrowed from Apple reference docs
     
     [geocoder reverseGeocodeLocation: location completionHandler:
      ^(NSArray *placemarks, NSError *error) {
@@ -82,16 +105,18 @@
          NSLog(@"Placemark array: %@",placemark.addressDictionary );
          NSString *locatedaddress = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
          NSLog(@"Currently address is: %@",locatedaddress);
-         
      }];
-
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of resources that can be recreated.
 }
+
+
+
 
 #pragma mark - Table View
 
@@ -231,6 +256,8 @@
 }
 
 
+
+
 #pragma mark-configure actions
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -319,7 +346,7 @@
                 [huddle appendString:@", "];
             }
         }
-        //removing the last ","
+        //remove the last ","
         huddle = [[huddle substringToIndex:[huddle length]-2]mutableCopy];
         [huddle appendString:@";"];
         
@@ -331,7 +358,7 @@
         NSMutableString *dateTime=[[dateFormatter stringFromDate:now] mutableCopy];
         [huddle appendString:dateTime];
         
-        ////adding a new huddle to local storage
+        ////add a new huddle to local storage
         NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
         NSMutableArray *huddleHistory=[[prefs arrayForKey:@"huddleHistory"] mutableCopy];
         if (huddleHistory==nil) {huddleHistory=[[NSMutableArray alloc]init];}
@@ -339,7 +366,7 @@
 
         [prefs setObject:huddleHistory forKey:@"huddleHistory"];
         
-        ///////lead the user to the map
+        ////lead the user to the map
         [self.tabBarController setSelectedIndex:1];
         
     }
@@ -357,6 +384,7 @@
     
     [self.tableView reloadData];
 }
+
 
 
 

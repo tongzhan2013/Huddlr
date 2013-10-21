@@ -6,7 +6,6 @@
 
 @implementation LoginViewController
 
-
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
@@ -17,7 +16,15 @@
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
     }
+    
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+
 }
+
 
 
 #pragma mark - Login methods
@@ -41,18 +48,28 @@
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             }
-        } else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
-        } else {
-            NSLog(@"User with facebook logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         }
         
-        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        else if (user.isNew) {
+            NSLog(@"User with facebook signed up and logged in!");
+            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            
+            //store the objectId locally for future use
+            _objectId=user.objectId;
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        }
+        
+        else {
+            NSLog(@"User with facebook logged in!");
+            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            
+            _objectId=user.objectId;
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        }
     }];
     
     [_activityIndicator startAnimating]; // Show loading indicator until login is finished
+
 }
 
 
