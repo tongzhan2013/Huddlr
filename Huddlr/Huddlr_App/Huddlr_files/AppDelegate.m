@@ -24,17 +24,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [GMSServices provideAPIKey:@"AIzaSyDBrAgarDG3pFtg92dmxrrXkBDjmdMnNEI"];
-    // Override point for customization after application launch.
-    
-    // HuddlrClient *huddlr = [[HuddlrClient alloc] initWithEndpoint:@"http://default-environment-ti2kr6z2qm.elasticbeanstalk.com/" useSSL:USE_SSL];
-    
+
     [Parse setApplicationId:@"FtiKmIeaXfFzK4RkxaHhtISbjh5jCmxYu8zYJdLO"
                   clientKey:@"fiBcY95k8UHVV2eMnp05g63C4iV3pdXBCH0l2NO2"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [PFFacebookUtils initializeFacebook];
     
-    // This line may say self.window, don't worry about that
     [[self window] makeKeyAndVisible];
     return YES;
 }

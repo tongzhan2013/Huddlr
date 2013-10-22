@@ -17,6 +17,9 @@
 
 @class MapViewController;
 
+// The following declarations are used for calculating static distance as well as for reverse geocoding
+const double RADIANS=0.0174532925;
+
 @interface MasterViewController ()
 
 @end
@@ -68,7 +71,7 @@
     // Update Parse Cloud of the user's latitude and longitude information
     
     PFQuery *query=[PFUser query];
-    PFUser *user=(PFUser *)[query getObjectWithId:@"Hqj8R8KENL"];
+    PFUser *user=(PFUser *)[query getObjectWithId:@"U0t0Z9WfJu"];
     if (_myLatitude !=0 || _myLongitude!=0){
         user[@"latitude"]=@(_myLatitude);
         user[@"longitude"]=@(_myLongitude);

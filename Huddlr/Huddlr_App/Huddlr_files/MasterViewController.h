@@ -11,10 +11,6 @@
 
 @class FriendsDataController;
 
-// The following declarations are used for calculating static distance as well as for reverse geocoding
-
-const double RADIANS=0.0174532925;
-
 @interface MasterViewController : UITableViewController <UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
 }
