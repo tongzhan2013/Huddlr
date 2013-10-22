@@ -24,8 +24,6 @@
 @implementation MasterViewController{
     /* This instance variable keeps track of the indexes of search results in _dataController.friendList */
     NSIndexSet *searchResultIndexes;
-    double myLatitude;
-    double myLongitude;
 }
 
 - (void)awakeFromNib
@@ -48,7 +46,8 @@
     self.navigationItem.titleView = label;
     [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
     
-    //setting UserDefault for first-time users
+    // Set UserDefault for first-time users
+    
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     if ([prefs stringForKey:@"username"]==nil) {[prefs setObject:@"Xiaosheng Mu" forKey:@"username"];}
     if ([prefs stringForKey:@"password"]==nil) {[prefs setObject:@"yatou1729" forKey:@"password"];}
@@ -56,26 +55,31 @@
     if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
     if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
     
-}
-
-
-- (void)viewWillAppear:(BOOL)animated{
+    // Get user location
+    
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager startUpdatingLocation];
-    myLatitude=locationManager.location.coordinate.latitude;
-    myLongitude=locationManager.location.coordinate.longitude;
+    _myLatitude=locationManager.location.coordinate.latitude;
+    _myLongitude=locationManager.location.coordinate.longitude;
     
     // Update Parse Cloud of the user's latitude and longitude information
+    
     PFQuery *query=[PFUser query];
     PFUser *user=(PFUser *)[query getObjectWithId:@"Hqj8R8KENL"];
-    user[@"latitude"]=@(myLatitude);
-    user[@"longitude"]=@(myLongitude);
-    [user saveInBackground];
+    if (_myLatitude !=0 || _myLongitude!=0){
+        user[@"latitude"]=@(_myLatitude);
+        user[@"longitude"]=@(_myLongitude);
+       [user saveInBackground];
+    }
+    else {
+        _myLatitude=[[user objectForKey:@"latitude"]doubleValue];
+        _myLongitude=[[user objectForKey:@"longitude"]doubleValue];
+    }
     
-    // Additional setup
+    // Setup the model layer when the view loads for the first time
     
     _dataController=[[FriendsDataController alloc]init];
     _friendNames=_dataController.friendNames;
@@ -86,18 +90,22 @@
     // Calculate distance using longitude and latitude info and sort friends into sections
     
     for (Friend *friend in _dataController.friendList){
-        double distance=acos(cos(RADIANS*(90-myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(myLongitude-friend.longitude))) *4500;
+        double distance=acos(cos(RADIANS*(90-_myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-_myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(_myLongitude-friend.longitude))) *4500;
         
         friend.distance=distance;
         if (distance < 0.1){[_friendsWithinFiveHundredFeet addObject:friend];}
         else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
         else {[_friendsFarAway addObject:friend];}
     }
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
     
     /////// Reverse geocoding example
     
     CLGeocoder *geocoder=[[CLGeocoder alloc]init];
-    CLLocation *location=[[CLLocation alloc]initWithLatitude:myLatitude  longitude:myLongitude];
+    CLLocation *location=[[CLLocation alloc]initWithLatitude:_myLatitude  longitude:_myLongitude];
     
     [geocoder reverseGeocodeLocation: location completionHandler:
      ^(NSArray *placemarks, NSError *error) {
@@ -112,7 +120,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of resources that can be recreated.
 }
 
 
@@ -125,7 +132,7 @@
     /* Need to distinguish between the tableview and the searchResultsTableView. By default they use the same data source, so this method is called by both */
     
     if (tableView==self.searchDisplayController.searchResultsTableView){return 1;}
-    else {return 3;}
+    else return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -133,10 +140,9 @@
     if (tableView==self.searchDisplayController.searchResultsTableView){return [searchResultIndexes count];}
     
     // Here the row numbers depend on distances calculated before
-    
-    else if (section==0) {return [_friendsWithinFiveHundredFeet count];}
-    else if (section==1) {return [_friendsWithinHalfAMile count];}
-    else if (section==2) {return [_friendsFarAway count];}
+    else if (section==0) {if ([_friendsWithinFiveHundredFeet count]>0) return [_friendsWithinFiveHundredFeet count]; else return 1;}
+    else if (section==1) {if ([_friendsWithinHalfAMile count]>0) return [_friendsWithinHalfAMile count]; else return 1;}
+    else if (section==2) {if ([_friendsFarAway count]>0) return [_friendsFarAway count]; else return 1;}
     return 0;
 }
 
@@ -147,7 +153,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
     
     // In case there is no reusable cell, create one and give it a reuse identifier
-    
     if (cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FriendCell"];
     }
@@ -164,12 +169,12 @@
     
     Friend* friend;
     if (tableView==self.tableView){
-        if (section==0) {friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
-        else if (section==1) {friend=[_friendsWithinHalfAMile objectAtIndex:row];}
-        else if (section==2) {friend=[_friendsFarAway objectAtIndex:row];}
+        if (section==0) {if ([_friendsWithinFiveHundredFeet count]>0) friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
+        else if (section==1) {if ([_friendsWithinHalfAMile count]>0) friend=[_friendsWithinHalfAMile objectAtIndex:row];}
+        else if (section==2) {if ([_friendsFarAway count]>0) friend=[_friendsFarAway objectAtIndex:row];}
     }
     else {
-        // "index" is the one at position "row" in the NSIndexSet
+        // "Index" is the one at position "row" in the NSIndexSet
         NSUInteger index = [searchResultIndexes firstIndex];
         for (NSUInteger i = 0; i < row; i++) {
             index = [searchResultIndexes indexGreaterThanIndex:index];
@@ -179,32 +184,40 @@
 
 
     // This step means that when you are reusing the cell, you update the checkmark situation according to this new friend that you're looking at.
+    if (friend){
+       if (friend.selected==YES){cell.accessoryType=UITableViewCellAccessoryCheckmark;}
+       else {cell.accessoryType=UITableViewCellAccessoryNone;}
+       
+       // Configure the appearance of the cell
+       UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(16, 11, 44, 44)];
+       imgView.backgroundColor=[UIColor clearColor];
+       [imgView setImage:[UIImage imageNamed: friend.picture]];
     
-    if (friend.selected==YES){cell.accessoryType=UITableViewCellAccessoryCheckmark;}
-    else {cell.accessoryType=UITableViewCellAccessoryNone;}
+       imgView.layer.shadowColor = [[UIColor blackColor] CGColor];
+       imgView.layer.shadowOpacity = 0.5;
+       imgView.layer.shadowRadius = 2.0;
+       imgView.layer.shadowOffset = CGSizeMake(1.5f, 1.5f);
+       [cell.contentView addSubview:imgView];
     
+       UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,14,180,20)];
+       nameLabel.text=friend.name;
+       [cell.contentView addSubview:nameLabel];
     
-    UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(16, 11, 44, 44)];
-    imgView.backgroundColor=[UIColor clearColor];
-    [imgView setImage:[UIImage imageNamed: friend.picture]];
-    
-    imgView.layer.shadowColor = [[UIColor blackColor] CGColor];
-    imgView.layer.shadowOpacity = 0.5;
-    imgView.layer.shadowRadius = 2.0;
-    imgView.layer.shadowOffset = CGSizeMake(1.5f, 1.5f);
-    [cell.contentView addSubview:imgView];
-    
-
-    UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,14,180,20)];
-    nameLabel.text=friend.name;
-    [cell.contentView addSubview:nameLabel];
-    
-    UILabel *locationLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,36,180,20)];
-    locationLabel.text=friend.location;
-    locationLabel.textColor=[UIColor lightGrayColor];
-    locationLabel.font=[UIFont fontWithName:nil size:12];
-    [cell.contentView addSubview:locationLabel];
-   
+       UILabel *locationLabel=[[UILabel alloc] initWithFrame:CGRectMake(80,36,180,20)];
+       locationLabel.text=friend.location;
+       locationLabel.textColor=[UIColor lightGrayColor];
+       locationLabel.font=[UIFont fontWithName:nil size:12];
+       [cell.contentView addSubview:locationLabel];
+    }
+    else {
+        UILabel *alertLabel=[[UILabel alloc] initWithFrame:CGRectMake(20,22,280,20)];
+        alertLabel.text=@"None of your friends in this distance zone";
+        alertLabel.textAlignment=NSTextAlignmentCenter;
+        alertLabel.textColor=[UIColor lightGrayColor];
+        alertLabel.font=[UIFont fontWithName:nil size:15];
+        [cell.contentView addSubview:alertLabel];
+    }
+        
     return cell;
 }
 
@@ -264,14 +277,14 @@
     UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
     NSInteger section=indexPath.section;
     NSInteger row=indexPath.row;
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     // Again we need to first find the "right" friend that the user selects
     
     Friend *friend;
     if (tableView==self.tableView){
-        if (section==0){friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
-        else if (section==1){friend=[_friendsWithinHalfAMile objectAtIndex:row];}
-        else if (section==2){friend=[_friendsFarAway objectAtIndex:row];}
+        if (section==0){if ([_friendsWithinFiveHundredFeet count]>0) friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
+        else if (section==1){if ([_friendsWithinHalfAMile count]>0) friend=[_friendsWithinHalfAMile objectAtIndex:row];}
+        else if (section==2){if ([_friendsFarAway count]>0) friend=[_friendsFarAway objectAtIndex:row];}
     }
     else {
         NSUInteger index = [searchResultIndexes firstIndex];
@@ -281,20 +294,22 @@
         friend=[_dataController friendAtIndex:index];
     }
     
-    
-    if (cell.accessoryType==UITableViewCellAccessoryNone){
+    if (friend){
+      if (cell.accessoryType==UITableViewCellAccessoryNone){
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         friend.selected=YES;
-    }
-    else if (cell.accessoryType==UITableViewCellAccessoryCheckmark){
+      }
+      else if (cell.accessoryType==UITableViewCellAccessoryCheckmark){
         [cell setAccessoryType:UITableViewCellAccessoryNone];
         friend.selected=NO;
+      }
     }
-    
     /* Without this, when the user exits the searchDisplayTableView, he won't see the same friend selected on the original tableview. However, this leads to a small lag */
     if (tableView!=self.tableView){
         [self.tableView reloadData];
     }
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
 }
 
@@ -333,11 +348,13 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != [alertView cancelButtonIndex]) {
-        //lead the user to the map tab
-        MapViewController *mapController=[self.tabBarController.viewControllers objectAtIndex:1];
+        UINavigationController *navController=[self.tabBarController.viewControllers objectAtIndex:1];
+        MapViewController *mapController=[navController.viewControllers objectAtIndex:0];
         mapController.huddleList=[[NSMutableArray alloc]init];
-        
         NSMutableString *huddle=[[NSMutableString alloc]init];
+        
+        // Instantiate the huddleList in the MapViewController and save the huddle to NSUserDefaults
+        
         for (int i=0; i<[_dataController countOfFriends]; i++){
             Friend *friend=[_dataController friendAtIndex:i];
             if (friend.selected==YES){
@@ -346,11 +363,12 @@
                 [huddle appendString:@", "];
             }
         }
-        //remove the last ","
+        
+        // Remove the last ","
         huddle = [[huddle substringToIndex:[huddle length]-2]mutableCopy];
         [huddle appendString:@";"];
         
-        //append date and time
+        // Append date and time
         NSDate *now = [NSDate date];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"MM-dd 'at' HH:mm";
@@ -358,30 +376,41 @@
         NSMutableString *dateTime=[[dateFormatter stringFromDate:now] mutableCopy];
         [huddle appendString:dateTime];
         
-        ////add a new huddle to local storage
         NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
         NSMutableArray *huddleHistory=[[prefs arrayForKey:@"huddleHistory"] mutableCopy];
         if (huddleHistory==nil) {huddleHistory=[[NSMutableArray alloc]init];}
         [huddleHistory insertObject:huddle atIndex:0];
-
         [prefs setObject:huddleHistory forKey:@"huddleHistory"];
         
-        ////lead the user to the map
+        //// Lead the user to the map
         [self.tabBarController setSelectedIndex:1];
+
         
     }
 }
 
 - (IBAction)refresh:(id)sender {
-    
-    for (int i=0; i<[_dataController countOfFriends]; i++){
-        Friend *friend=[_dataController friendAtIndex:i];
-        friend.selected=NO;
+    //// Update the model layer
+    if (locationManager.location.coordinate.latitude!=0 ||locationManager.location.coordinate.longitude!=0){
+        _myLatitude=locationManager.location.coordinate.latitude;
+        _myLongitude=locationManager.location.coordinate.longitude;
     }
+    _dataController=[[FriendsDataController alloc]init];
+    _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
+    _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
+    _friendsFarAway=[[NSMutableArray alloc]init];
     
-    // The question is: how to scroll to the top of the search bar?
+    for (Friend *friend in _dataController.friendList){
+        double distance=acos(cos(RADIANS*(90-_myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-_myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(_myLongitude-friend.longitude))) *4500;
+        
+        friend.distance=distance;
+        if (distance < 0.1){[_friendsWithinFiveHundredFeet addObject:friend];}
+        else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
+        else {[_friendsFarAway addObject:friend];}
+    }
+
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    
+
     [self.tableView reloadData];
 }
 

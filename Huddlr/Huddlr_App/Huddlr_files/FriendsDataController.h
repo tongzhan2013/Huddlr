@@ -16,7 +16,7 @@
 - (void) initializeDefaultList;
 -(void) addFriend: (Friend *) newFriend;
 -(void) removeFriendAtIndex: (NSUInteger) index;
-//this is an array of friend names that will be used in searching
+// This is an array of friend names that will be used in searching
 @property (nonatomic, copy) NSMutableArray *friendNames;
 @end
 

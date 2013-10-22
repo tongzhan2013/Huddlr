@@ -25,6 +25,9 @@ const double RADIANS=0.0174532925;
 @property (nonatomic, copy) NSMutableArray *friendsWithinFiveHundredFeet;
 @property (nonatomic, copy) NSMutableArray *friendsWithinHalfAMile;
 @property (nonatomic, copy) NSMutableArray *friendsFarAway;
+@property double myLatitude;
+@property double myLongitude;
+
 
 // This array contains friend names from which to search
 @property (nonatomic, copy) NSArray *friendNames;
