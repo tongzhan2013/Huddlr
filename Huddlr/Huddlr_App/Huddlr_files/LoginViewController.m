@@ -54,8 +54,6 @@
             NSLog(@"User with facebook signed up and logged in!");
             [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
             
-            //store the objectId locally for future use
-            _objectId=user.objectId;
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
         
@@ -63,7 +61,6 @@
             NSLog(@"User with facebook logged in!");
             [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
             
-            _objectId=user.objectId;
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
     }];

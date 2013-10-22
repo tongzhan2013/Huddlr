@@ -19,6 +19,7 @@
 }
 
 ///////// It would be very helpful to initialize the friendsWithinFiveHundredFeet and similar arrays directly here
+
 -(void) initializeDefaultList {
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
     _friendNames = [[NSMutableArray alloc] init];

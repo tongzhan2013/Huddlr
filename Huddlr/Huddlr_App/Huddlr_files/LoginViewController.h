@@ -11,8 +11,4 @@
 
 - (IBAction)loginButtonTouchHandler:(id)sender;
 
-@property (nonatomic,copy) NSString *objectId;
-
-
-
 @end

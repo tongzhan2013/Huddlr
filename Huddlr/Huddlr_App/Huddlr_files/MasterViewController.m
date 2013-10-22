@@ -14,8 +14,7 @@
 #import <Parse/Parse.h>
 #import "MapViewController.h"
 
-
-@class MapViewController;
+const double RADIANS=0.0174532925;
 
 @interface MasterViewController ()
 
@@ -29,6 +28,28 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    // Get user location
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDelegate:self];
+    [_locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [_locationManager startUpdatingLocation];
+    _myLatitude=_locationManager.location.coordinate.latitude;
+    _myLongitude=_locationManager.location.coordinate.longitude;
+    
+    // Update Parse Cloud of the user's latitude and longitude information
+    
+    PFUser *user=[PFUser currentUser];
+    if (_myLatitude !=0 || _myLongitude!=0){
+        user[@"latitude"]=@(_myLatitude);
+        user[@"longitude"]=@(_myLongitude);
+        [user saveInBackground];
+    }
+    else {
+        _myLatitude=[[user objectForKey:@"latitude"]doubleValue];
+        _myLongitude=[[user objectForKey:@"longitude"]doubleValue];
+    }
 }
 
 
@@ -54,30 +75,6 @@
     if ([prefs stringForKey:@"email"]==nil) {[prefs setObject:@"indefatigablexs@gmail.com" forKey:@"email"];}
     if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
     if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
-    
-    // Get user location
-    
-    locationManager = [[CLLocationManager alloc] init];
-    [locationManager setDelegate:self];
-    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager startUpdatingLocation];
-    _myLatitude=locationManager.location.coordinate.latitude;
-    _myLongitude=locationManager.location.coordinate.longitude;
-    
-    // Update Parse Cloud of the user's latitude and longitude information
-    
-    PFQuery *query=[PFUser query];
-    PFUser *user=(PFUser *)[query getObjectWithId:@"Hqj8R8KENL"];
-    if (_myLatitude !=0 || _myLongitude!=0){
-        user[@"latitude"]=@(_myLatitude);
-        user[@"longitude"]=@(_myLongitude);
-       [user saveInBackground];
-    }
-    else {
-        _myLatitude=[[user objectForKey:@"latitude"]doubleValue];
-        _myLongitude=[[user objectForKey:@"longitude"]doubleValue];
-    }
     
     // Setup the model layer when the view loads for the first time
     
@@ -391,10 +388,16 @@
 
 - (IBAction)refresh:(id)sender {
     //// Update the model layer
-    if (locationManager.location.coordinate.latitude!=0 ||locationManager.location.coordinate.longitude!=0){
-        _myLatitude=locationManager.location.coordinate.latitude;
-        _myLongitude=locationManager.location.coordinate.longitude;
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDelegate:self];
+    [_locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [_locationManager startUpdatingLocation];
+    if (_locationManager.location.coordinate.latitude!=0 ||_locationManager.location.coordinate.longitude!=0){
+        _myLatitude=_locationManager.location.coordinate.latitude;
+        _myLongitude=_locationManager.location.coordinate.longitude;
     }
+    
     _dataController=[[FriendsDataController alloc]init];
     _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
     _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
@@ -408,10 +411,11 @@
         else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
         else {[_friendsFarAway addObject:friend];}
     }
-
+    
+    [self.tableView reloadData];
+    
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 
-    [self.tableView reloadData];
 }
 
 
