@@ -74,7 +74,7 @@
     mapView_.settings.compassButton = YES;
     mapView_.delegate=self;
     
-    // Creates a marker for each friend in the huddleList
+    // Create a marker for each friend in the huddleList
     for (int i=0; i<[huddleList count]; i++){
         Friend *friend=[huddleList objectAtIndex:i];
         GMSMarker *marker = [[GMSMarker alloc] init];
@@ -83,6 +83,8 @@
         marker.snippet =@"Great!";
         marker.map=mapView_;
     }
+    
+    setLocation.map=mapView_;
 }
 
 
