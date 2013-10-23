@@ -11,9 +11,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Parse/Parse.h>
 #import "MasterViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation MapViewController {
     GMSMapView *mapView_;
+    GMSMarker *setLocation;
 }
 
 @synthesize huddleList;
@@ -36,10 +38,6 @@
     label.textAlignment=NSTextAlignmentCenter;
     label.text = @"Map";
     self.navigationItem.titleView = label;
-    
-    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = 1.0;  //user must hold for 1 second
-    [self.view addGestureRecognizer:lpgr];
 }
 
 
@@ -74,6 +72,7 @@
     self.view=mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
+    mapView_.delegate=self;
     
     // Creates a marker for each friend in the huddleList
     for (int i=0; i<[huddleList count]; i++){
@@ -87,17 +86,27 @@
 }
 
 
-- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
-{
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded){NSLog(@"Haha");}
-    /*CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
-    GMSProjection *projection=[[GMSProjection alloc]init];
-    CLLocationCoordinate2D touchCoordinate=[projection coordinateForPoint:touchPoint];
-    GMSMarker *marker=[[GMSMarker alloc]init];
-    marker.position=touchCoordinate;
-    marker.title=@"Success!";
-    marker.map=mapView_;*/
+- (void) mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate{
+    // Remove the meeting location set previously and instantiate a new one
+    setLocation.map=nil;
+    setLocation =[GMSMarker markerWithPosition:coordinate];
+    setLocation.map=mapView;
     
+    CLGeocoder *geocoder=[[CLGeocoder alloc]init];
+    CLLocation *location=[[CLLocation alloc]initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    
+    [geocoder reverseGeocodeLocation: location completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSArray *address= [placemark.addressDictionary valueForKey:@"FormattedAddressLines"];
+         if ([address count]>1){
+             setLocation.title=[address objectAtIndex:0];
+             setLocation.snippet=[address objectAtIndex:1];
+         }
+     }];
+    
+    ////// Need to send notifications to the huddleList
+
 }
 
  

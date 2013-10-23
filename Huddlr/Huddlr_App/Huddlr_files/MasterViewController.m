@@ -27,6 +27,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+
     // Get user location
     
     locationManager = [[CLLocationManager alloc] init];
@@ -71,7 +72,6 @@
     
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     if ([prefs stringForKey:@"username"]==nil) {[prefs setObject:@"Xiaosheng Mu" forKey:@"username"];}
-    if ([prefs stringForKey:@"password"]==nil) {[prefs setObject:@"yatou1729" forKey:@"password"];}
     if ([prefs stringForKey:@"email"]==nil) {[prefs setObject:@"indefatigablexs@gmail.com" forKey:@"email"];}
     if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
     if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
@@ -86,7 +86,6 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     /////// Reverse geocoding example
-    
     CLGeocoder *geocoder=[[CLGeocoder alloc]init];
     CLLocation *location=[[CLLocation alloc]initWithLatitude:_myLatitude  longitude:_myLongitude];
     
@@ -113,7 +112,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     /* Need to distinguish between the tableview and the searchResultsTableView. By default they use the same data source, so this method is called by both */
-    
     if (tableView==self.searchDisplayController.searchResultsTableView){return 1;}
     else return 3;
 }
@@ -149,7 +147,6 @@
     NSInteger section=indexPath.section;
     
     // Depending on which tableview calls the method, find the friend to display
-    
     Friend* friend;
     if (tableView==self.tableView){
         if (section==0) {if ([_dataController.friendsWithinFiveHundredFeet count]>0) friend=[_dataController.friendsWithinFiveHundredFeet objectAtIndex:row];}
@@ -221,7 +218,6 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     // As before, we need to first check which tableview calls this method
-    
     if (tableView==self.tableView){
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 20)];
         // Create custom view in section header
@@ -262,7 +258,6 @@
     NSInteger row=indexPath.row;
     
     // Again we need to first find the "right" friend that the user selects
-    
     Friend *friend;
     if (tableView==self.tableView){
         if (section==0){if ([_dataController.friendsWithinFiveHundredFeet count]>0) friend=[_dataController.friendsWithinFiveHundredFeet objectAtIndex:row];}
@@ -337,7 +332,6 @@
         NSMutableString *huddle=[[NSMutableString alloc]init];
         
         // Instantiate the huddleList in the MapViewController and save the huddle to NSUserDefaults
-        
         for (int i=0; i<[_dataController.allFriends count]; i++){
             Friend *friend=[_dataController.allFriends objectAtIndex:i];
             if (friend.selected==YES){
@@ -359,6 +353,7 @@
         NSMutableString *dateTime=[[dateFormatter stringFromDate:now] mutableCopy];
         [huddle appendString:dateTime];
         
+        // Save the huddle to NSUserDefaults
         NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
         NSMutableArray *huddleHistory=[[prefs arrayForKey:@"huddleHistory"] mutableCopy];
         if (huddleHistory==nil) {huddleHistory=[[NSMutableArray alloc]init];}
@@ -367,6 +362,10 @@
         
         //// Lead the user to the map
         [self.tabBarController setSelectedIndex:1];
+
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Tip" message:@"Long press anywhere on the map to set a meeting place for your huddle" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        
     }
 }
 

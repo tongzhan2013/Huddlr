@@ -11,7 +11,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 //#import "MasterViewController.h"
 
-@interface MapViewController : UIViewController <CLLocationManagerDelegate>
+@interface MapViewController : UIViewController <CLLocationManagerDelegate,GMSMapViewDelegate>
 {
     CLLocationManager *locationManager;
 }

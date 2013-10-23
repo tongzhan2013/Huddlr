@@ -11,7 +11,6 @@
 		511B212F1813790600447996 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B212E1813790600447996 /* SettingsViewController.m */; };
 		511B2132181379E800447996 /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B2131181379E800447996 /* EmailViewController.m */; };
 		511B213518137A4400447996 /* MobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213418137A4400447996 /* MobileViewController.m */; };
-		511B213818137A7400447996 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B213718137A7400447996 /* PasswordViewController.m */; };
 		512599F91815A4D300771A2A /* Refresh_icon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599F81815A4D300771A2A /* Refresh_icon-1.png */; };
 		512599FB1815A7AC00771A2A /* Huddlr_icon10.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599FA1815A7AC00771A2A /* Huddlr_icon10.png */; };
 		512599FD1815A84C00771A2A /* Huddlr_icon11.png in Resources */ = {isa = PBXBuildFile; fileRef = 512599FC1815A84C00771A2A /* Huddlr_icon11.png */; };
@@ -110,8 +109,6 @@
 		511B2131181379E800447996 /* EmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailViewController.m; sourceTree = "<group>"; };
 		511B213318137A4400447996 /* MobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileViewController.h; sourceTree = "<group>"; };
 		511B213418137A4400447996 /* MobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileViewController.m; sourceTree = "<group>"; };
-		511B213618137A7400447996 /* PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordViewController.h; sourceTree = "<group>"; };
-		511B213718137A7400447996 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
 		512599F81815A4D300771A2A /* Refresh_icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Refresh_icon-1.png"; path = "Images/Refresh_icon-1.png"; sourceTree = "<group>"; };
 		512599FA1815A7AC00771A2A /* Huddlr_icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon10.png; path = Images/Huddlr_icon10.png; sourceTree = "<group>"; };
 		512599FC1815A84C00771A2A /* Huddlr_icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon11.png; path = Images/Huddlr_icon11.png; sourceTree = "<group>"; };
@@ -322,8 +319,6 @@
 				511B212B1813785600447996 /* UserDataController.m */,
 				511B212D1813790600447996 /* SettingsViewController.h */,
 				511B212E1813790600447996 /* SettingsViewController.m */,
-				511B213618137A7400447996 /* PasswordViewController.h */,
-				511B213718137A7400447996 /* PasswordViewController.m */,
 				511B2130181379E800447996 /* EmailViewController.h */,
 				511B2131181379E800447996 /* EmailViewController.m */,
 				511B213318137A4400447996 /* MobileViewController.h */,
@@ -528,7 +523,6 @@
 				51EEF23318144B2C003F3B07 /* HuddleViewController.m in Sources */,
 				511B213518137A4400447996 /* MobileViewController.m in Sources */,
 				51EEF23B1814B4BA003F3B07 /* LoginViewController.m in Sources */,
-				511B213818137A7400447996 /* PasswordViewController.m in Sources */,
 				DE0DBD4317810774004E5FF9 /* main.m in Sources */,
 				DE0DBD4717810774004E5FF9 /* AppDelegate.m in Sources */,
 				DE0DBD5617810775004E5FF9 /* MapViewController.m in Sources */,

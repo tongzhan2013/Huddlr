@@ -14,8 +14,6 @@
 
 #import "MobileViewController.h"
 
-#import "PasswordViewController.h"
-
 @interface SettingsViewController ()
 
 @end
@@ -127,13 +125,6 @@
          //need to actually turn the location on and off with this button
 }
 
-/*
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
-}
- */
 
 
 @end
