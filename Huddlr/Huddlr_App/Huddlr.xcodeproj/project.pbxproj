@@ -96,6 +96,8 @@
 		DE721F91181353FB00ECC698 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F90181353FB00ECC698 /* MobileCoreServices.framework */; };
 		DE721F931813541500ECC698 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F921813541500ECC698 /* StoreKit.framework */; };
 		DE721F9B18135B8700ECC698 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F9A18135B8700ECC698 /* FacebookSDK.framework */; };
+		DE8BAD1E1816EC1100B08CA4 /* Facebook_login.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8BAD1D1816EC1100B08CA4 /* Facebook_login.png */; };
+		DE8BAD241816F0E400B08CA4 /* Login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8BAD231816F0E400B08CA4 /* Login_background.png */; };
 		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
 		DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE462761804BDD6005C8618 /* Huddlr_icon8.png */; };
 		DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE462CA180F93EF005C8618 /* MapKit.framework */; };
@@ -207,6 +209,8 @@
 		DE721F90181353FB00ECC698 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DE721F921813541500ECC698 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE721F9A18135B8700ECC698 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		DE8BAD1D1816EC1100B08CA4 /* Facebook_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_login.png; sourceTree = "<group>"; };
+		DE8BAD231816F0E400B08CA4 /* Login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_background.png; sourceTree = "<group>"; };
 		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DEE462761804BDD6005C8618 /* Huddlr_icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon8.png; path = Images/Huddlr_icon8.png; sourceTree = "<group>"; };
 		DEE462CA180F93EF005C8618 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -634,13 +638,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
@@ -658,13 +662,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
-					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
