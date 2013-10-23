@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		510CDF651817062300D0C2DD /* Facebook_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 510CDF641817062300D0C2DD /* Facebook_login.png */; };
-		510CDF67181771FC00D0C2DD /* Login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 510CDF66181771FC00D0C2DD /* Login_background.png */; };
 		511B212C1813785600447996 /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B212B1813785600447996 /* UserDataController.m */; };
 		511B212F1813790600447996 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B212E1813790600447996 /* SettingsViewController.m */; };
 		511B2132181379E800447996 /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511B2131181379E800447996 /* EmailViewController.m */; };
@@ -102,8 +100,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		510CDF641817062300D0C2DD /* Facebook_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_login.png; sourceTree = "<group>"; };
-		510CDF66181771FC00D0C2DD /* Login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_background.png; sourceTree = "<group>"; };
 		511B212A1813785500447996 /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataController.h; sourceTree = "<group>"; };
 		511B212B1813785600447996 /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataController.m; sourceTree = "<group>"; };
 		511B212D1813790600447996 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -352,8 +348,6 @@
 		DE5758B917FA96ED007A7777 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				510CDF66181771FC00D0C2DD /* Login_background.png */,
-				510CDF641817062300D0C2DD /* Facebook_login.png */,
 				51259A061815AFA200771A2A /* Launch_image.png */,
 				51259A041815AD7400771A2A /* Huddlr_icon15.png */,
 				51259A021815ACC800771A2A /* Huddlr_icon14.png */,
@@ -484,7 +478,6 @@
 				DE5758F61800DC83007A7777 /* Christy.png in Resources */,
 				DE5759021800DC83007A7777 /* Sinye.png in Resources */,
 				51259A071815AFA200771A2A /* Launch_image.png in Resources */,
-				510CDF651817062300D0C2DD /* Facebook_login.png in Resources */,
 				DE5758FA1800DC83007A7777 /* Henry.png in Resources */,
 				DE0DBD5317810775004E5FF9 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE5758C317FA9880007A7777 /* Huddlr_icon5.png in Resources */,
@@ -502,7 +495,6 @@
 				DE5758F31800DC83007A7777 /* Adele.png in Resources */,
 				DE0DBD6317810DEE004E5FF9 /* GoogleMaps.bundle in Resources */,
 				512599F91815A4D300771A2A /* Refresh_icon-1.png in Resources */,
-				510CDF67181771FC00D0C2DD /* Login_background.png in Resources */,
 				DE5758BB17FA9797007A7777 /* Huddlr_icon1.png in Resources */,
 				DE5758F71800DC83007A7777 /* Danqing.png in Resources */,
 				DE721F8518120C2D00ECC698 /* Profile.png in Resources */,
