@@ -96,8 +96,6 @@
 		DE721F91181353FB00ECC698 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F90181353FB00ECC698 /* MobileCoreServices.framework */; };
 		DE721F931813541500ECC698 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F921813541500ECC698 /* StoreKit.framework */; };
 		DE721F9B18135B8700ECC698 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE721F9A18135B8700ECC698 /* FacebookSDK.framework */; };
-		DE8BAD1E1816EC1100B08CA4 /* Facebook_login.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8BAD1D1816EC1100B08CA4 /* Facebook_login.png */; };
-		DE8BAD241816F0E400B08CA4 /* Login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8BAD231816F0E400B08CA4 /* Login_background.png */; };
 		DEE1496417D2CDA7009043B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE1496317D2CDA7009043B8 /* Security.framework */; };
 		DEE462771804BDD6005C8618 /* Huddlr_icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE462761804BDD6005C8618 /* Huddlr_icon8.png */; };
 		DEE462CB180F93EF005C8618 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE462CA180F93EF005C8618 /* MapKit.framework */; };
@@ -114,22 +112,22 @@
 		511B213418137A4400447996 /* MobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileViewController.m; sourceTree = "<group>"; };
 		511B213618137A7400447996 /* PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordViewController.h; sourceTree = "<group>"; };
 		511B213718137A7400447996 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
-		512599F81815A4D300771A2A /* Refresh_icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh_icon-1.png"; sourceTree = "<group>"; };
-		512599FA1815A7AC00771A2A /* Huddlr_icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon10.png; sourceTree = "<group>"; };
-		512599FC1815A84C00771A2A /* Huddlr_icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon11.png; sourceTree = "<group>"; };
-		512599FE1815AAD400771A2A /* Huddlr_icon12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon12.png; sourceTree = "<group>"; };
-		51259A001815AC1400771A2A /* Huddlr_icon13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon13.png; sourceTree = "<group>"; };
-		51259A021815ACC800771A2A /* Huddlr_icon14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon14.png; sourceTree = "<group>"; };
-		51259A041815AD7400771A2A /* Huddlr_icon15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon15.png; sourceTree = "<group>"; };
-		51259A061815AFA200771A2A /* Launch_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch_image.png; sourceTree = "<group>"; };
+		512599F81815A4D300771A2A /* Refresh_icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Refresh_icon-1.png"; path = "Images/Refresh_icon-1.png"; sourceTree = "<group>"; };
+		512599FA1815A7AC00771A2A /* Huddlr_icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon10.png; path = Images/Huddlr_icon10.png; sourceTree = "<group>"; };
+		512599FC1815A84C00771A2A /* Huddlr_icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon11.png; path = Images/Huddlr_icon11.png; sourceTree = "<group>"; };
+		512599FE1815AAD400771A2A /* Huddlr_icon12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon12.png; path = Images/Huddlr_icon12.png; sourceTree = "<group>"; };
+		51259A001815AC1400771A2A /* Huddlr_icon13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon13.png; path = Images/Huddlr_icon13.png; sourceTree = "<group>"; };
+		51259A021815ACC800771A2A /* Huddlr_icon14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon14.png; path = Images/Huddlr_icon14.png; sourceTree = "<group>"; };
+		51259A041815AD7400771A2A /* Huddlr_icon15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon15.png; path = Images/Huddlr_icon15.png; sourceTree = "<group>"; };
+		51259A061815AFA200771A2A /* Launch_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Launch_image.png; path = Images/Launch_image.png; sourceTree = "<group>"; };
 		51EEF23118144B2C003F3B07 /* HuddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuddleViewController.h; sourceTree = "<group>"; };
 		51EEF23218144B2C003F3B07 /* HuddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuddleViewController.m; sourceTree = "<group>"; };
 		51EEF2371814B4BA003F3B07 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		51EEF2381814B4BA003F3B07 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		51EEF2391814B4BA003F3B07 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		51EEF23A1814B4BA003F3B07 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
-		51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huddlr_icon9.png; sourceTree = "<group>"; };
-		51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Huddlr_icon9-1.png"; sourceTree = "<group>"; };
+		51EEF23D1814C8F6003F3B07 /* Huddlr_icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon9.png; path = Images/Huddlr_icon9.png; sourceTree = "<group>"; };
+		51EEF23F1814CA43003F3B07 /* Huddlr_icon9-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Huddlr_icon9-1.png"; path = "Images/Huddlr_icon9-1.png"; sourceTree = "<group>"; };
 		51F31E4118185D6D0096718B /* Facebook_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_login.png; sourceTree = "<group>"; };
 		51F31E4318185D740096718B /* Login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_background.png; sourceTree = "<group>"; };
 		DE0DBD3317810774004E5FF9 /* Huddlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,8 +207,6 @@
 		DE721F90181353FB00ECC698 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DE721F921813541500ECC698 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE721F9A18135B8700ECC698 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		DE8BAD1D1816EC1100B08CA4 /* Facebook_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_login.png; sourceTree = "<group>"; };
-		DE8BAD231816F0E400B08CA4 /* Login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_background.png; sourceTree = "<group>"; };
 		DEE1496317D2CDA7009043B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DEE462761804BDD6005C8618 /* Huddlr_icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Huddlr_icon8.png; path = Images/Huddlr_icon8.png; sourceTree = "<group>"; };
 		DEE462CA180F93EF005C8618 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -638,13 +634,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;
@@ -662,13 +658,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App,
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
-					/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Parse.framework,
+					/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Huddlr_files/Huddlr-Prefix.pch";
-				INFOPLIST_FILE = "/Users/discipulus/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
+				INFOPLIST_FILE = "/Users/xiaosheng/Desktop/Huddlr/Huddlr/Huddlr_App/Huddlr_files/Huddlr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Huddlr;

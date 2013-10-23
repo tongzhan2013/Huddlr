@@ -2,7 +2,7 @@
 
 #import "UserDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import <Parse/Parse.h>
 @implementation UserDetailsViewController
 
 
