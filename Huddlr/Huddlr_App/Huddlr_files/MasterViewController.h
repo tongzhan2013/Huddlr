@@ -13,16 +13,11 @@
 
 // The following declarations are used for calculating static distance as well as for reverse geocoding
 
-extern const double RADIANS;
-
-@interface MasterViewController : UITableViewController <UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
+@interface MasterViewController : UITableViewController <UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+}
 
 @property (strong, nonatomic) FriendsDataController *dataController;
-@property (nonatomic, strong) CLLocationManager *locationManager;
-/* These arrays manage data for the different sections, which are sorted by distance. There should also be an array for offline friends */
-@property (nonatomic, copy) NSMutableArray *friendsWithinFiveHundredFeet;
-@property (nonatomic, copy) NSMutableArray *friendsWithinHalfAMile;
-@property (nonatomic, copy) NSMutableArray *friendsFarAway;
 @property double myLatitude;
 @property double myLongitude;
 

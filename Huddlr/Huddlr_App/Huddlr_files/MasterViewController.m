@@ -14,7 +14,6 @@
 #import <Parse/Parse.h>
 #import "MapViewController.h"
 
-const double RADIANS=0.0174532925;
 
 @interface MasterViewController ()
 
@@ -30,13 +29,13 @@ const double RADIANS=0.0174532925;
     [super awakeFromNib];
     // Get user location
     
-    _locationManager = [[CLLocationManager alloc] init];
-    [_locationManager setDelegate:self];
-    [_locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [_locationManager startUpdatingLocation];
-    _myLatitude=_locationManager.location.coordinate.latitude;
-    _myLongitude=_locationManager.location.coordinate.longitude;
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    _myLatitude=locationManager.location.coordinate.latitude;
+    _myLongitude=locationManager.location.coordinate.longitude;
     
     // Update Parse Cloud of the user's latitude and longitude information
     
@@ -56,6 +55,7 @@ const double RADIANS=0.0174532925;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Set title
     
     CGRect frame = CGRectMake(0, 0, 320, 44);
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
@@ -80,20 +80,6 @@ const double RADIANS=0.0174532925;
     
     _dataController=[[FriendsDataController alloc]init];
     _friendNames=_dataController.friendNames;
-    _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
-    _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
-    _friendsFarAway=[[NSMutableArray alloc]init];
-    
-    // Calculate distance using longitude and latitude info and sort friends into sections
-    
-    for (Friend *friend in _dataController.friendList){
-        double distance=acos(cos(RADIANS*(90-_myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-_myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(_myLongitude-friend.longitude))) *4500;
-        
-        friend.distance=distance;
-        if (distance < 0.1){[_friendsWithinFiveHundredFeet addObject:friend];}
-        else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
-        else {[_friendsFarAway addObject:friend];}
-    }
 }
 
 
@@ -137,9 +123,9 @@ const double RADIANS=0.0174532925;
     if (tableView==self.searchDisplayController.searchResultsTableView){return [searchResultIndexes count];}
     
     // Here the row numbers depend on distances calculated before
-    else if (section==0) {if ([_friendsWithinFiveHundredFeet count]>0) return [_friendsWithinFiveHundredFeet count]; else return 1;}
-    else if (section==1) {if ([_friendsWithinHalfAMile count]>0) return [_friendsWithinHalfAMile count]; else return 1;}
-    else if (section==2) {if ([_friendsFarAway count]>0) return [_friendsFarAway count]; else return 1;}
+    else if (section==0) {if ([_dataController.friendsWithinFiveHundredFeet count]>0) return [_dataController.friendsWithinFiveHundredFeet count]; else return 1;}
+    else if (section==1) {if ([_dataController.friendsWithinHalfAMile count]>0) return [_dataController.friendsWithinHalfAMile count]; else return 1;}
+    else if (section==2) {if ([_dataController.friendsFarAway count]>0) return [_dataController.friendsFarAway count]; else return 1;}
     return 0;
 }
 
@@ -166,17 +152,17 @@ const double RADIANS=0.0174532925;
     
     Friend* friend;
     if (tableView==self.tableView){
-        if (section==0) {if ([_friendsWithinFiveHundredFeet count]>0) friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
-        else if (section==1) {if ([_friendsWithinHalfAMile count]>0) friend=[_friendsWithinHalfAMile objectAtIndex:row];}
-        else if (section==2) {if ([_friendsFarAway count]>0) friend=[_friendsFarAway objectAtIndex:row];}
+        if (section==0) {if ([_dataController.friendsWithinFiveHundredFeet count]>0) friend=[_dataController.friendsWithinFiveHundredFeet objectAtIndex:row];}
+        else if (section==1) {if ([_dataController.friendsWithinHalfAMile count]>0) friend=[_dataController.friendsWithinHalfAMile objectAtIndex:row];}
+        else if (section==2) {if ([_dataController.friendsFarAway count]>0) friend=[_dataController.friendsFarAway objectAtIndex:row];}
     }
-    else {
+    else { // This means it's the searchDisplayTableView that is calling the method
         // "Index" is the one at position "row" in the NSIndexSet
         NSUInteger index = [searchResultIndexes firstIndex];
         for (NSUInteger i = 0; i < row; i++) {
             index = [searchResultIndexes indexGreaterThanIndex:index];
         }
-        friend=[_dataController friendAtIndex:index];
+        friend=[_dataController.allFriends objectAtIndex:index];
     }
 
 
@@ -279,16 +265,16 @@ const double RADIANS=0.0174532925;
     
     Friend *friend;
     if (tableView==self.tableView){
-        if (section==0){if ([_friendsWithinFiveHundredFeet count]>0) friend=[_friendsWithinFiveHundredFeet objectAtIndex:row];}
-        else if (section==1){if ([_friendsWithinHalfAMile count]>0) friend=[_friendsWithinHalfAMile objectAtIndex:row];}
-        else if (section==2){if ([_friendsFarAway count]>0) friend=[_friendsFarAway objectAtIndex:row];}
+        if (section==0){if ([_dataController.friendsWithinFiveHundredFeet count]>0) friend=[_dataController.friendsWithinFiveHundredFeet objectAtIndex:row];}
+        else if (section==1){if ([_dataController.friendsWithinHalfAMile count]>0) friend=[_dataController.friendsWithinHalfAMile objectAtIndex:row];}
+        else if (section==2){if ([_dataController.friendsFarAway count]>0) friend=[_dataController.friendsFarAway objectAtIndex:row];}
     }
     else {
         NSUInteger index = [searchResultIndexes firstIndex];
         for (NSUInteger i = 0; i < row; i++) {
             index = [searchResultIndexes indexGreaterThanIndex:index];
         }
-        friend=[_dataController friendAtIndex:index];
+        friend=[_dataController.allFriends objectAtIndex:index];
     }
     
     if (friend){
@@ -317,8 +303,8 @@ const double RADIANS=0.0174532925;
     NSMutableArray *huddleList=[[NSMutableArray alloc]init];
     [names appendString:@"Would you like to huddle with \n"];
     int count = 0;
-    for (int i = 0; i < [_dataController countOfFriends]; i++){
-        Friend *friend=[self.dataController friendAtIndex:i];
+    for (int i = 0; i < [_dataController.allFriends count]; i++){
+        Friend *friend=[_dataController.allFriends objectAtIndex:i];
         if (friend.selected==YES){
             if (count>0){
                 [names appendString:@", "];
@@ -352,8 +338,8 @@ const double RADIANS=0.0174532925;
         
         // Instantiate the huddleList in the MapViewController and save the huddle to NSUserDefaults
         
-        for (int i=0; i<[_dataController countOfFriends]; i++){
-            Friend *friend=[_dataController friendAtIndex:i];
+        for (int i=0; i<[_dataController.allFriends count]; i++){
+            Friend *friend=[_dataController.allFriends objectAtIndex:i];
             if (friend.selected==YES){
                 [mapController.huddleList addObject:friend];
                 [huddle appendString:[friend.name copy]];
@@ -381,43 +367,33 @@ const double RADIANS=0.0174532925;
         
         //// Lead the user to the map
         [self.tabBarController setSelectedIndex:1];
-
-        
     }
 }
 
 - (IBAction)refresh:(id)sender {
     //// Update the model layer
-    _locationManager = [[CLLocationManager alloc] init];
-    [_locationManager setDelegate:self];
-    [_locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [_locationManager startUpdatingLocation];
-    if (_locationManager.location.coordinate.latitude!=0 ||_locationManager.location.coordinate.longitude!=0){
-        _myLatitude=_locationManager.location.coordinate.latitude;
-        _myLongitude=_locationManager.location.coordinate.longitude;
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    if (locationManager.location.coordinate.latitude!=0 ||locationManager.location.coordinate.longitude!=0){
+        _myLatitude=locationManager.location.coordinate.latitude;
+        _myLongitude=locationManager.location.coordinate.longitude;
+        PFUser *user=[PFUser currentUser];
+        user[@"latitude"]=@(_myLatitude);
+        user[@"longitude"]=@(_myLongitude);
+        [user saveInBackground];
     }
     
+    
+    ////////// How to minimize network requests here?
     _dataController=[[FriendsDataController alloc]init];
-    _friendsWithinFiveHundredFeet=[[NSMutableArray alloc]init];
-    _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
-    _friendsFarAway=[[NSMutableArray alloc]init];
-    
-    for (Friend *friend in _dataController.friendList){
-        double distance=acos(cos(RADIANS*(90-_myLatitude))*cos(RADIANS*(90-friend.latitude)) +sin(RADIANS*(90-_myLatitude)) *sin(RADIANS*(90-friend.latitude)) *cos(RADIANS*(_myLongitude-friend.longitude))) *4500;
-        
-        friend.distance=distance;
-        if (distance < 0.1){[_friendsWithinFiveHundredFeet addObject:friend];}
-        else if (distance <0.5){[_friendsWithinHalfAMile addObject:friend];}
-        else {[_friendsFarAway addObject:friend];}
-    }
-    
-    [self.tableView reloadData];
     
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self.tableView reloadData];
 
 }
-
 
 
 

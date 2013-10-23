@@ -45,7 +45,6 @@
     _dataController=[[UserDataController alloc]init];
     [_usernameLabel setText:_dataController.username];
     [_emailLabel setText:_dataController.email];
-    [_emailLabel setFont:[UIFont systemFontOfSize:14]];
     [_mobileLabel setText:_dataController.mobile];
     if ([_dataController.locationService isEqualToString: @"On"]){
         _serviceSwitch.on=YES;
@@ -85,7 +84,7 @@
     [label setText:string];
     [label setTextColor:[UIColor whiteColor]];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:159.0/255.0 green:127.0/255.0 blue:223.0/255.0 alpha:1]];
+    [view setBackgroundColor:[UIColor colorWithRed:159.0/255.0 green:127.0/255.0 blue:223.0/255.0 alpha:0.8]];
     return view;
 }
 

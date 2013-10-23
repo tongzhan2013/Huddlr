@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 @class Friend;
+extern const double RADIANS;
 
 @interface FriendsDataController : NSObject
-@property (nonatomic, copy) NSMutableArray *friendList;
--(NSUInteger) countOfFriends;
--(Friend *) friendAtIndex: (NSUInteger) index;
-- (void) initializeDefaultList;
--(void) addFriend: (Friend *) newFriend;
--(void) removeFriendAtIndex: (NSUInteger) index;
+@property (nonatomic, copy) NSMutableArray *allFriends;
+@property (nonatomic, copy) NSMutableArray *friendsWithinFiveHundredFeet;
+@property (nonatomic, copy) NSMutableArray *friendsWithinHalfAMile;
+@property (nonatomic, copy) NSMutableArray *friendsFarAway;
+
+- (void) initializeStaticLists;
+
+// Implement this to retrieve actual server data;
+- (void) initializeFriendListsWithUserId: (NSString *)objectId;
+
 // This is an array of friend names that will be used in searching
 @property (nonatomic, copy) NSMutableArray *friendNames;
 @end

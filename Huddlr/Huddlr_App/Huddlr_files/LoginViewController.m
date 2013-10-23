@@ -22,9 +22,13 @@
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager startUpdatingLocation];
-
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Login_background.png"]]];
+
+}
 
 
 #pragma mark - Login methods

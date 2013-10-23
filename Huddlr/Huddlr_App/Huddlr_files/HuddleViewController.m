@@ -74,13 +74,25 @@
     
     NSString *huddle=[huddleHistory objectAtIndex:indexPath.row];
     NSArray *components = [huddle componentsSeparatedByString: @";"];
-    NSString *participants= [components objectAtIndex:0];
-    NSString *dateTime= [components objectAtIndex:1];
     
-    [cell.textLabel setText:participants];
+    NSString *dateTime= [components objectAtIndex:1];
     [cell.detailTextLabel setText:dateTime];
     [cell.detailTextLabel setTextColor:[UIColor lightGrayColor]];
     [cell.detailTextLabel setFont:[UIFont systemFontOfSize:12]];
+    
+    NSString *namesString= [components objectAtIndex:0];
+    NSArray *participants=[namesString componentsSeparatedByString:@","];
+    NSMutableString *displayText;
+    displayText=[[participants objectAtIndex:0] mutableCopy];
+    if ([participants count]>1){
+        displayText=[[participants objectAtIndex:0] mutableCopy];
+        NSString *str=[NSString stringWithFormat:@" and %d other",[participants count]-1];
+        [displayText appendString:str];
+        if ([participants count]>2) {[displayText appendString:@"s"];}
+    }
+    
+    [cell.textLabel setText:displayText];
+
     
     return cell;
 }

@@ -36,6 +36,10 @@
     label.textAlignment=NSTextAlignmentCenter;
     label.text = @"Map";
     self.navigationItem.titleView = label;
+    
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 1.0;  //user must hold for 1 second
+    [self.view addGestureRecognizer:lpgr];
 }
 
 
@@ -70,7 +74,6 @@
     self.view=mapView_;
     mapView_.settings.myLocationButton = YES;
     mapView_.settings.compassButton = YES;
-
     
     // Creates a marker for each friend in the huddleList
     for (int i=0; i<[huddleList count]; i++){
@@ -81,6 +84,20 @@
         marker.snippet =@"Great!";
         marker.map=mapView_;
     }
+}
+
+
+- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded){NSLog(@"Haha");}
+    /*CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
+    GMSProjection *projection=[[GMSProjection alloc]init];
+    CLLocationCoordinate2D touchCoordinate=[projection coordinateForPoint:touchPoint];
+    GMSMarker *marker=[[GMSMarker alloc]init];
+    marker.position=touchCoordinate;
+    marker.title=@"Success!";
+    marker.map=mapView_;*/
+    
 }
 
  
