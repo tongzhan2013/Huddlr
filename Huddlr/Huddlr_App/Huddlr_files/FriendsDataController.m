@@ -12,21 +12,27 @@
 const double RADIANS=0.0174532925;
 
 @implementation FriendsDataController
-/*- (void)setFriendList:(NSMutableArray *) newList {
-    if (_friendList != newList) {
-        _friendList = [newList mutableCopy];
-    }
-}
-*/
 
-///////// It would be very helpful to initialize the friendsWithinFiveHundredFeet and similar arrays directly here
-
--(void) initializeStaticLists {
+-(void) initializeLists {
     _allFriends = [[NSMutableArray alloc] init];
     _friendsWithinFiveHundredFeet =[[NSMutableArray alloc]init];
     _friendsWithinHalfAMile=[[NSMutableArray alloc]init];
     _friendsFarAway=[[NSMutableArray alloc]init];
     _friendNames=[[NSMutableArray alloc] init];
+    NSArray *friendIds=[[NSUserDefaults standardUserDefaults]objectForKey:@"friendIds"];
+    
+    /////////// Initialize friendArray from Parse. How to minimize requests here? Perhaps by only updating those friends who were decently close to the user. 
+    
+    PFQuery *friendQuery = [PFUser query];
+    [friendQuery whereKey:@"fbId" containedIn:friendIds];
+    NSArray *friendUsers = [friendQuery findObjects];
+    
+    for (PFUser *user in friendUsers){
+        Friend *myFriend=[[Friend alloc] initWithName:[user objectForKey:@"name"] location:[user objectForKey:@"location"] picture:nil latitude:[[user objectForKey:@"latitude"]doubleValue] longitude:[[user objectForKey:@"longitude"]doubleValue] selected:NO];
+        [_allFriends addObject:myFriend];
+        [_friendNames addObject:[myFriend.name mutableCopy]];
+    }
+
     
     // Initialize friendArray from staticfrienddata.txt
     NSString *fileContents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"staticfrienddata" ofType: @"txt"] encoding:NSUTF8StringEncoding error:NULL];
@@ -39,9 +45,7 @@ const double RADIANS=0.0174532925;
         if ([values count]>1){
             Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0] location: [values objectAtIndex:1] picture: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
             [_allFriends addObject:myFriend];
-        
-            // The zeroth component in each line of the file is the name
-            [_friendNames addObject:[[values objectAtIndex:0] mutableCopy]];
+            [_friendNames addObject:[myFriend.name mutableCopy]];
         }
     }
     
@@ -62,14 +66,11 @@ const double RADIANS=0.0174532925;
 -(id) init{
     if (self = [super init]){
         ///////
-        [self initializeStaticLists];
+        [self initializeLists];
         return self;
     }
     return nil;
 }
 
--(void) initializeFriendListsWithUserId:(NSString *)objectId{
-    ////////// Use this method to implement dynamic data
-}
 
 @end

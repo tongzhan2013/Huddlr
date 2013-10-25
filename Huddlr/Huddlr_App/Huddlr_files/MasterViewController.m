@@ -14,42 +14,18 @@
 #import <Parse/Parse.h>
 #import "MapViewController.h"
 
-
 @interface MasterViewController ()
 
 @end
 
 @implementation MasterViewController{
-    /* This instance variable keeps track of the indexes of search results in _dataController.friendList */
+    // This instance variable keeps track of the indexes of search results in _dataController.friendList
     NSIndexSet *searchResultIndexes;
 }
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-
-    // Get user location
-    
-    locationManager = [[CLLocationManager alloc] init];
-    [locationManager setDelegate:self];
-    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager startUpdatingLocation];
-    _myLatitude=locationManager.location.coordinate.latitude;
-    _myLongitude=locationManager.location.coordinate.longitude;
-    
-    // Update Parse Cloud of the user's latitude and longitude information
-    
-    PFUser *user=[PFUser currentUser];
-    if (_myLatitude !=0 || _myLongitude!=0){
-        user[@"latitude"]=@(_myLatitude);
-        user[@"longitude"]=@(_myLongitude);
-        [user saveInBackground];
-    }
-    else {
-        _myLatitude=[[user objectForKey:@"latitude"]doubleValue];
-        _myLongitude=[[user objectForKey:@"longitude"]doubleValue];
-    }
 }
 
 
@@ -57,7 +33,6 @@
 {
     [super viewDidLoad];
     // Set title
-    
     CGRect frame = CGRectMake(0, 0, 320, 44);
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.backgroundColor = [UIColor clearColor];
@@ -68,8 +43,7 @@
     self.navigationItem.titleView = label;
     [self.navigationController.toolbar setBarTintColor:[UIColor lightGrayColor]];
     
-    // Set UserDefault for first-time users
-    
+    /////////// Set UserDefault for first-time users
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     if ([prefs stringForKey:@"username"]==nil) {[prefs setObject:@"Xiaosheng Mu" forKey:@"username"];}
     if ([prefs stringForKey:@"email"]==nil) {[prefs setObject:@"indefatigablexs@gmail.com" forKey:@"email"];}
@@ -80,22 +54,41 @@
     
     _dataController=[[FriendsDataController alloc]init];
     _friendNames=_dataController.friendNames;
+    
+    // Get user location
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    _myLatitude=locationManager.location.coordinate.latitude;
+    _myLongitude=locationManager.location.coordinate.longitude;
+    
+    // Update Parse of the user's latitude and longitude information
+    PFUser *user=[PFUser currentUser];
+    if (_myLatitude !=0 || _myLongitude!=0){
+        user[@"latitude"]=@(_myLatitude);
+        user[@"longitude"]=@(_myLongitude);
+    }
+    else {
+        _myLatitude=[[user objectForKey:@"latitude"]doubleValue];
+        _myLongitude=[[user objectForKey:@"longitude"]doubleValue];
+    }
+    
+    CLGeocoder *geocoder=[[CLGeocoder alloc]init];
+    CLLocation *location=[[CLLocation alloc]initWithLatitude:_myLatitude longitude:_myLongitude];
+    [geocoder reverseGeocodeLocation: location completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSArray *address= [placemark.addressDictionary valueForKey:@"FormattedAddressLines"];
+         user[@"location"]=(NSString *)[address objectAtIndex:0];
+         [user saveInBackground];
+     }];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated{
-    
-    /////// Reverse geocoding example
-    CLGeocoder *geocoder=[[CLGeocoder alloc]init];
-    CLLocation *location=[[CLLocation alloc]initWithLatitude:_myLatitude  longitude:_myLongitude];
-    
-    [geocoder reverseGeocodeLocation: location completionHandler:
-     ^(NSArray *placemarks, NSError *error) {
-         CLPlacemark *placemark = [placemarks objectAtIndex:0];
-         NSLog(@"Placemark array: %@",placemark.addressDictionary );
-         NSString *locatedaddress = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-         NSLog(@"Currently address is: %@",locatedaddress);
-     }];
+
 }
 
 
@@ -111,7 +104,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    /* Need to distinguish between the tableview and the searchResultsTableView. By default they use the same data source, so this method is called by both */
+    // Distinguish between the tableview and the searchResultsTableView. By default they use the same data source, so this method is called by both
     if (tableView==self.searchDisplayController.searchResultsTableView){return 1;}
     else return 3;
 }
@@ -282,7 +275,7 @@
         friend.selected=NO;
       }
     }
-    /* Without this, when the user exits the searchDisplayTableView, he won't see the same friend selected on the original tableview. However, this leads to a small lag */
+    // Without this, when the user exits the searchDisplayTableView, he won't see the same friend selected on the original tableview
     if (tableView!=self.tableView){
         [self.tableView reloadData];
     }
@@ -340,8 +333,6 @@
                 [huddle appendString:@", "];
             }
         }
-        
-        // Remove the last ","
         huddle = [[huddle substringToIndex:[huddle length]-2]mutableCopy];
         [huddle appendString:@";"];
         
@@ -370,7 +361,7 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    //// Update the model layer
+    // Update the model layer
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
@@ -382,14 +373,23 @@
         PFUser *user=[PFUser currentUser];
         user[@"latitude"]=@(_myLatitude);
         user[@"longitude"]=@(_myLongitude);
-        [user saveInBackground];
+        
+        CLGeocoder *geocoder=[[CLGeocoder alloc]init];
+        CLLocation *location=[[CLLocation alloc]initWithLatitude:_myLatitude longitude:_myLongitude];
+        [geocoder reverseGeocodeLocation: location completionHandler:
+         ^(NSArray *placemarks, NSError *error) {
+             CLPlacemark *placemark = [placemarks objectAtIndex:0];
+             NSArray *address= [placemark.addressDictionary valueForKey:@"FormattedAddressLines"];
+             user[@"location"]=(NSString *)[address objectAtIndex:0];
+             [user saveInBackground];
+         }];
     }
     
     
-    ////////// How to minimize network requests here?
-    _dataController=[[FriendsDataController alloc]init];
-    
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    ////////// Perhaps we do not want to update too often/too much here, because it is slow and costly 
+    _dataController=[[FriendsDataController alloc]init];
     [self.tableView reloadData];
 
 }
@@ -400,7 +400,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    /* This is a block code that returns the indexes of friend names that contain the search text */
+    // This is a block code that returns the indexes of friend names that contain the search text
     searchResultIndexes = [_friendNames indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){
         NSString *s = (NSString*)obj;
         NSRange range = [s rangeOfString: searchText options:NSCaseInsensitiveSearch];
@@ -416,7 +416,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
                                     objectAtIndex:[self.searchDisplayController.searchBar
                                                      selectedScopeButtonIndex]]];
     
-    /* Immediately after this method returns YES, cellForRowAtIndexPath is called to display the filtered search results every time the user inputs */
+    // Immediately after this method returns YES, cellForRowAtIndexPath is called to display the filtered search results every time the user inputs
     return YES;
 }
 

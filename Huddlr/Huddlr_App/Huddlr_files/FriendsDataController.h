@@ -16,10 +16,7 @@ extern const double RADIANS;
 @property (nonatomic, copy) NSMutableArray *friendsWithinHalfAMile;
 @property (nonatomic, copy) NSMutableArray *friendsFarAway;
 
-- (void) initializeStaticLists;
-
-// Implement this to retrieve actual server data;
-- (void) initializeFriendListsWithUserId: (NSString *)objectId;
+- (void) initializeLists;
 
 // This is an array of friend names that will be used in searching
 @property (nonatomic, copy) NSMutableArray *friendNames;

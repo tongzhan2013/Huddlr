@@ -17,8 +17,6 @@
         //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
     }
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background.png"]];
-    
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
@@ -47,26 +45,47 @@
         if (!user) {
             if (!error) {
                 NSLog(@"Uh oh. The user cancelled the Facebook login.");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Uh oh. The user cancelled the Facebook login." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"Facebook login cancelled. Please try again." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             } else {
                 NSLog(@"Uh oh. An error occurred: %@", error);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:@"An error occurred. Please try again."delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             }
         }
         
-        else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
-            
-            [self performSegueWithIdentifier:@"loginSegue" sender:self];
-        }
-        
         else {
-            NSLog(@"User with facebook logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            if (user.isNew) {
+            NSLog(@"User with facebook signed up and logged in!");
+            [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if (!error) {
+                    // Store the current user's Facebook ID on Parse for future query
+                    [[PFUser currentUser] setObject:[result objectForKey:@"id"]
+                                             forKey:@"fbId"];
+                    [[PFUser currentUser] saveInBackground];
+                }
+            }];
+            }
+            else {
+                NSLog(@"User with facebook logged in!");
+            }
             
+            // Get the user's FB friend IDs and save the array to NSUserDefaults
+            [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if (!error) {
+                    // Result will contain an array with your user's friends in the "data" key
+                    NSArray *friendObjects = [result objectForKey:@"data"];
+                    NSMutableArray *friendIds = [NSMutableArray arrayWithCapacity:friendObjects.count];
+                    // Create a list of friends' Facebook IDs
+                    for (NSDictionary *friendObject in friendObjects) {
+                        [friendIds addObject:[friendObject objectForKey:@"id"]];
+                    }
+                    [[NSUserDefaults standardUserDefaults]setObject:friendIds forKey:@"friendIds"];
+                }
+            }];
+            
+            /////////// Need to also save name and picture 
+
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
     }];
