@@ -265,8 +265,8 @@
                     <connections>
                         <outlet property="emailLabel" destination="xLw-CK-iOM" id="aez-BR-d3Y"/>
                         <outlet property="mobileLabel" destination="cjI-VX-jsb" id="fLr-zs-f0V"/>
+                        <outlet property="nameLabel" destination="yR5-Wc-3bA" id="qjk-Tj-SLb"/>
                         <outlet property="serviceSwitch" destination="lAm-Fd-NzF" id="vyB-uZ-CGm"/>
-                        <outlet property="usernameLabel" destination="yR5-Wc-3bA" id="YdK-mG-hFd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qk-fX-XlY" userLabel="First Responder" sceneMemberID="firstResponder"/>

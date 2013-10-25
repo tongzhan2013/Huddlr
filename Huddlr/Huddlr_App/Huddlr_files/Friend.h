@@ -11,12 +11,14 @@
 @interface Friend : NSObject
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSString *location;
-@property (nonatomic, copy) NSString *picture;
-//latitude and longitude data will be copied from the server
+@property (nonatomic, copy) NSString *pictureFilePath;
+@property (nonatomic, copy) NSURL *pictureURL;
+@property (nonatomic) UIImage *profilePicture;
+
 @property double latitude;
 @property double longitude;
 @property double distance;
 @property (nonatomic) BOOL selected;
--(id)initWithName:(NSString *)name location:(NSString *)location picture:(NSString *)picture latitude:(double)latitude longitude:(double)longitude  selected:(BOOL) selected;
+-(id)initWithName:(NSString *)name location:(NSString *)location pictureFilePath:(NSString *)path latitude:(double)latitude longitude:(double)longitude  selected:(BOOL) selected;
 @end
 

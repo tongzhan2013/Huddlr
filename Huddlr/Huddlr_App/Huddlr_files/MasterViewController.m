@@ -45,7 +45,6 @@
     
     /////////// Set UserDefault for first-time users
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
-    if ([prefs stringForKey:@"username"]==nil) {[prefs setObject:@"Xiaosheng Mu" forKey:@"username"];}
     if ([prefs stringForKey:@"email"]==nil) {[prefs setObject:@"indefatigablexs@gmail.com" forKey:@"email"];}
     if ([prefs stringForKey:@"mobile"]==nil) {[prefs setObject:@"203-909-2814" forKey:@"mobile"];}
     if ([prefs stringForKey:@"locationService"]==nil) {[prefs setObject:@"On" forKey:@"locationService"];}
@@ -164,7 +163,20 @@
        // Configure the appearance of the cell
        UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(16, 11, 44, 44)];
        imgView.backgroundColor=[UIColor clearColor];
-       [imgView setImage:[UIImage imageNamed: friend.picture]];
+        
+       //////// How to perform this request in the background, thus not blocking the UI?
+       if (friend.pictureFilePath) {[imgView setImage:[UIImage imageNamed: friend.pictureFilePath]];}
+       else if (friend.profilePicture){
+           UIImage *image = friend.profilePicture;
+           [imgView setImage:image];
+       }
+       else {
+           NSURL *pictureURL = friend.pictureURL;
+           NSData *data = [NSData dataWithContentsOfURL:pictureURL];
+           UIImage *image=[UIImage imageWithData:data];
+           [imgView setImage:image];
+           friend.profilePicture=image;
+       }
     
        imgView.layer.shadowColor = [[UIColor blackColor] CGColor];
        imgView.layer.shadowOpacity = 0.5;
@@ -388,7 +400,7 @@
     
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     
-    ////////// Perhaps we do not want to update too often/too much here, because it is slow and costly 
+    ////////// Perhaps we do not want to update too often/too much here, because it is slow and costly
     _dataController=[[FriendsDataController alloc]init];
     [self.tableView reloadData];
 

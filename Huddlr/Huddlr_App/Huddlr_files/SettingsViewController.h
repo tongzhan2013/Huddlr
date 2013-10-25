@@ -12,7 +12,7 @@
 @interface SettingsViewController : UITableViewController <UITableViewDelegate>
 
 @property (nonatomic, strong) UserDataController* dataController;
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
 - (IBAction)switchOff:(id)sender;

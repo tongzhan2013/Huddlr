@@ -13,7 +13,7 @@
 -(id) init{
     if (self=[super init]){
         NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
-        _username = [prefs stringForKey:@"username"];
+        _name = [prefs stringForKey:@"name"];
         _email = [prefs stringForKey:@"email"];
         _mobile = [prefs stringForKey:@"mobile"];
         _locationService= [prefs stringForKey:@"locationService"];

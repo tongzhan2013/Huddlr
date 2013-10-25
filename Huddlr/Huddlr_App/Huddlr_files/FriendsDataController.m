@@ -28,7 +28,8 @@ const double RADIANS=0.0174532925;
     NSArray *friendUsers = [friendQuery findObjects];
     
     for (PFUser *user in friendUsers){
-        Friend *myFriend=[[Friend alloc] initWithName:[user objectForKey:@"name"] location:[user objectForKey:@"location"] picture:nil latitude:[[user objectForKey:@"latitude"]doubleValue] longitude:[[user objectForKey:@"longitude"]doubleValue] selected:NO];
+        Friend *myFriend=[[Friend alloc] initWithName:[user objectForKey:@"name"] location:[user objectForKey:@"location"] pictureFilePath:nil latitude:[[user objectForKey:@"latitude"]doubleValue] longitude:[[user objectForKey:@"longitude"]doubleValue] selected:NO];
+        myFriend.pictureURL=[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?width=100&height=100&return_ssl_resources=1", [user objectForKey:@"fbId"]]];
         [_allFriends addObject:myFriend];
         [_friendNames addObject:[myFriend.name mutableCopy]];
     }
@@ -43,7 +44,7 @@ const double RADIANS=0.0174532925;
         NSArray *values = [[NSArray alloc] init];
         values = [line componentsSeparatedByString:@","];
         if ([values count]>1){
-            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0] location: [values objectAtIndex:1] picture: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
+            Friend *myFriend = [[Friend alloc] initWithName:[values objectAtIndex:0] location: [values objectAtIndex:1] pictureFilePath: [values objectAtIndex:2] latitude:[[values objectAtIndex:3] doubleValue] longitude:[[values objectAtIndex:4] doubleValue] selected: NO];
             [_allFriends addObject:myFriend];
             [_friendNames addObject:[myFriend.name mutableCopy]];
         }

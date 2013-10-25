@@ -41,7 +41,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     _dataController=[[UserDataController alloc]init];
-    [_usernameLabel setText:_dataController.username];
+    [_nameLabel setText:_dataController.name];
     [_emailLabel setText:_dataController.email];
     [_mobileLabel setText:_dataController.mobile];
     if ([_dataController.locationService isEqualToString: @"On"]){

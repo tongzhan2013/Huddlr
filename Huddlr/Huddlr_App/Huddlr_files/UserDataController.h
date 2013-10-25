@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface UserDataController : NSObject
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *mobile;
 @property (nonatomic, copy) NSString *locationService;

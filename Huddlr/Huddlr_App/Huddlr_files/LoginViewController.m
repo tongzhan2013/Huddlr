@@ -55,21 +55,25 @@
         }
         
         else {
-            if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
+            if (user.isNew) {NSLog(@"User with facebook signed up and logged in!");}
+            else {NSLog(@"User with facebook logged in!");}
+            
+            // Save the current user's Facebook ID and name on Parse for future query
             [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
-                    // Store the current user's Facebook ID on Parse for future query
-                    [[PFUser currentUser] setObject:[result objectForKey:@"id"]
-                                             forKey:@"fbId"];
-                    [[PFUser currentUser] saveInBackground];
+                    NSString *fbId=[result objectForKey:@"id"];
+                    [user setObject:fbId forKey:@"fbId"];
+                    
+                    NSURL *nameURL=[[NSURL alloc]initWithString:[NSString stringWithFormat: @"https://graph.facebook.com/%@?fields=name",fbId]];
+                    NSString *content=[[NSString alloc]initWithContentsOfURL:nameURL encoding:NSUTF8StringEncoding error:NULL];
+                    NSArray *components=[content componentsSeparatedByString:@"\""];
+                    NSString *nameStr=[components objectAtIndex:3];
+                    [[NSUserDefaults standardUserDefaults]setObject:nameStr forKey:@"name"];
+                    [user setObject:nameStr forKey:@"name"];
+                    [user saveInBackground];
                 }
             }];
-            }
-            else {
-                NSLog(@"User with facebook logged in!");
-            }
-            
+
             // Get the user's FB friend IDs and save the array to NSUserDefaults
             [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
@@ -83,8 +87,6 @@
                     [[NSUserDefaults standardUserDefaults]setObject:friendIds forKey:@"friendIds"];
                 }
             }];
-            
-            /////////// Need to also save name and picture 
 
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
